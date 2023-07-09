@@ -150,9 +150,9 @@
 }
 
 .dropdown-nav {
-  float: left;
+  float: right;
   overflow: hidden;
-  margin-left: 72.95%;
+  margin-left: 0%;
 }
 
 .dropdown-nav .dropbtn-nav {
