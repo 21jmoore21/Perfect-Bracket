@@ -3,7 +3,7 @@ function ML_settings() {
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
-        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value")
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
         document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
     }
@@ -14,7 +14,7 @@ function three_pt_settings() {
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
-        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value")
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
         document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
     }
@@ -25,7 +25,7 @@ function strong_def_settings() {
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
-        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value")
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
         document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
     }
@@ -36,7 +36,7 @@ function low_tov_settings() {
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
-        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value")
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
         document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
     }
@@ -46,6 +46,7 @@ function select_all() {
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
     }
 }
 
@@ -53,6 +54,7 @@ function deselect_all() {
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = false;
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
     }
 }
 
