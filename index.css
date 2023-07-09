@@ -48,8 +48,8 @@
 
 .easy_to_use {
   position: absolute;
-  top: 5px;
-  left: 25px;
+  top: 1.5%;
+  left: 3.5%;
   color: white;
   font-size: 40px;
   -webkit-text-stroke: 0.8px black;
@@ -57,8 +57,8 @@
 
 .men_and_women {
   position: absolute;
-  top: 50px;
-  right: 25px;
+  top: 6%;
+  right: 3%;
   color: white;
   font-size: 40px;
   text-align: center;
@@ -67,8 +67,8 @@
 
 .stats {
   position: absolute;
-  top: 150px;
-  right: 750px;
+  top: 20%;
+  right: 60%;
   color: white;
   font-size: 40px;
   text-align: center;
@@ -77,8 +77,8 @@
 
 .prev_years {
   position: absolute;
-  top: 500px;
-  right: 750px;
+  top: 50%;
+  right: 55%;
   color: white;
   font-size: 40px;
   text-align: center;
@@ -87,8 +87,8 @@
 
 .AI {
   position: absolute;
-  bottom: 10px;
-  right: 400px;
+  bottom: 2%;
+  right: 30%;
   color: white;
   font-size: 40px;
   text-align: center;
@@ -184,9 +184,9 @@
 }
 
 .dropdown-nav {
-  float: left;
+  float: right;
   overflow: hidden;
-  margin-left: 72.95%;
+  margin-left: 0%;
 }
 
 .dropdown-nav .dropbtn-nav {
