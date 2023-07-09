@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="actual-men.css">
+    <script src="website-men.js"></script>
+    <link rel="icon" type="image/x-icon" href="Icon.png">
+  </head>
+  <title>Men's Perfect Bracket Simulator</title>
+  <body style="background-color: white;">
+    <div class="topnav">
+        <a class="active" href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./stats.html">Stats</a>
+        <div class="dropdown-nav">
+            <button class = "dropbtn-nav">Men's Bracket</button>
+            <div class="dropdown-content-nav">
+                <a href="./website-women.html">Women's Bracket</a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top:45px;">
+        <div class="column_one" style="background-color: #ddd;">
+            <h2 style="color:#333">How important?</h2>
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox1" onclick="toggleLabel('checkbox1', 'label1','slider1','slider_1_value');" checked>
+            <label for="checkbox1" id="label1"><div class="tooltip">3pt%: <span class="tooltiptext">Three Point Field Goal Percentage</span></div> <span id="slider_1_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider1" onchange="slider_1_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox2" onclick="toggleLabel('checkbox2', 'label2', 'slider2','slider_2_value')" checked>
+            <label for="checkbox2" id="label2"><div class="tooltip">FT%: <span class="tooltiptext">Free Throw Percentage</span></div> <span id="slider_2_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider2" onchange="slider_2_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+            
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox3" onclick="toggleLabel('checkbox3', 'label3', 'slider3','slider_3_value')" checked>
+            <label for="checkbox3" id="label3"><div class="tooltip">TOV: <span class="tooltiptext">Turnovers Per Game</span></div> <span id="slider_3_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider3" onchange="slider_3_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox4" onclick="toggleLabel('checkbox4', 'label4', 'slider4','slider_4_value')" checked>
+            <label for="checkbox4" id="label4"><div class="tooltip">Opp TOV: <span class="tooltiptext">Turnovers Forced Per Game</span></div> <span id="slider_4_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider4" onchange="slider_4_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox5" onclick="toggleLabel('checkbox5', 'label5', 'slider5','slider_5_value')" checked>
+            <label for="checkbox5" id="label5"><div class="tooltip">PTS: <span class="tooltiptext">Points Scored Per Game</span></div> <span id="slider_5_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider5" onchange="slider_5_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox6" onclick="toggleLabel('checkbox6', 'label6', 'slider6','slider_6_value')" checked>
+            <label for="checkbox6" id="label6"><div class="tooltip">Seed: <span class="tooltiptext">Seed in March Madness</span></div> <span id="slider_6_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider6" onchange="slider_6_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox7" onclick="toggleLabel('checkbox7', 'label7', 'slider7','slider_7_value')" checked>
+            <label for="checkbox7" id="label7"><div class="tooltip">SOS: <span class="tooltiptext">Strength of Schedule</span></div> <span id="slider_7_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider7" onchange="slider_7_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox8" onclick="toggleLabel('checkbox8', 'label8', 'slider8','slider_8_value')" checked>
+            <label for="checkbox8" id="label8"><div class="tooltip">MOV: <span class="tooltiptext">Margin of Victory</span></div> <span id="slider_8_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider8" onchange="slider_8_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox9" onclick="toggleLabel('checkbox9', 'label9', 'slider9','slider_9_value')" checked>
+            <label for="checkbox9" id="label9"><div class="tooltip">eFG%: <span class="tooltiptext">Effective Field Goal Percentage</span></div> <span id="slider_9_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider9" onchange="slider_9_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox10" onclick="toggleLabel('checkbox10', 'label10', 'slider10','slider_10_value')" checked>
+            <label for="checkbox10" id="label10"><div class="tooltip">TRB: <span class="tooltiptext">Total Rebounds Per Game</span></div> <span id="slider_10_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider10" onchange="slider_10_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+            
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox11" onclick="toggleLabel('checkbox11', 'label11', 'slider11','slider_11_value')" checked>
+            <label for="checkbox11" id="label11"><div class="tooltip">Opp 3pt%: <span class="tooltiptext">Opponent Three Point Field Goal Percentage</span></div> <span id="slider_11_value">50</span></label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider11" onchange="slider_11_val(this.value);">
+            </div>
+            <div class="give_me_space"></div>
+
+            <div>
+            <input type="checkbox" class="checkbox" id="checkbox12" onclick="toggleLabel('checkbox12', 'label12', 'slider12','slider_12_value')" checked>
+            <label for="checkbox12" id="label12"><div class="tooltip">AST: <span class="tooltiptext">Assists Per Game</span></div> <span id="slider_12_value">50</span></label>
+            <input type="range" style="z-index:0" min="0" max="100" value="50" class="slider" id="slider12" onchange="slider_12_val(this.value);">
+            </div>
+            <div class="give_me_space_2"></div>
+            <span><button onclick="select_all()" class="selection_button">Select All /</button><button onclick="deselect_all()" class="selection_button">Deselect All</button></span>
+            <div class="give_me_space_2"></div>
+            <button accesskey="m" onclick="find_winner()" class="myButton">Run</button>    
+
+        </div>
+        <div class="column_two" style="background-color: white;">
+            <div class="give_me_space"></div>
+            <button onclick="ML_settings() ; find_winner()" class="ML_button" style="margin-left:1.5%">ML Algorithm</button>
+            <button onclick="three_pt_settings() ; find_winner()" class="ML_button">3pt Heavy</button>
+            <button onclick="strong_def_settings() ; find_winner()" class="ML_button">Strong Def</button>
+            <button onclick="low_tov_settings() ; find_winner()" class="ML_button">Low TOV</button>
+            <div class="dropdown" style="margin-left:60.7%;">
+                <button class="dropbtn"><span id="yearofstudy">Year</span></button>
+                <div class="dropdown-content">
+                  <button onclick="change_year(2024) ; find_winner()" class="dropdownButton">2024</button>
+                  <button onclick="change_year(2023) ; find_winner()" class="dropdownButton">2023</button>
+                  <button onclick="change_year(2022) ; find_winner()" class="dropdownButton">2022</button>
+                  <button onclick="change_year(2021) ; find_winner()" class="dropdownButton">2021</button>
+                  <button onclick="change_year(2019) ; find_winner()" class="dropdownButton">2019</button>
+                  <button onclick="change_year(2018) ; find_winner()" class="dropdownButton">2018</button>
+                </div>
+              </div>
+            <section>
+                <div class='tournament'>
+                <ul class='round seed'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>1</span>
+                    <span id="team_0">Alabama</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span id="team_1">Texas AM CC</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>8</span>
+                    <span id="team_2">Maryland</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>9</span>
+                    <span id="team_3">West Virginia</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>5</span>
+                    <span id="team_4">SDSU</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>12</span>
+                    <span id="team_5">Charleston</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>4</span>
+                    <span id="team_6">Virginia</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>13</span>
+                    <span id="team_7">Furman</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>6</span>
+                    <span id="team_8">Creighton</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span id="team_9">NC State</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>3</span>
+                    <span id="team_10">Baylor</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>14</span>
+                    <span id="team_11">UCSB</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>7</span>
+                    <span id="team_12">Missouri</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>10</span>
+                    <span id="team_13">Utah St</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>2</span>
+                    <span id="team_14">Arizona</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>15</span>
+                    <span id="team_15">Princeton</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>1</span>
+                    <span id="team_16">Purdue</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span id="team_17">FDU</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>8</span>
+                    <span id="team_18">Memphis</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>9</span>
+                    <span id="team_19">FAU</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>5</span>
+                    <span id="team_20">Duke</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>12</span>
+                    <span id="team_21">ORU</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>4</span>
+                    <span id="team_22">Tenessee</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>13</span>
+                    <span id="team_23">UL</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>6</span>
+                    <span id="team_24">Kentucky</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span id="team_25">Providence</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>3</span>
+                    <span id="team_26">Kansas St</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>14</span>
+                    <span id="team_27">Montana St</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>7</span>
+                    <span id="team_28">Michigan State</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>10</span>
+                    <span id="team_29">USC</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>2</span>
+                    <span id="team_30">Marquette</span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>15</span>
+                    <span id="team_31">Vermont</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-1'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_64"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_65"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_66"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_67"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_68"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_69"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_70"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_71"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_72"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_73"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_74"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_75"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_76"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_77"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_78"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_79"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-2'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_96"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_97"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_98"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_99"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_100"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_101"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_102"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_103"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-3'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_112"></li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left region region-left' id='region_1'>South</li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left game-bottom' id="team_113"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_114"></li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left region region-left' id="region_2">East</li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left game-bottom' id="team_115"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-4'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_120"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_121"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round semi-final'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_124"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round finals'>
+                    <li class='bracket_score_text'><span id="bracket_score_text"></span><span class="bracket_score" id="bracket_score"></span> <span id="bracket_score_text_two"></span></li>
+                    <li id="bracket_score"></li>
+                    <li class='game-final spacer'>&nbsp;</li>
+                    <li class='game final' id="team_126"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round semi-final'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_125"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-4'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_122"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_123"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-3'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_116"></li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right region region-right' id="region_3">Midwest</li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right game-bottom' id="team_117"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_118"></li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right region region-right' id="region_4">West</li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right game-bottom' id="team_119"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-2'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_104"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_105"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_106"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_107"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_108"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_109"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_110"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_111"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-1'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_80"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_81"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_82"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_83"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_84"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_85"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_86"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_87"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_88"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_89"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_90"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_91"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_92"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_93"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_94"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_95"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round seed'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_32">Houston</span>
+                    <span>1</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_33">N Kentucky</span>
+                    <span>16</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_34">Iowa</span>
+                    <span>8</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_35">Auburn</span>
+                    <span>9</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_36">Miami</span>
+                    <span>5</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_37">Drake</span>
+                    <span>12</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_38">Indiana</span>
+                    <span>4</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_39">Kent St</span>
+                    <span>13</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_40">Iowa State</span>
+                    <span>6</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_41">Pitt</span>
+                    <span>11</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_42">Xavier</span>
+                    <span>3</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_43">Kenn St</span>
+                    <span>14</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_44">Texas A&M</span>
+                    <span>7</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_45">Penn State</span>
+                    <span>10</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_46">Texas</span>
+                    <span>2</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_47">Colgate</span>
+                    <span>15</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_48">Kansas</span>
+                    <span>1</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_49">Howard</span>
+                    <span>16</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_50">Arkansas</span>
+                    <span>8</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_51">Illinois</span>
+                    <span>9</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_52">Saint Marys</span>
+                    <span>5</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_53">VCU</span>
+                    <span>12</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_54">UConn</span>
+                    <span>4</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_55">Iona</span>
+                    <span>13</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_56">TCU</span>
+                    <span>6</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_57">Nevada</span>
+                    <span>11</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_58">Gonzaga</span>
+                    <span>3</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_59">GCU</span>
+                    <span>14</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_60">Northwestern</span>
+                    <span>7</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_61">Boise St</span>
+                    <span>10</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_62">UCLA</span>
+                    <span>2</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_63">NC Asheville</span>
+                    <span>15</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+  </body>
+</html>
