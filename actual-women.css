@@ -21,8 +21,8 @@
 
 .ML_button {
   margin-left: 0.5%;
-  background:rgb(0, 187, 90);
-	background-color:rgb(0, 187, 90);
+  background:#00be9f;
+	background-color:#00be9f;
 	border-radius:50px;
 	border:0px solid #030303;
 	display:inline-block;
@@ -40,7 +40,7 @@
 }
 
 .bracket_score {
-  color: rgb(0, 187, 90);
+  color: #00be9f;
   font-weight:bold;
   font-size: 20px;
 }
@@ -92,7 +92,7 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: rgb(0, 187, 90);color:#ffffff}
+.dropdown-content a:hover {background-color: #00be9f;color:#ffffff}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #333;color:#ffffff}
 
@@ -111,8 +111,8 @@
 	text-decoration:none;
 }
 .dropdownButton:hover {
-	background:rgb(0, 187, 90);
-	background-color:rgb(0, 187, 90);
+	background:#00be9f;
+	background-color:#00be9f;
   color:#ffffff;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .topnav a.active {
-  background-color: rgb(0, 187, 90);
+  background-color: #00be9f;
   color: white;
 }
 
@@ -159,13 +159,13 @@
   color: white;
   padding: 14px 16px;
   min-width: 165px;
-  background-color: rgb(0, 187, 90);
+  background-color: #00be9f;
   font-family: inherit;
   margin: 0;
 }
 
 .dropdown-nav:hover .dropbtn-nav {
-  background-color: rgb(0, 187, 90);
+  background-color: #00be9f;
   color: black;
 }
 
@@ -276,7 +276,7 @@
 
 /* Custom range slider thumb on hover */
 .slider::-webkit-slider-thumb:hover {
-  background: rgb(0, 187, 90);
+  background: #00be9f;
 }
 
 /*Checkboxes styles*/

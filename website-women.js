@@ -631,7 +631,7 @@ function find_winner(){
         if (study_year != current_year && study_year != "Year") {
             if (j < (96-64)){
                 if (round_32.includes(team_name)){
-                    document.getElementById(team_no_id).style.color = "green";
+                    document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
                     ++bracket_score;
                 }
                 else {
@@ -640,7 +640,7 @@ function find_winner(){
             }
             else if (j < 112-64 && j > 95-64){
                 if (round_16.includes(team_name)){
-                    document.getElementById(team_no_id).style.color = "green";
+                    document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
                     bracket_score = bracket_score + 2;
                 }
                 else {
@@ -649,7 +649,7 @@ function find_winner(){
             }
             else if (j < 120-64 && j > 111-64){
                 if (round_8.includes(team_name)){
-                    document.getElementById(team_no_id).style.color = "green";
+                    document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
                     bracket_score = bracket_score + 4;
                 }
                 else {
@@ -658,7 +658,7 @@ function find_winner(){
             }
             else if (j < 124-64 && j > 119-64){
                 if (round_4.includes(team_name)){
-                    document.getElementById(team_no_id).style.color = "green";
+                    document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
                     bracket_score = bracket_score + 8;
                 }
                 else {
@@ -667,7 +667,7 @@ function find_winner(){
             }
             else if (j < 126-64 && j > 123-64){
                 if (round_2.includes(team_name)){
-                    document.getElementById(team_no_id).style.color = "green";
+                    document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
                     bracket_score = bracket_score + 16;
                 }
                 else {
@@ -676,7 +676,7 @@ function find_winner(){
             }
             else if (j < 127-64 && j > 125-64){
                 if (round_1.includes(team_name)){
-                    document.getElementById(team_no_id).style.color = "green";
+                    document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
                     bracket_score = bracket_score + 32;
                 }
                 else {
