@@ -52,7 +52,7 @@
   padding-bottom: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
-  min-height: 200px;
+  min-height: 36%;
   font-weight:bold;
   font-size: 20px;
 }
@@ -434,7 +434,7 @@ body {
     max-height: 103px;
   }
   li.game-final.spacer {
-    max-height: 144px;
+    max-height: 0%;
     padding-right:.25em;
   } 
   li.game-right-half.spacer {
@@ -466,7 +466,10 @@ body {
       margin-bottom: 1em;
       font-weight:bold;
       font-size: 20px;
+      min-height: 2.3%;
+      vertical-align: middle;
   }
+
   .finals .centered {
       text-align:center;
       font-weight:bold;
