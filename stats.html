@@ -18,21 +18,21 @@
             </div>
         </div>
     </div>
-    <div class="row" style="padding-top:45px;">
+    <div class="row" style="padding-top:45px; color: #333;">
         <h1 style="padding-left:10px"><a class="heading">The Perfect Bracket Simulator: </a>How We Process The Stats</h1>
-        <p style="padding-left:10px ; padding-right: 10px;">All stats for this website are from Sports-Reference.com. After 
+        <p style="padding-left:10px ; padding-right: 10px; color: black;">All stats for this website are from Sports-Reference.com. After 
             retrieving all of the stats, I used python to do some cleaning up of the data and getting it into a format that fit 
             my use case. Once the data was cleaned up, I knew I would have to scale the stats so that metrics like points per game
             wouldn't have a much larger impact on the combination than other stats like assists per game. In order to even the playing field,
             I scaled all of the data so that for every stat, the team with the highest value for that stat was set to 1,
             the team with the lowest value was set to 0 and all other teams are linearly scaled between the two. For example, if 
             Gonzaga averaged the most ppg out of all teams in the tournament field, their new ppg value would be scaled to 1.</p>
-            <p style="padding-left:10px ; padding-right: 10px;">For stats such as ppg, if that stat has a higher weight assigned to 
+            <p style="padding-left:10px ; padding-right: 10px; color: black;">For stats such as ppg, if that stat has a higher weight assigned to 
             it, the teams that averaged a high ppg will be predicted to perform better. For stats such as turnovers, where it is 
             undesirable to have a lot, the data was inverted to ensure that the team who averaged the least amount of turnovers had 
             their TOV value scaled to 1. This means, if the TOV weight is set higher, the teams that took care of the ball will 
             be predicted to perform better.</p>
-            <p style="padding-left:10px ; padding-right: 10px;">Once you have the combination of weights set that you believe will
+            <p style="padding-left:10px ; padding-right: 10px; color: black;">Once you have the combination of weights set that you believe will
             predict that perfect bracket and hit run, the score for each team will be displayed by the team name in the first round.
             This is helpful in seeing how close two teams are predicted to be, as well as understanding which teams have good stats in some
             areas and others don't. The teams score is not displayed in any rounds other than the first, but the score does not change 
