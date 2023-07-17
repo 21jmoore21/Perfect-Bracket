@@ -34,7 +34,7 @@
 
 .link{
   text-decoration: none;
-  color: black;
+  color: #333;
   opacity: 1;
 }
 
@@ -52,7 +52,7 @@
   left: 3.5%;
   color: white;
   font-size: 40px;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px #333;
 }
 
 .men_and_women {
@@ -62,7 +62,7 @@
   color: white;
   font-size: 40px;
   text-align: center;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px #333;
 }
 
 .stats {
@@ -72,7 +72,7 @@
   color: white;
   font-size: 40px;
   text-align: center;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px #333;
 }
 
 .prev_years {
@@ -82,7 +82,7 @@
   color: white;
   font-size: 40px;
   text-align: center;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px #333;
 }
 
 .AI {
@@ -92,7 +92,7 @@
   color: white;
   font-size: 40px;
   text-align: center;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px #333;
 }
 
 .dropbtn {
@@ -123,7 +123,7 @@
 }
 
 .dropdown-content a {
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -171,7 +171,7 @@
 
 .topnav a:hover {
   background-color: rgb(194, 194, 194);
-  color: black;
+  color: #333;
 }
 
 .topnav a.active {
@@ -203,7 +203,7 @@
 
 .dropdown-nav:hover .dropbtn-nav {
   background-color: #00beae;
-  color: black;
+  color: #333;
 }
 
 .dropdown-content-nav {
@@ -216,7 +216,7 @@
 
 .dropdown-content-nav a {
   float: none;
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -265,7 +265,7 @@
 }
 .run_button {
     padding: 3px 0;
-    border: 3px solid black;
+    border: 3px solid #333;
     width: 50px;
     text-align: center;
 }
@@ -550,7 +550,7 @@ body {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: #333 transparent transparent transparent;
   }
   
   .tooltip:hover .tooltiptext {
