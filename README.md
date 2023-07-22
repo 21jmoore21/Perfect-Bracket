@@ -1,5 +1,5 @@
-# Website
-Perfect-Bracket website
+# Perfect-Bracket
+Perfect-Bracket Simulator
 Whether you are like me and spend hours every year trying to get the perfect bracket or just 
 need to get picks for a bracket group you now regret joining, the Perfect Bracket Simulator is for you. The simplest way to use 
 the simulator is to use the 'Bracket' dropdown menu in the top right to navigate to the tournament you want to create picks for. 
