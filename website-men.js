@@ -49,9 +49,6 @@ function perfect_settings() {
     else if (study_year == 2018){
         var slider_weights = [13,60,100,65,50,20,65,45,30,40,30,85]
     }
-    else if (study_year == current_year || study_year == "Year"){
-        var slider_weights = [10,60,100,65,50,20,65,45,30,40,30,85]
-    }
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
