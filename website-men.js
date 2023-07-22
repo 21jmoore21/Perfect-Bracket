@@ -5,7 +5,7 @@ function ML_settings() {
         document.getElementById("checkbox"+id).checked = true;
         toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
+        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
     }
 }
 
@@ -16,7 +16,7 @@ function three_pt_settings() {
         document.getElementById("checkbox"+id).checked = true;
         toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
+        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
     }
 }
 
@@ -27,18 +27,37 @@ function strong_def_settings() {
         document.getElementById("checkbox"+id).checked = true;
         toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
+        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
     }
 }
 
-function low_tov_settings() {
-    const slider_weights = [50,60,100,65,50,20,65,45,30,40,30,85]
+function perfect_settings() {
+    let study_year = document.getElementById("yearofstudy").innerHTML;
+    let current_year = 2024;
+    if (study_year == 2023){
+        var slider_weights = [50,60,100,65,50,20,65,45,30,40,30,85]
+    }
+    else if (study_year == 2022){
+        var slider_weights = [78,60,100,65,50,20,65,45,30,40,30,85]
+    }
+    else if (study_year == 2021){
+        var slider_weights = [62,60,100,65,50,20,65,45,30,40,30,85]
+    }
+    else if (study_year == 2019){
+        var slider_weights = [82,60,100,65,50,20,65,45,30,40,30,85]
+    }
+    else if (study_year == 2018){
+        var slider_weights = [13,60,100,65,50,20,65,45,30,40,30,85]
+    }
+    else if (study_year == current_year || study_year == "Year"){
+        var slider_weights = [10,60,100,65,50,20,65,45,30,40,30,85]
+    }
     for (let j = 0, len = 12; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
         toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
         document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").innerHTML = slider_weights[j];
+        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
     }
 }
 
@@ -59,14 +78,17 @@ function deselect_all() {
 }
 
 function toggleLabel(checkboxId, labelId, slider_value,slider_val_id) {
-  let checkbox = document.getElementById(checkboxId);
-  let label = document.getElementById(labelId);
-  if (checkbox.checked) {
-    label.style.color = "black";
-  } else {
-    label.style.color = "gray";
+    let checkbox = document.getElementById(checkboxId);
+    let label = document.getElementById(labelId);
+    let slider_val = document.getElementById(slider_val_id);
+    if (checkbox.checked) {
+      label.style.color = "black";
+      slider_val.style.color = "black";
+    } else {
+      label.style.color = "gray";
+      slider_val.style.color = "gray";
+    }
   }
-}
 
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
@@ -699,38 +721,75 @@ function find_winner(){
 }
 
 function slider_1_val(val){
-    document.getElementById("slider_1_value").innerHTML = val;    
+    document.getElementById("slider_1_value").value = val;    
 }
 function slider_2_val(val){
-    document.getElementById("slider_2_value").innerHTML = val;    
+    document.getElementById("slider_2_value").value = val;    
 }
 function slider_3_val(val){
-    document.getElementById("slider_3_value").innerHTML = val;    
+    document.getElementById("slider_3_value").value = val;    
 }
 function slider_4_val(val){
-    document.getElementById("slider_4_value").innerHTML = val;    
+    document.getElementById("slider_4_value").value = val;    
 }
 function slider_5_val(val){
-    document.getElementById("slider_5_value").innerHTML = val;    
+    document.getElementById("slider_5_value").value = val;    
 }
 function slider_6_val(val){
-    document.getElementById("slider_6_value").innerHTML = val;    
+    document.getElementById("slider_6_value").value = val;    
 }
 function slider_7_val(val){
-    document.getElementById("slider_7_value").innerHTML = val;    
+    document.getElementById("slider_7_value").value = val;    
 }
 function slider_8_val(val){
-    document.getElementById("slider_8_value").innerHTML = val;    
+    document.getElementById("slider_8_value").value = val;    
 }
 function slider_9_val(val){
-    document.getElementById("slider_9_value").innerHTML = val;    
+    document.getElementById("slider_9_value").value = val;    
 }
 function slider_10_val(val){
-    document.getElementById("slider_10_value").innerHTML = val;    
+    document.getElementById("slider_10_value").value = val;    
 }
 function slider_11_val(val){
-    document.getElementById("slider_11_value").innerHTML = val;    
+    document.getElementById("slider_11_value").value = val;    
 }
 function slider_12_val(val){
-    document.getElementById("slider_12_value").innerHTML = val;    
+    document.getElementById("slider_12_value").value = val;    
+}
+
+function slider1_val(val){
+    document.getElementById("slider1").value = val;    
+}
+function slider2_val(val){
+    document.getElementById("slider2").value = val;    
+}
+function slider3_val(val){
+    document.getElementById("slider3").value = val;    
+}
+function slider4_val(val){
+    document.getElementById("slider4").value = val;    
+}
+function slider5_val(val){
+    document.getElementById("slider5").value = val;    
+}
+function slider6_val(val){
+    document.getElementById("slider6").value = val;    
+}
+function slider7_val(val){
+    document.getElementById("slider7").value = val;    
+}
+function slider8_val(val){
+    document.getElementById("slider8").value = val;    
+}
+function slider9_val(val){
+    document.getElementById("slider9").value = val;    
+}
+function slider10_val(val){
+    document.getElementById("slider10").value = val;    
+}
+function slider11_val(val){
+    document.getElementById("slider11").value = val;    
+}
+function slider12_val(val){
+    document.getElementById("slider12").value = val;    
 }

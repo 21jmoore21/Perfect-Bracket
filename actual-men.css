@@ -15,6 +15,17 @@
   color:#333;
 }
 
+.num_input {
+  background-color: transparent;
+  border-color: transparent;
+  max-width: 27px;
+  font: 16px/20px 'Open Sans', Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .give_me_space_2 {
   min-height:10px;
 }
@@ -52,7 +63,14 @@
   padding-bottom: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
-  min-height: 36%;
+  min-height: 25%;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.national_champ {
+  text-align: center;
+  color: #333;
   font-weight:bold;
   font-size: 20px;
 }
@@ -458,17 +476,16 @@ body {
   }
 
   .final {
-      text-align: center;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      border: 1px solid #aaa;
-      margin-top: 1em;
-      margin-bottom: 1em;
-      font-weight:bold;
-      font-size: 20px;
-      min-height: 2.3%;
-      vertical-align: middle;
-  }
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid #aaa;
+    font-weight:bold;
+    font-size: 20px;
+    min-height: 0%;
+}
 
   .finals .centered {
       text-align:center;
@@ -491,6 +508,7 @@ body {
   .tooltip {
     position: relative;
     display: inline-block;
+    margin-left: 30px;
   }
   
   .tooltip .tooltiptext {
