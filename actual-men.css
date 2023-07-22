@@ -298,13 +298,16 @@
 }
 
 /*Checkboxes styles*/
-input[type="checkbox"] { display: none; }
+input[type="checkbox"] { 
+  display: none;
+}
 
 input[type="checkbox"] + label {
   display: block;
   position: relative;
+  top: 2.5px;
   padding-left: 35px;
-  margin-bottom: px;
+  margin-bottom: 0px;
   font: 16px/20px 'Open Sans', Arial, sans-serif;
   color: #333;
   cursor: pointer;
