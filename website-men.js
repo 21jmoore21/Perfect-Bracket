@@ -89,6 +89,24 @@ function toggleLabel(checkboxId, labelId, slider_value,slider_val_id) {
 
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
+    if (year == 2024 || year == "Year") {
+        document.getElementById("perfect_button").innerHTML = "";
+    }
+    else if (year == 2023){
+        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
+    }
+    else if (year == 2022){
+        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
+    }
+    else if (year == 2021){
+        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
+    }
+    else if (year == 2019){
+        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
+    }
+    else if (year == 2018){
+        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
+    }
 }
 
 function set_slider_val(weight,id){
