@@ -44,7 +44,7 @@ function perfect_settings() {
         var slider_weights = [62,60,100,65,50,20,45,30,40,30,85]
     }
     else if (study_year == 2019){
-        var slider_weights = [0,0,60,0,4,100,0,0,0,39,86]
+        var slider_weights = [23,0,60,0,4,100,0,0,0,39,86]
     }
     else if (study_year == 2018){
         var slider_weights = [13,60,100,65,50,20,65,45,40,30,85]
