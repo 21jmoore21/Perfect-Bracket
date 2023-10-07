@@ -11,6 +11,23 @@
   font-size: 40px;
 }
 
+.bottom_banner {
+  margin-top: -5px;
+  text-align: center;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  color: rgb(126, 126, 126);
+  font-size: 15px;
+  background-color: #333;
+  position: relative;
+  width: 100%;
+  bottom:0px;
+}
+
+.bottom_banner_2 {
+  font-size: 12px;
+}
+
 .mid-right-button {
   position: absolute;
   top: 180px;
