@@ -7,11 +7,11 @@ Once there, you will see an empty bracket waiting for you to create the perfect 
 You can either manually adjust all of the weights on the left side of the website or use one of the preset weight combinations 
 found at the top. Simple as that, you have created a bracket for this years tournament!
 
-The current presets that we have are ML Algorithm, 3pt Heavy, Strong Def, Low TOV and Perfect. 
+The current presets that we have are ML Algorithm, 3pt Heavy, Random and Perfect. 
 All of these presets are from an artificial intelligence model (this is not true right now). The ML Algorithm is focused
 on getting the best results for the previous years overall. If you believe three's win games, the 3pt Heavy preset is for you, 
-this is a preset that is focused on having a high weight placed on three's. Strong Def is from a model designed to give high 
-priority to defense. The Perfect preset is a preset we create after the tournament is finished and find a combination of weights 
+this is a preset that is focused on having a high weight placed on three's. Random will give you a random set of weights. 
+The Perfect preset is a preset we create after the tournament is finished and find a combination of weights 
 that would have predicted the perfect bracket for tournament in the year you are currently looking at. 
 Obviously, the perfect preset doesn't work for the upcoming tournament, your job is to find that combination!
 
