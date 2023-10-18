@@ -20,7 +20,7 @@
     </div>
     <main class="row" style="padding-top:45px;">
         <div class="column_one" style="background-color: #ddd;">
-            <h2 style="color:#333">How important?</h2>
+            <h2 style="color:#333">Weights:</h2>
             <div>
             <input type="checkbox" class="checkbox" id="checkbox1" onclick="toggleLabel('checkbox1', 'label1','slider1','slider_1_value');" checked><label for="checkbox1"></label>
             <span id="label1"><div class="tooltip">3pt%: <span class="tooltiptext">Three Point Percentage</span></div> <input min="0" max="100" value="50" type="number" onchange="slider1_val(this.value);" id="slider_1_value" class="num_input"></input></span>
@@ -104,9 +104,9 @@
         </div>
         <div class="column_two" style="background-color: white;">
             <div class="give_me_space"></div>
-            <button onclick="ML_settings() ; find_winner()" class="ML_button" style="margin-left:1.5%">ML Algorithm</button>
+            <button onclick="ML_settings() ; find_winner()" class="ML_button" style="margin-left:1.5%">AI Prediction</button>
             <button onclick="three_pt_settings() ; find_winner()" class="ML_button">3pt Heavy</button>
-            <button onclick="strong_def_settings() ; find_winner()" class="ML_button">Strong Def</button>
+            <button onclick="random_settings() ; find_winner()" class="ML_button">Random</button>
             <span id="perfect_button"></span>
             <div class="dropdown" style="float: right;">
                 <button class="dropbtn"><span id="yearofstudy">Year</span></button>

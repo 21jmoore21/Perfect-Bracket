@@ -20,8 +20,8 @@ function three_pt_settings() {
     }
 }
 
-function strong_def_settings() {
-    const slider_weights = [25,25,40,92,33,20,25,35,60,85,30]
+function random_settings() {
+    const slider_weights = Array(11).fill(null).map((u, i) => Math.floor(Math.random()*101))
     for (let j = 0, len = 11; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
