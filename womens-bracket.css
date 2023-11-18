@@ -271,8 +271,8 @@ input[type=number] {
 	top:1px;
 }
 
-.row:after {
-    display: table;
+.row {
+    display: flex;
     clear: both;
 }
 .give_me_space {
@@ -285,16 +285,16 @@ input[type=number] {
     text-align: center;
 }
 .column_one {
+  display: table-cell;
   float: left;
   width: 10vw;
   padding: 1vw;
-  min-height: 1010px;
 }
 .column_two {
+  display: table-cell;
   float: left;
   width: 88vw;
   padding: 0px;
-  min-height: 1010px;
   }
 .slider-label {
     display: inline-block;
