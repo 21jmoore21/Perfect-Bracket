@@ -3,7 +3,7 @@ function load_weights(){
     input.click();
   }
 
-function previewFile() {
+function previewFile(myCallback) {
     const preview = document.getElementById("file_content");
     const fileInput = document.getElementById("readfile");
 
@@ -26,8 +26,10 @@ function previewFile() {
                 document.getElementById("slider"+id).value = array[j+1][1];
                 document.getElementById("slider_" + id + "_value").value = array[j+1][1];
             }
+            myCallback();
         })
     })
+
   }
 
 function save_weights() {
