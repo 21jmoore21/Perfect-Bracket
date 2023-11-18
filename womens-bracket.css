@@ -288,13 +288,15 @@ input[type=number] {
   display: table-cell;
   float: left;
   width: 10vw;
-  padding: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 .column_two {
   display: table-cell;
   float: left;
   width: 88vw;
-  padding: 0px;
+  padding-left: 0vw;
+  padding-right: 0vw;
   }
 .slider-label {
     display: inline-block;

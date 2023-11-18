@@ -287,12 +287,13 @@ input[type=number] {
 .column_one {
   float: left;
   width: 10vw;
-  padding: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 .column_two {
     float: left;
     width: 88vw;
-    padding: 0px;
+    padding-right: 0vw;
   }
 .slider-label {
     display: inline-block;
