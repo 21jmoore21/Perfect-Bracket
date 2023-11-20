@@ -100,8 +100,16 @@ function save_weights() {
     else {
         content_11 = 0 + '\r\n';
     }
-    var content = ["Womens Perfect Bracket Weights\r\n" + "3pt%: " + content_1 + "FT%: " + content_2 + "TOV: " + content_3 + "Opp TOV: " + content_4 + "PTS: " + content_5 
-    + "Seed: " + content_6 + "MOV: " + content_7 + "eFG%: " + content_8 + "TRB: " + content_9 + "Opp 3pt%: " + content_10 + "AST: " + content_11 + "https://www.perfect-bracket.com/womens-bracket.html"];
+    var year = document.getElementById("yearofstudy").innerHTML;
+    if (year == 'Year') {
+        var score = '';
+    }
+    else {
+        var points = document.getElementById("bracket_score").innerHTML;
+        var score = "This Bracket Would Have Scored " + points + " Points In " + year + "\r\n";
+    }
+    var content = ["Women's Perfect Bracket Weights\r\n" + "3pt%: " + content_1 + "FT%: " + content_2 + "TOV: " + content_3 + "Opp TOV: " + content_4 + "PTS: " + content_5 
+    + "Seed: " + content_6 + "MOV: " + content_7 + "eFG%: " + content_8 + "TRB: " + content_9 + "Opp 3pt%: " + content_10 + "AST: " + content_11 + score + "https://www.perfect-bracket.com/womens-bracket.html"];
     const file = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(file);
     link.download = "Womens_Perfect_Bracket_Weights.txt";
