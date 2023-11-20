@@ -15,7 +15,7 @@ function previewFile(myCallback) {
         fr.addEventListener('load', () => {
             const txt = fr.result;
 
-            const array = txt.split('\n').map((line) => {
+            const array = txt.split('\r\n').map((line) => {
                 return line.split(': ');
             })
 
@@ -36,67 +36,67 @@ function save_weights() {
     var content_1, content_2, content_3, content_4, content_5, content_6, content_7, content_8, content_9, content_10, content_11
     const link = document.createElement("a");
     if (document.getElementById("checkbox1").checked == true) {
-        content_1 = document.getElementById("slider1").value + '\n';
+        content_1 = document.getElementById("slider1").value + '\r\n';
     }
     else {
         content_1 = 0 + '\n';
     }
     if (document.getElementById("checkbox2").checked == true) {
-        content_2 = document.getElementById("slider2").value + '\n';
+        content_2 = document.getElementById("slider2").value + '\r\n';
     }
     else {
         content_2 = 0 + '\n';
     }
     if (document.getElementById("checkbox3").checked == true) {
-        content_3 = document.getElementById("slider3").value + '\n';
+        content_3 = document.getElementById("slider3").value + '\r\n';
     }
     else {
         content_3 = 0 + '\n';
     }
     if (document.getElementById("checkbox4").checked == true) {
-        content_4 = document.getElementById("slider4").value + '\n';
+        content_4 = document.getElementById("slider4").value + '\r\n';
     }
     else {
         content_4 = 0 + '\n';
     }
     if (document.getElementById("checkbox5").checked == true) {
-        content_5 = document.getElementById("slider5").value + '\n';
+        content_5 = document.getElementById("slider5").value + '\r\n';
     }
     else {
         content_5 = 0 + '\n';
     }
     if (document.getElementById("checkbox6").checked == true) {
-        content_6 = document.getElementById("slider6").value + '\n';
+        content_6 = document.getElementById("slider6").value + '\r\n';
     }
     else {
         content_6 = 0 + '\n';
     }
     if (document.getElementById("checkbox7").checked == true) {
-        content_7 = document.getElementById("slider7").value + '\n';
+        content_7 = document.getElementById("slider7").value + '\r\n';
     }
     else {
         content_7 = 0 + '\n';
     }
     if (document.getElementById("checkbox8").checked == true) {
-        content_8 = document.getElementById("slider8").value + '\n';
+        content_8 = document.getElementById("slider8").value + '\r\n';
     }
     else {
         content_8 = 0 + '\n';
     }
     if (document.getElementById("checkbox9").checked == true) {
-        content_9 = document.getElementById("slider9").value + '\n';
+        content_9 = document.getElementById("slider9").value + '\r\n';
     }
     else {
         content_9 = 0 + '\n';
     }
     if (document.getElementById("checkbox10").checked == true) {
-        content_10 = document.getElementById("slider10").value + '\n';
+        content_10 = document.getElementById("slider10").value + '\r\n';
     }
     else {
         content_10 = 0 + '\n';
     }
     if (document.getElementById("checkbox11").checked == true) {
-        content_11 = document.getElementById("slider11").value + '\n';
+        content_11 = document.getElementById("slider11").value + '\r\n';
     }
     else {
         content_11 = 0 + '\n';
