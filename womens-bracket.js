@@ -38,19 +38,19 @@ function save_weights() {
         content_1 = document.getElementById("slider1").value + '\r\n';
     }
     else {
-        content_1 = 0 + '\n';
+        content_1 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox2").checked == true) {
         content_2 = document.getElementById("slider2").value + '\r\n';
     }
     else {
-        content_2 = 0 + '\n';
+        content_2 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox3").checked == true) {
         content_3 = document.getElementById("slider3").value + '\r\n';
     }
     else {
-        content_3 = 0 + '\n';
+        content_3 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox4").checked == true) {
         content_4 = document.getElementById("slider4").value + '\r\n';
@@ -62,45 +62,45 @@ function save_weights() {
         content_5 = document.getElementById("slider5").value + '\r\n';
     }
     else {
-        content_5 = 0 + '\n';
+        content_5 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox6").checked == true) {
         content_6 = document.getElementById("slider6").value + '\r\n';
     }
     else {
-        content_6 = 0 + '\n';
+        content_6 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox7").checked == true) {
         content_7 = document.getElementById("slider7").value + '\r\n';
     }
     else {
-        content_7 = 0 + '\n';
+        content_7 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox8").checked == true) {
         content_8 = document.getElementById("slider8").value + '\r\n';
     }
     else {
-        content_8 = 0 + '\n';
+        content_8 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox9").checked == true) {
         content_9 = document.getElementById("slider9").value + '\r\n';
     }
     else {
-        content_9 = 0 + '\n';
+        content_9 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox10").checked == true) {
         content_10 = document.getElementById("slider10").value + '\r\n';
     }
     else {
-        content_10 = 0 + '\n';
+        content_10 = 0 + '\r\n';
     }
     if (document.getElementById("checkbox11").checked == true) {
         content_11 = document.getElementById("slider11").value + '\r\n';
     }
     else {
-        content_11 = 0 + '\n';
+        content_11 = 0 + '\r\n';
     }
-    var content = ["Womens Perfect Bracket Weights\n" + "3pt%: " + content_1 + "FT%: " + content_2 + "TOV: " + content_3 + "Opp TOV: " + content_4 + "PTS: " + content_5 
+    var content = ["Womens Perfect Bracket Weights\r\n" + "3pt%: " + content_1 + "FT%: " + content_2 + "TOV: " + content_3 + "Opp TOV: " + content_4 + "PTS: " + content_5 
     + "Seed: " + content_6 + "MOV: " + content_7 + "eFG%: " + content_8 + "TRB: " + content_9 + "Opp 3pt%: " + content_10 + "AST: " + content_11 + "https://www.perfect-bracket.com/womens-bracket.html"];
     const file = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(file);
