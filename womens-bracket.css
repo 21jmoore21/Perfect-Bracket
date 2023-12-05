@@ -287,14 +287,14 @@ input[type=number] {
 .column_one {
   display: table-cell;
   float: left;
-  width: 10vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  width: 11.5vw;
+  padding-left: 0.75vw;
+  padding-right: 0.75vw;
 }
 .column_two {
   display: table-cell;
   float: left;
-  width: 88vw;
+  width: 87vw;
   padding-left: 0vw;
   padding-right: 0vw;
   }
