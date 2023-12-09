@@ -132,12 +132,12 @@ function previewFile(myCallback) {
         var points = document.getElementById("bracket_score").innerHTML;
         var score = "This Bracket Would Have Scored " + points + " Points In " + year + "\r\n";
     }
-    var content = ["Men's Perfect Bracket Weights\r\n" + "Off Rtg: " + content_1 + "Def Rtg: " + content_2 + "eFG%: " + content_3 + "3pt%: " + content_4 + "OReb%: " + content_5 
+    var content = ["Women's Perfect Bracket Weights\r\n" + "Off Rtg: " + content_1 + "Def Rtg: " + content_2 + "eFG%: " + content_3 + "3pt%: " + content_4 + "OReb%: " + content_5 
     + "TOV%: " + content_6 + "FTA%: " + content_7 + "FT%: " + content_8 + "Opp eFG%: " + content_9 + "Opp 3pt%: " + content_10 + "Opp OReb%: " + content_11 
-    + 'Opp TOV%: ' + content_12 + 'Opp FTA%: ' + content_13 + 'Poss: ' + content_14 + 'Seed: ' + content_15 + score + "https://www.perfect-bracket.com/mens-bracket.html"];
+    + 'Opp TOV%: ' + content_12 + 'Opp FTA%: ' + content_13 + 'Poss: ' + content_14 + 'Seed: ' + content_15 + score + "https://www.perfect-bracket.com/womens-bracket.html"];
     const file = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(file);
-    link.download = "Mens_Perfect_Bracket_Weights.txt";
+    link.download = "Womens_Perfect_Bracket_Weights.txt";
     link.click();
     URL.rev
 }
