@@ -19,7 +19,7 @@ function previewFile(myCallback) {
                 return line.split(': ');
             })
 
-            for (let j = 0, len = 11; j < len; j++) {
+            for (let j = 0, len = 15; j < len; j++) {
                 let id = j+1;
                 document.getElementById("checkbox"+id).checked = true;
                 toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
