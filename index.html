@@ -9,13 +9,20 @@
   <body style="background-color: white;" onload="doIt()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./stats.html">Stats</a>
+        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
+        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./stats.html">Stats</a>
+        <div class="left-dropdown">
+          <button style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" class="left-dropbtn">Winner's Matrix</button>
+          <div class="left-dropdown-content">
+            <a href="./mens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00beae';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Men's Matrix</a><br>
+            <a href="./womens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00beae';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Women's Matrix</a>
+          </div>
+      </div>
         <div class="dropdown-nav">
             <button class = "dropbtn-nav">Bracket</button>
             <div class="dropdown-content-nav">
-                <a href="./womens-bracket.html">Women's Bracket</a>
                 <a href="./mens-bracket.html">Men's Bracket</a>
+                <a href="./womens-bracket.html">Women's Bracket</a>
             </div>
         </div>
     </div>
