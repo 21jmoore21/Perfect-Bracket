@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mens-matrix-bracket.css">
+    <script src="mens-matrix-bracket.js"></script>
+    <link rel="icon" type="image/x-icon" href="Icon.png">
+  </head>
+  <title>Men's Perfect Bracket Simulator</title>
+  <body style="background-color: white;" onload="find_winner()">
+    <div class="topnav">
+        <a class="active" href="./index.html">Home</a>
+        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
+        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./stats.html">Stats</a>
+        <div class="left-dropdown">
+          <button style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" class="left-dropbtn">Winner's Matrix</button>
+          <div class="left-dropdown-content">
+            <a href="./mens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00aebe';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Men's Matrix</a><br>
+            <a href="./womens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00aebe';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Women's Matrix</a>
+        </div>
+      </div>
+      <div class="dropdown-nav">
+        <button class = "dropbtn-nav">Bracket</button>
+        <div class="dropdown-content-nav">
+            <a href="./mens-bracket.html">Men's Bracket</a>
+            <a href="./womens-bracket.html">Women's Bracket</a>
+        </div>
+    </div>
+    </div>
+    <main class="row" style="padding-top:45px;">
+        <div class="column_two" style="background-color: white;">
+            <div class="give_me_space"></div>
+            <a href="./mens-matrix-table.html" class="selection_button">Table Mode</a>
+            <a class="selection_button_break">|</a>
+            <a href="./mens-matrix-bracket.html" class="selection_button">Bracket Mode</a>
+            <div class="dropdown" style="float: right;">
+                <button class="dropbtn"><span id="yearofstudy">Year</span></button>
+                <div class="dropdown-content">
+                  <button onclick="change_year(2024) ; find_winner()" class="dropdownButton">2024</button>
+                  <button onclick="change_year(2023) ; find_winner()" class="dropdownButton">2023</button>
+                  <button onclick="change_year(2022) ; find_winner()" class="dropdownButton">2022</button>
+                  <button onclick="change_year(2021) ; find_winner()" class="dropdownButton">2021</button>
+                </div>
+              </div>
+            <div>
+                <p class="heading">Men's Winner's Matrix</p>
+            </div>
+            <section style="clear:both;">
+                <div class='tournament'>
+                <ul class='round seed'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>1</span>
+                    <span id="team_0"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span id="team_1"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>8</span>
+                    <span id="team_2"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>9</span>
+                    <span id="team_3"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>5</span>
+                    <span id="team_4"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>12</span>
+                    <span id="team_5"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>4</span>
+                    <span id="team_6"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>13</span>
+                    <span id="team_7"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>6</span>
+                    <span id="team_8"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span id="team_9"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>3</span>
+                    <span id="team_10"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>14</span>
+                    <span id="team_11"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>7</span>
+                    <span id="team_12"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>10</span>
+                    <span id="team_13"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>2</span>
+                    <span id="team_14"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>15</span>
+                    <span id="team_15"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>1</span>
+                    <span id="team_16"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span id="team_17"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>8</span>
+                    <span id="team_18"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>9</span>
+                    <span id="team_19"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>5</span>
+                    <span id="team_20"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>12</span>
+                    <span id="team_21"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>4</span>
+                    <span id="team_22"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>13</span>
+                    <span id="team_23"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>6</span>
+                    <span id="team_24"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span id="team_25"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>3</span>
+                    <span id="team_26"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>14</span>
+                    <span id="team_27"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>7</span>
+                    <span id="team_28"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>10</span>
+                    <span id="team_29"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top'>
+                    <span>2</span>
+                    <span id="team_30"></span>
+                    </li>
+                    <li class='game-left-first spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom'>
+                    <span>15</span>
+                    <span id="team_31"></span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-1'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_64"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_65"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_66"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_67"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_68"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_69"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_70"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_71"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_72"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_73"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_74"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_75"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_76"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_77"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_78"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_79"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-2'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_96"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_97"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_98"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_99"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_100"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_101"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_102"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_103"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-3'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_112"></li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left region region-left' id='region_1'></li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left game-bottom' id="team_113"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_114"></li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left region region-left' id="region_2"></li>
+                    <li class='game-left-half spacer'></li>
+                    <li class='game-left game-bottom' id="team_115"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-4'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_120"></li>
+                    <li class='game-left spacer'>&nbsp;</li>
+                    <li class='game-left game-bottom' id="team_121"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round semi-final'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-left game-top' id="team_124"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round finals'>
+                    <li class='bracket_score_text'><span id="bracket_score_text"></span><span class="bracket_score" id="bracket_score"></span> <span id="bracket_score_text_two"></span></li>
+                    <li id="bracket_score"></li>
+                    <li class='national_champ'>National Champion</li>
+                    <li class='game final' id="team_126"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round semi-final'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_125"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-4'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_122"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_123"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-3'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_116"></li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right region region-right' id="region_3"></li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right game-bottom' id="team_117"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_118"></li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right region region-right' id="region_4"></li>
+                    <li class='game-right-half spacer'></li>
+                    <li class='game-right game-bottom' id="team_119"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-2'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_104"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_105"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_106"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_107"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_108"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_109"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_110"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_111"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round round-1'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_80"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_81"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_82"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_83"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_84"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_85"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_86"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_87"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_88"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_89"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_90"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_91"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_92"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_93"></li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top' id="team_94"></li>
+                    <li class='game-right spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom' id="team_95"></li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                <ul class='round seed'>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_32"></span>
+                    <span>1</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_33"></span>
+                    <span>16</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_34"></span>
+                    <span>8</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_35"></span>
+                    <span>9</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_36"></span>
+                    <span>5</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_37"></span>
+                    <span>12</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_38"></span>
+                    <span>4</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_39"></span>
+                    <span>13</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_40"></span>
+                    <span>6</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_41"></span>
+                    <span>11</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_42"></span>
+                    <span>3</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_43"></span>
+                    <span>14</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_44"></span>
+                    <span>7</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_45"></span>
+                    <span>10</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_46"></span>
+                    <span>2</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_47"></span>
+                    <span>15</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_48"></span>
+                    <span>1</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_49"></span>
+                    <span>16</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_50"></span>
+                    <span>8</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_51"></span>
+                    <span>9</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_52"></span>
+                    <span>5</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_53"></span>
+                    <span>12</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_54"></span>
+                    <span>4</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_55"></span>
+                    <span>13</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_56"></span>
+                    <span>6</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_57"></span>
+                    <span>11</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_58"></span>
+                    <span>3</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_59"></span>
+                    <span>14</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_60"></span>
+                    <span>7</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_61"></span>
+                    <span>10</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                    <li class='game-right game-top'>
+                    <span id="team_62"></span>
+                    <span>2</span>
+                    </li>
+                    <li class='game-right-first spacer'>&nbsp;</li>
+                    <li class='game-right game-bottom'>
+                    <span id="team_63"></span>
+                    <span>15</span>
+                    </li>
+                    <li class='spacer'>&nbsp;</li>
+                </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="bottom_banner">
+        <p>“Perfection is not attainable, but if we chase perfection we can catch excellence” - Vince Lombardi<p></p><a class="bottom_banner_2">Questions? Contact: perfectbracketsim@gmail.com</a></p>
+      </div>
+  </body>
+</html>
