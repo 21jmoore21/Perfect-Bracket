@@ -437,6 +437,8 @@ function find_winner(){
         document.getElementById("region_2").innerHTML = "East";
         document.getElementById("region_3").innerHTML = "Midwest";
         document.getElementById("region_4").innerHTML = "West";
+        document.getElementById("bracket_score_text").innerHTML = ""
+        document.getElementById("bracket_score_text_two").innerHTML = ""
         var team_stats = [{name:"Alabama",per:'-'}, 
         {name:"T AM CC",per:'-'}, 
         {name:"MD",per:'-'}, 
