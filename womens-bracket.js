@@ -75,6 +75,18 @@ function populate_teams(){
     }
 }
 
+function limit_input(val) {
+    let input = val //document.getElementById(val);
+    let n = input.value;
+    n = Number(n);
+    if (n < -100) {
+        input.value = -100;
+    } 
+    else if (n > 100) {
+        input.value = 100;
+    }
+}
+
 function load_weights(){
     var input = document.getElementById('readfile');
     input.click();
