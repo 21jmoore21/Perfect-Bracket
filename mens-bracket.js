@@ -244,7 +244,7 @@ function ML_settings() {
 }
 
 function three_pt_settings() {
-    const slider_weights = [100,75,30,30,80,10,50,50,25,25,25,30,40,16,85]
+    const slider_weights = [80,-10,50,100,30,20,10,50,-20,0,5,25,0,10,30]
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
