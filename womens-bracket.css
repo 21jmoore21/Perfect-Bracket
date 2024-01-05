@@ -92,7 +92,7 @@ main {
 .num_input {
   background-color: transparent;
   border-color: transparent;
-  max-width: 27px;
+  max-width: 32px;
   font: 16px/20px 'Open Sans', Arial, sans-serif;
   color: black;
   -webkit-user-select: none;
