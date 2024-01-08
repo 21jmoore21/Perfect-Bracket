@@ -232,7 +232,7 @@ function previewFile(myCallback) {
 }
 
 function ML_settings() {
-    const slider_weights = [15,30,60,42,98,0,77,21,82,50,44,30,40,15,85]
+    const slider_weights = [23, 89, 79, 4, 61, 52, 7, 19, 84, 2, 6, 81, 90, 25, 47]
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
@@ -268,13 +268,13 @@ function perfect_settings() {
     let study_year = document.getElementById("yearofstudy").innerHTML;
     let current_year = 2024;
     if (study_year == 2023){
-        var slider_weights = [50,60,100,65,50,20,45,30,40,30,85,30,40,17,85]
+        var slider_weights = [-18, -13, 23, -3, 14, 13, 4, 4, 2, 3, 6, 14, 2, -3, 3]
     }
     else if (study_year == 2022){
-        var slider_weights = [78,60,100,65,50,20,45,30,40,30,85,30,40,18,85]
+        var slider_weights = [10, -5, -8, -1, -3, -6, -2, -3, 4, 1, 3, 4, 2, -1, 3]
     }
     else if (study_year == 2021){
-        var slider_weights = [62,60,100,65,50,20,45,30,40,30,85,30,40,19,85]
+        var slider_weights = [21, -27, -12, -4, -11, -9, -4, -6, 19, 2, 4, 14, 2, -2, 9]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
