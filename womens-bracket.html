@@ -29,105 +29,105 @@
         <div class="column_one" style="background-color: #ddd;">
             <h2 style="color:#333">Weights:</h2>
             <div>
-                <input type="checkbox" class="checkbox" id="checkbox1" onclick="toggleLabel('checkbox1', 'label1','slider1','slider_1_value');" checked><label for="checkbox1"></label>
+                <input type="checkbox" class="checkbox" id="checkbox1" onclick="toggleLabel('checkbox1', 'label1','slider1','slider_1_value');find_winner();" checked><label for="checkbox1"></label>
                 <span id="label1"><div class="tooltip">Off Rtg: <span class="tooltiptext">Offensive Rating</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider1_val(this.value);find_winner()" id="slider_1_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider1" onchange="slider_1_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox2" onclick="toggleLabel('checkbox2', 'label2','slider2','slider_2_value');" checked><label for="checkbox2"></label>
+                <input type="checkbox" class="checkbox" id="checkbox2" onclick="toggleLabel('checkbox2', 'label2','slider2','slider_2_value');find_winner();" checked><label for="checkbox2"></label>
                 <span id="label2"><div class="tooltip">Def Rtg:<span class="tooltiptext">Defensive Rating</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider2_val(this.value);find_winner()" id="slider_2_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider2" onchange="slider_2_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
                     
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox3" onclick="toggleLabel('checkbox3', 'label3','slider3','slider_3_value');" checked><label for="checkbox3"></label>
+                <input type="checkbox" class="checkbox" id="checkbox3" onclick="toggleLabel('checkbox3', 'label3','slider3','slider_3_value');find_winner();" checked><label for="checkbox3"></label>
                 <span id="label3"><div class="tooltip">eFG%:<span class="tooltiptext">Effective Field Goal Percentage</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider3_val(this.value);find_winner()" id="slider_3_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider3" onchange="slider_3_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox4" onclick="toggleLabel('checkbox4', 'label4','slider4','slider_4_value');" checked><label for="checkbox4"></label>
+                <input type="checkbox" class="checkbox" id="checkbox4" onclick="toggleLabel('checkbox4', 'label4','slider4','slider_4_value');find_winner();" checked><label for="checkbox4"></label>
                 <span id="label4"><div class="tooltip">3pt%:<span class="tooltiptext">Three Point Percentage</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider4_val(this.value);find_winner()" id="slider_4_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider4" onchange="slider_4_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox5" onclick="toggleLabel('checkbox5', 'label5','slider5','slider_5_value');" checked><label for="checkbox5"></label>
+                <input type="checkbox" class="checkbox" id="checkbox5" onclick="toggleLabel('checkbox5', 'label5','slider5','slider_5_value');find_winner();" checked><label for="checkbox5"></label>
                 <span id="label5"><div class="tooltip">OReb%:<span class="tooltiptext">Offensive Rebounding Percentage</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider5_val(this.value);find_winner()" id="slider_5_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider5" onchange="slider_5_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox6" onclick="toggleLabel('checkbox6', 'label6','slider6','slider_6_value');" checked><label for="checkbox6"></label>
+                <input type="checkbox" class="checkbox" id="checkbox6" onclick="toggleLabel('checkbox6', 'label6','slider6','slider_6_value');find_winner();" checked><label for="checkbox6"></label>
                 <span id="label6"><div class="tooltip">TOV%:<span class="tooltiptext">Turnover Percentage</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider6_val(this.value);find_winner()" id="slider_6_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider6" onchange="slider_6_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox7" onclick="toggleLabel('checkbox7', 'label7','slider7','slider_7_value');" checked><label for="checkbox7"></label>
+                <input type="checkbox" class="checkbox" id="checkbox7" onclick="toggleLabel('checkbox7', 'label7','slider7','slider_7_value');find_winner();" checked><label for="checkbox7"></label>
                 <span id="label7"><div class="tooltip">FTA%:<span class="tooltiptext">Free Throw Attempt Rate</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider7_val(this.value);find_winner()" id="slider_7_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider7" onchange="slider_7_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox8" onclick="toggleLabel('checkbox8', 'label8','slider8','slider_8_value');" checked><label for="checkbox8"></label>
+                <input type="checkbox" class="checkbox" id="checkbox8" onclick="toggleLabel('checkbox8', 'label8','slider8','slider_8_value');find_winner();" checked><label for="checkbox8"></label>
                 <span id="label8"><div class="tooltip">FT%:<span class="tooltiptext">Free Throw Percentage</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider8_val(this.value);find_winner()" id="slider_8_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider8" onchange="slider_8_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox9" onclick="toggleLabel('checkbox9', 'label9','slider9','slider_9_value');" checked><label for="checkbox9"></label>
+                <input type="checkbox" class="checkbox" id="checkbox9" onclick="toggleLabel('checkbox9', 'label9','slider9','slider_9_value');find_winner();" checked><label for="checkbox9"></label>
                 <span id="label9"><div class="tooltip">Opp eFG%:<span class="tooltiptext">Opponent Effective Field Goal Percentage</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider9_val(this.value);find_winner()" id="slider_9_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider9" onchange="slider_9_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
                     
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox10" onclick="toggleLabel('checkbox10', 'label10','slider10','slider_10_value');" checked><label for="checkbox10"></label>
+                <input type="checkbox" class="checkbox" id="checkbox10" onclick="toggleLabel('checkbox10', 'label10','slider10','slider_10_value');find_winner();" checked><label for="checkbox10"></label>
                 <span id="label10"><div class="tooltip">Opp 3pt%:<span class="tooltiptext">Opponent Three Point Percentage</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider10_val(this.value);find_winner()" id="slider_10_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider10" onchange="slider_10_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
         
                 <div>
-                <input type="checkbox" class="checkbox" id="checkbox11" onclick="toggleLabel('checkbox11', 'label11','slider11','slider_11_value');" checked><label for="checkbox11"></label>
+                <input type="checkbox" class="checkbox" id="checkbox11" onclick="toggleLabel('checkbox11', 'label11','slider11','slider_11_value');find_winner();" checked><label for="checkbox11"></label>
                 <span id="label11"><div class="tooltip">Opp OReb%:<span class="tooltiptext">Opponent Offensive Rebounding Percentage</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider11_val(this.value);find_winner()" id="slider_11_value" class="num_input"></input></span>
                 <input type="range" min="-100" max="100" value="0" class="slider" id="slider11" onchange="slider_11_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
     
                 <div>
-                    <input type="checkbox" class="checkbox" id="checkbox12" onclick="toggleLabel('checkbox12', 'label12','slider12','slider_12_value');" checked><label for="checkbox12"></label>
+                    <input type="checkbox" class="checkbox" id="checkbox12" onclick="toggleLabel('checkbox12', 'label12','slider12','slider_12_value');find_winner();" checked><label for="checkbox12"></label>
                     <span id="label12"><div class="tooltip">Opp TOV%:<span class="tooltiptext">Opponent Turnover Percentage</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider12_val(this.value);find_winner()" id="slider_12_value" class="num_input"></input></span>
                     <input type="range" min="-100" max="100" value="0" class="slider" id="slider12" onchange="slider_12_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
     
                 <div>
-                    <input type="checkbox" class="checkbox" id="checkbox13" onclick="toggleLabel('checkbox13', 'label13','slider13','slider_13_value');" checked><label for="checkbox13"></label>
+                    <input type="checkbox" class="checkbox" id="checkbox13" onclick="toggleLabel('checkbox13', 'label13','slider13','slider_13_value');find_winner();" checked><label for="checkbox13"></label>
                     <span id="label13"><div class="tooltip">Opp FTA%:<span class="tooltiptext">Opponent Free Throw Attempt Rate</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider13_val(this.value);find_winner()" id="slider_13_value" class="num_input"></input></span>
                     <input type="range" min="-100" max="100" value="0" class="slider" id="slider13" onchange="slider_13_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
     
                 <div>
-                    <input type="checkbox" class="checkbox" id="checkbox14" onclick="toggleLabel('checkbox14', 'label14','slider14','slider_14_value');" checked><label for="checkbox14"></label>
+                    <input type="checkbox" class="checkbox" id="checkbox14" onclick="toggleLabel('checkbox14', 'label14','slider14','slider_14_value');find_winner();" checked><label for="checkbox14"></label>
                     <span id="label14"><div class="tooltip">Poss:<span class="tooltiptext">Possessions Per Game</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider14_val(this.value);find_winner()" id="slider_14_value" class="num_input"></input></span>
                     <input type="range" min="-100" max="100" value="0" class="slider" id="slider14" onchange="slider_14_val(this.value);find_winner()">
                 </div>
                 <div class="give_me_space"></div>
     
                 <div>
-                    <input type="checkbox" class="checkbox" id="checkbox15" onclick="toggleLabel('checkbox15', 'label15','slider15','slider_15_value');" checked><label for="checkbox15"></label>
+                    <input type="checkbox" class="checkbox" id="checkbox15" onclick="toggleLabel('checkbox15', 'label15','slider15','slider_15_value');find_winner();" checked><label for="checkbox15"></label>
                     <span id="label15"><div class="tooltip">Seed:<span class="tooltiptext">Seed In March Madness</span></div><input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider15_val(this.value);find_winner()" id="slider_15_value" class="num_input"></input></span>
                     <input type="range" min="-100" max="100" value="0" class="slider" id="slider15" onchange="slider_15_val(this.value);find_winner()">
                 </div>
