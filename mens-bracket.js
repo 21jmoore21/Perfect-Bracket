@@ -233,7 +233,7 @@ function save_weights() {
 }
 
 function ML_settings() {
-    const slider_weights = [-2, -39, 60, 85, 46, -48, -21, 65, 15, 71, -70, 57, -8, -63, 96]
+    const slider_weights = [85, -23, 9, 78, -14, -9, -66, 11, 2, 92, -79, -8, -71, 25, 59]
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
