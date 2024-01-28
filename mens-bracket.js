@@ -269,10 +269,10 @@ function perfect_settings() {
     let study_year = document.getElementById("yearofstudy").innerHTML;
     let current_year = 2024;
     if (study_year == 2023){
-        var slider_weights = [40, -30, 69, 30, -22, -80, -100, 65, -20, 48, 61, 75, -13, -28, 95]
+        var slider_weights = [5, 9, -7, 10, -27, 0, -12, 80, -36, 83, 78, -1, -47, 8, 50]
     }
     else if (study_year == 2022){
-        var slider_weights = [89, -100, -70, -70, -100, -19, 32, -58, 44, 96, -93, 64, 73, 22, 99]
+        var slider_weights = [-75, -24, -72, 95, 61, 35, 27, -1, -84, 96, -13, -41, 83, 93, 94]
     }
     else if (study_year == 2021){
         var slider_weights = [92, 75, 14, 48, 27, 32, -61, 41, 68, -32, -87, 55, 98, 81, 76]
