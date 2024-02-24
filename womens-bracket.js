@@ -274,7 +274,7 @@ function perfect_settings() {
         var slider_weights = [83, -94, 19, -8, 69, -83, -29, -87, 35, 13, 89, 84, 29, -33, 78]
     }
     else if (study_year == 2021){
-        var slider_weights = [-93, 75, 47, -11, 5, 70, -94, -35, 30, -10, 2, 4, -42, 30, 95]
+        var slider_weights = [-92, -59, 56, -9, -3, 55, -45, -66, 85, 6, 6, 15, -8, 26, 96]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
