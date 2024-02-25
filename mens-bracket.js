@@ -269,7 +269,7 @@ function perfect_settings() {
     let study_year = document.getElementById("yearofstudy").innerHTML;
     let current_year = 2024;
     if (study_year == 2023){
-        var slider_weights = [1, -33, -89, 32, 46, -34, -100, 81, -67, 86, 93, 49, 3, 74, 99]
+        var slider_weights = [66, -13, -97, 57, -1, -85, -80, 56, -42, 83, 84, 62, 34, 53, 96]
     }
     else if (study_year == 2022){
         var slider_weights = [-100, -4, -11, 95, 42, -11, -9, 51, -74, 99, -5, -33, 97, 57, 96]
