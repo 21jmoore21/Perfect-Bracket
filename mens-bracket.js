@@ -272,7 +272,7 @@ function perfect_settings() {
         var slider_weights = [66, -13, -97, 57, -1, -85, -80, 56, -42, 83, 84, 62, 34, 53, 96]
     }
     else if (study_year == 2022){
-        var slider_weights = [-100, -4, -11, 95, 42, -11, -9, 51, -74, 99, -5, -33, 97, 57, 96]
+        var slider_weights = [20, -21, -76, 19, 2, -62, 0, 36, -66, 96, 12, -28, 64, 56, 87]
     }
     else if (study_year == 2021){
         var slider_weights = [94, 79, 68, 92, 69, 44, 60, -100, -55, 78, -35, -27, 55, -80, 6]
