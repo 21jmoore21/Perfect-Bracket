@@ -45,16 +45,16 @@
                 <p class="heading">Women's Winner's Matrix</p>
             </div>
             <div class="give_me_space"></div>
-            <table class="table_style">
+            <table class="table_style" id="winner_matrix">
                 <tr style="background-color: #333;color: white;">
-                  <th style="width:34%">Team</th>
-                  <th style="width:11%;text-align: center;">Round of 32</th>
-                  <th style="width:11%;text-align: center;">Sweet Sixteen</th>
-                  <th style="width:11%;text-align: center;">Elite Eight</th>
-                  <th style="width:11%;text-align: center;">Final Four</th>
-                  <th style="width:11%;text-align: center;">Championship</th>
-                  <th style="width:11%;text-align: center;">Champions</th>
-                </tr>
+                    <th style="width:34%" onclick="sortTable_name(0)">Team</th>
+                    <th style="width:11%;text-align: center;" onclick="sortTable(1)">Round of 32</th>
+                    <th style="width:11%;text-align: center;" onclick="sortTable(2)">Sweet Sixteen</th>
+                    <th style="width:11%;text-align: center;" onclick="sortTable(3)">Elite Eight</th>
+                    <th style="width:11%;text-align: center;" onclick="sortTable(4)">Final Four</th>
+                    <th style="width:11%;text-align: center;" onclick="sortTable(5)">Championship</th>
+                    <th style="width:11%;text-align: center;" onclick="sortTable(6)">Champions</th>
+                  </tr>
                 <tr>
                     <td id="team0"></td>
                     <td id="team0_r32" style="text-align: center;"></td>
