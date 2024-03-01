@@ -322,11 +322,11 @@ function sortTable(n) {
         /* Get the two elements you want to compare,
         one from current row and one from the next: */
         x = rows[i].getElementsByTagName("TD")[n];
-        x = x.innerHTML
-        x = x.slice(0, -1)
+        x = x.innerHTML;
+        x = x.slice(0, -1);
         y = rows[i + 1].getElementsByTagName("TD")[n];
-        y = y.innerHTML
-        y = y.slice(0, -1)
+        y = y.innerHTML;
+        y = y.slice(0, -1);
         /* Check if the two rows should switch place,
         based on the direction, asc or desc: */
         if (dir == "asc") {
@@ -414,3 +414,88 @@ function sortTable_name(n) {
       }
     }
   }
+
+function show_results() {
+  var table, rows = 0;
+  table = document.getElementById("winner_matrix");
+  rows = table.rows;
+  let current_year = 2024;
+  var study_year = document.getElementById("yearofstudy").innerHTML;
+  if (study_year == 2023){
+    var round_32 = ['Alabama Crimson Tide', 'Maryland Terrapins', 'San Diego State Aztecs', 'Furman Paladins', 'Creighton Bluejays', 'Baylor Bears', 'Missouri Tigers', 'Princeton Tigers', 'Fairleigh Dickinson Knights', 'Florida Atlantic Owls', 'Duke Blue Devils', 'Tennessee Volunteers', 'Kentucky Wildcats', 'Kansas State Wildcats', 'Michigan State Spartans', 'Marquette Golden Eagles','Houston Cougars', 'Auburn Tigers', 'Miami Hurricanes', 'Indiana Hoosiers', 'Pittsburgh Panthers', 'Xavier Musketeers', 'Penn State Nittany Lions', 'Texas Longhorns', 'Kansas Jayhawks', 'Arkansas Razorbacks', "Saint Mary's Gaels", 'UConn Huskies', 'TCU Horned Frogs', 'Gonzaga Bulldogs', 'Northwestern Wildcats', 'UCLA Bruins'];
+    var round_16 = ['Alabama Crimson Tide', 'San Diego State Aztecs', 'Creighton Bluejays', 'Princeton Tigers', 'Florida Atlantic Owls', 'Tennessee Volunteers', 'Kansas State Wildcats', 'Michigan State Spartans', 'Houston Cougars', 'Miami Hurricanes', 'Xavier Musketeers', 'Texas Longhorns', 'Arkansas Razorbacks', 'UConn Huskies', 'Gonzaga Bulldogs', 'UCLA Bruins'];
+    var round_8 = ['San Diego State Aztecs', 'Creighton Bluejays', 'Florida Atlantic Owls', 'Kansas State Wildcats', 'Miami Hurricanes', 'Texas Longhorns', 'UConn Huskies', 'Gonzaga Bulldogs'];
+    var round_4 = ['San Diego State Aztecs', 'Florida Atlantic Owls', 'Miami Hurricanes', 'UConn Huskies'];
+    var round_2 = ['San Diego State Aztecs', 'UConn Huskies'];
+    var round_1 = ['UConn Huskies'];
+  }
+  else if (study_year == 2022){
+    var round_32 = ['Gonzaga Bulldogs', 'Memphis Tigers', 'New Mexico State Aggies', 'Arkansas Razorbacks', 'Notre Dame Fighting Irish', 'Texas Tech Red Raiders', 'Michigan State Spartans', 'Duke Blue Devils', 'Baylor Bears', 'North Carolina Tar Heels', "Saint Mary's Gaels", 'UCLA Bruins', 'Texas Longhorns', 'Purdue Boilermakers', 'Murray State Racers', "Saint Peter's Peacocks", 'Arizona Wildcats', 'TCU Horned Frogs', 'Houston Cougars', 'Illinois Fighting Illini', 'Michigan Wolverines', 'Tennessee Volunteers', 'Ohio State Buckeyes', 'Villanova Wildcats', 'Kansas Jayhawks', 'Creighton Bluejays', 'Richmond Spiders', 'Providence Friars', 'Iowa State Cyclones', 'Wisconsin Badgers', 'Miami Hurricanes', 'Auburn Tigers'];
+    var round_16 = ['Gonzaga Bulldogs', 'Arkansas Razorbacks', 'Texas Tech Red Raiders', 'Duke Blue Devils', 'North Carolina Tar Heels', 'UCLA Bruins', 'Purdue Boilermakers', "Saint Peter's Peacocks", 'Arizona Wildcats', 'Houston Cougars', 'Michigan Wolverines', 'Villanova Wildcats', 'Kansas Jayhawks', 'Providence Friars', 'Iowa State Cyclones', 'Miami Hurricanes'];
+    var round_8 = ['Arkansas Razorbacks', 'Duke Blue Devils', 'North Carolina Tar Heels', "Saint Peter's Peacocks", 'Houston Cougars', 'Villanova Wildcats', 'Kansas Jayhawks', 'Miami Hurricanes'];
+    var round_4 = ['Duke Blue Devils', 'North Carolina Tar Heels', 'Villanova Wildcats', 'Kansas Jayhawks'];
+    var round_2 = ['North Carolina Tar Heels', 'Kansas Jayhawks'];
+    var round_1 = ['Kansas Jayhawks'];
+  }
+  else if (study_year == 2021){
+    var round_32 = ['Gonzaga Bulldogs', 'Oklahoma Sooners', 'Creighton Bluejays', 'Ohio Bobcats', 'USC Trojans', 'Kansas Jayhawks', 'Oregon Ducks', 'Iowa Hawkeyes', 'Michigan Wolverines', 'LSU Tigers', 'Colorado Buffaloes', 'Florida State Seminoles', 'UCLA Bruins', 'Abilene Christian Wildcats', 'Maryland Terrapins', 'Alabama Crimson Tide', 'Baylor Bears', 'Wisconsin Badgers', 'Villanova Wildcats', 'North Texas Mean Green', 'Texas Tech Red Raiders', 'Arkansas Razorbacks', 'Florida Gators', 'Oral Roberts Golden Eagles', 'Illinois Fighting Illini', 'Loyola Chicago Ramblers', 'Oregon State Beavers', 'Oklahoma State Cowboys', 'Syracuse Orange', 'West Virginia Mountaineers', 'Rutgers Scarlet Knights', 'Houston Cougars'];
+    var round_16 = ['Gonzaga Bulldogs', 'Creighton Bluejays', 'USC Trojans', 'Oregon Ducks', 'Michigan Wolverines', 'Florida State Seminoles', 'UCLA Bruins', 'Alabama Crimson Tide', 'Baylor Bears', 'Villanova Wildcats', 'Arkansas Razorbacks', 'Oral Roberts Golden Eagles', 'Loyola Chicago Ramblers', 'Oregon State Beavers', 'Syracuse Orange', 'Houston Cougars'];
+    var round_8 = ['Gonzaga Bulldogs', 'USC Trojans', 'Michigan Wolverines', 'UCLA Bruins', 'Baylor Bears', 'Arkansas Razorbacks', 'Oregon State Beavers', 'Houston Cougars'];
+    var round_4 = ['Gonzaga Bulldogs', 'UCLA Bruins', 'Baylor Bears', 'Houston Cougars'];
+    var round_2 = ['Gonzaga Bulldogs', 'Baylor Bears'];
+    var round_1 = ['Baylor Bears'];
+  }
+  else if (study_year == current_year || study_year == "Year"){
+    var round_32 = [];
+    var round_16 = [];
+    var round_8 = [];
+    var round_4 = [];
+    var round_2 = [];
+    var round_1 = [];
+  }
+  for (i = 1; i < (rows.length); i++) {
+    var bold_weight = "700";
+    var font_color = "#00aebe";
+    var font_black = 'black';
+    var team_name = rows[i].getElementsByTagName("TD")[0].innerHTML;
+    var col_r32 = rows[i].getElementsByTagName("TD")[1];
+    col_r32.style.color = font_black;
+    var col_r16 = rows[i].getElementsByTagName("TD")[2];
+    col_r16.style.color = font_black;
+    var col_r8 = rows[i].getElementsByTagName("TD")[3];
+    col_r8.style.color = font_black;
+    var col_r4 = rows[i].getElementsByTagName("TD")[4];
+    col_r4.style.color = font_black;
+    var col_r2 = rows[i].getElementsByTagName("TD")[5];
+    col_r2.style.color = font_black;
+    var col_r1 = rows[i].getElementsByTagName("TD")[6];
+    col_r1.style.color = font_black;
+
+    if (round_32.includes(team_name)) {
+      col_r32.style.color = font_color;
+    }
+    if (round_16.includes(team_name)) {
+      col_r16.style.color = font_color;
+    }
+    if (round_8.includes(team_name)) {
+      col_r8.style.color = font_color;
+    }
+    if (round_4.includes(team_name)) {
+      col_r4.style.color = font_color;
+    }
+    if (round_2.includes(team_name)) {
+      col_r2.style.color = font_color;
+    }
+    if (round_1.includes(team_name)) {
+      col_r1.style.color = font_color;
+    }
+
+    rows[i].getElementsByTagName("TD")[0].style.fontWeight = bold_weight;
+    col_r32.style.fontWeight = bold_weight;
+    col_r16.style.fontWeight = bold_weight;
+    col_r8.style.fontWeight = bold_weight;
+    col_r4.style.fontWeight = bold_weight;
+    col_r2.style.fontWeight = bold_weight;
+    col_r1.style.fontWeight = bold_weight;
+  }
+}

@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="Icon.png">
   </head>
   <title>Men's Perfect Bracket Simulator</title>
-  <body style="background-color: white;" onload="find_winner()">
+  <body style="background-color: white;" onload="find_winner() ; show_results()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
         <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
@@ -35,10 +35,10 @@
             <div class="dropdown" style="float: right;">
                 <button class="dropbtn"><span id="yearofstudy">Year</span></button>
                 <div class="dropdown-content">
-                  <button onclick="change_year(2024) ; find_winner()" class="dropdownButton">2024</button>
-                  <button onclick="change_year(2023) ; find_winner()" class="dropdownButton">2023</button>
-                  <button onclick="change_year(2022) ; find_winner()" class="dropdownButton">2022</button>
-                  <button onclick="change_year(2021) ; find_winner()" class="dropdownButton">2021</button>
+                  <button onclick="change_year(2024) ; find_winner() ; show_results()" class="dropdownButton">2024</button>
+                  <button onclick="change_year(2023) ; find_winner() ; show_results()" class="dropdownButton">2023</button>
+                  <button onclick="change_year(2022) ; find_winner() ; show_results()" class="dropdownButton">2022</button>
+                  <button onclick="change_year(2021) ; find_winner() ; show_results()" class="dropdownButton">2021</button>
                 </div>
               </div>
             <div>
