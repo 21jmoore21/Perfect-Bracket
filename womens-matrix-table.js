@@ -302,7 +302,7 @@ function find_winner(){
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-function sortTable(n) {
+function sortTable(n,reverse="Yes") {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("winner_matrix");
     switching = true;
@@ -353,7 +353,7 @@ function sortTable(n) {
       } else {
         /* If no switching has been done AND the direction is "asc",
         set the direction to "desc" and run the while loop again. */
-        if (switchcount == 0 && dir == "desc") {
+        if (switchcount == 0 && dir == "desc" && reverse=="Yes") {
           dir = "asc";
           switching = true;
         }
