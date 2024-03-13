@@ -122,6 +122,7 @@ function previewFile(myCallback) {
 
   function save_weights() {
     var content_1, content_2, content_3, content_4, content_5, content_6, content_7, content_8, content_9, content_10, content_11, content_12, content_13, content_14, content_15;
+    let current_year = 2024;
     const link = document.createElement("a");
     if (document.getElementById("checkbox1").checked == true) {
         content_1 = document.getElementById("slider1").value + '\r\n';
@@ -214,7 +215,7 @@ function previewFile(myCallback) {
         content_15 = 0 + '\r\n';
     }
     var year = document.getElementById("yearofstudy").innerHTML;
-    if (year == 'Year') {
+    if (year == 'Year' || year == current_year) {
         var score = '';
     }
     else {
