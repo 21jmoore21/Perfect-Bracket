@@ -433,10 +433,10 @@ function find_winner(){
         var round_1 = ['Baylor'];
     }
     else if (study_year == current_year || study_year == "Year"){
-        document.getElementById("region_1").innerHTML = "Midwest";
-        document.getElementById("region_2").innerHTML = "South";
-        document.getElementById("region_3").innerHTML = "East";
-        document.getElementById("region_4").innerHTML = "West";
+        document.getElementById("region_1").innerHTML = "East";
+        document.getElementById("region_2").innerHTML = "West";
+        document.getElementById("region_3").innerHTML = "South";
+        document.getElementById("region_4").innerHTML = "Midwest";
         document.getElementById("bracket_score_text").innerHTML = ""
         document.getElementById("bracket_score_text_two").innerHTML = ""
         var team_stats = [{name:"UConn",per:'-'}, 
