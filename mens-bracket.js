@@ -278,6 +278,9 @@ function perfect_settings() {
     else if (study_year == 2021){
         var slider_weights = [94, 79, 68, 92, 69, 44, 60, -100, -55, 78, -35, -27, 55, -80, 6]
     }
+    else if (study_year == 2024){
+        var slider_weights = [10, 2, 37, 92, 97, 68, 28, 83, 18, 29, 46, -100, -100, -67, 69]
+    }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
@@ -318,7 +321,7 @@ function toggleLabel(checkboxId, labelId, slider_value,slider_val_id) {
 
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
-    if (year == 2024 || year == "Year") {
+    if (year == "Year") {
         document.getElementById("perfect_button").innerHTML = "";
     }
     else if (year == 2023){
@@ -328,6 +331,9 @@ function change_year(year){
         document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
     }
     else if (year == 2021){
+        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
+    }
+    else if (year == 2024){
         document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
     }
 }
@@ -607,8 +613,14 @@ function find_winner(){
         document.getElementById("region_2").innerHTML = "West";
         document.getElementById("region_3").innerHTML = "South";
         document.getElementById("region_4").innerHTML = "Midwest";
-        document.getElementById("bracket_score_text").innerHTML = ""
-        document.getElementById("bracket_score_text_two").innerHTML = ""
+        if (study_year == "Year"){
+            document.getElementById("bracket_score_text").innerHTML = "";
+            document.getElementById("bracket_score_text_two").innerHTML = "";
+        }
+        else if (study_year == current_year){
+            document.getElementById("bracket_score_text").innerHTML = "This Bracket Would Have Scored: ";
+            document.getElementById("bracket_score_text_two").innerHTML = "Points";            
+        }
         var team_stats = [{name:"UConn",Team_GP:0.6,Team_PTS:0.6593406593406594,Team_FGM:0.696078431372549,Team_FGA:0.4508196721311477,Team_FG_PER:0.8387096774193549,Team_3PM:0.6000000000000002,Team_3PA:0.5119047619047618,Team_3P_PER:0.6484375000000001,Team_FTM:0.4761904761904763,Team_FTA:0.4571428571428572,Team_FT_PER:0.593220338983051,Team_OR:0.41237113402061853,Team_DR:0.6249999999999998,Team_REB:0.6347826086956521,Team_AST:0.9666666666666666,Team_STL:0.34375,Team_BLK:0.8085106382978725,Team_TO:0.7755102040816326,Team_PF:0.43678160919540243,Opp_GP:0.4,Opp_PTS:0.692946058091286,Opp_FGM:0.5978260869565215,Opp_FGA:0.5802469135802465,Opp_FG_PER:0.7594936708860761,Opp_3PM:0.7708333333333334,Opp_3PA:0.744,Opp_3P_PER:0.6117647058823533,Opp_FTM:0.5148514851485148,Opp_FTA:0.45390070921985826,Opp_FT_PER:0.5508474576271187,Opp_OR:0.4888888888888887,Opp_DR:0.9661016949152543,Opp_REB:0.7340425531914894,Opp_AST:0.8108108108108107,Opp_STL:0.7272727272727272,Opp_BLK:0.7741935483870969,Opp_TO:0.29896907216494845,Opp_PF:0.38356164383561636,Team_Seed:1.0,Team_eFG_PER:0.9798120380907985,Team_OReb_PER:0.7081891189196295,Team_Poss:0.19818708511035957,Team_Plays:0.31096644967451287,Team_TOV_PER:0.7662198968197812,Team_FTA_Rate:0.42062834438589736,Team_PF_Eff:0.6865134565969208,Opp_eFG_PER:0.8127645335764032,Opp_OReb_PER:0.5419668229818386,Opp_Poss:0.7906898422647813,Opp_Plays:0.7131169173924511,Opp_TOV_PER:0.33089435355877844,Opp_FTA_Rate:0.3817776418357091,Opp_PF_Eff:0.4678952080442072,Poss:0.19655997142697854,Off_Rtg:1.0,Def_Rtg:0.5518733698507354,Net_Rtg:0.928882918459966}, 
         {name:"Stets",Team_GP:0.6,Team_PTS:0.5128205128205129,Team_FGM:0.529411764705882,Team_FGA:0.46721311475409816,Team_FG_PER:0.6048387096774194,Team_3PM:0.65,Team_3PA:0.5476190476190476,Team_3P_PER:0.6718749999999999,Team_FTM:0.3571428571428572,Team_FTA:0.2761904761904764,Team_FT_PER:0.7966101694915249,Team_OR:0.20618556701030927,Team_DR:0.36111111111111116,Team_REB:0.2869565217391304,Team_AST:0.41111111111111104,Team_STL:0.20312499999999997,Team_BLK:0.31914893617021284,Team_TO:0.693877551020408,Team_PF:0.5977011494252873,Opp_GP:0.4,Opp_PTS:0.3443983402489626,Opp_FGM:0.10869565217391301,Opp_FGA:0.2716049382716045,Opp_FG_PER:0.24050632911392392,Opp_3PM:0.37499999999999983,Opp_3PA:0.36800000000000005,Opp_3P_PER:0.43529411764705916,Opp_FTM:0.7623762376237624,Opp_FTA:0.6808510638297872,Opp_FT_PER:0.6271186440677973,Opp_OR:0.2666666666666665,Opp_DR:0.4576271186440678,Opp_REB:0.30851063829787223,Opp_AST:0.3783783783783783,Opp_STL:0.606060606060606,Opp_BLK:0.8709677419354839,Opp_TO:0.18556701030927836,Opp_PF:0.3287671232876713,Team_Seed:-0.0,Team_eFG_PER:0.7527161447741127,Team_OReb_PER:0.3265215921052006,Team_Poss:0.3238233134769438,Team_Plays:0.2961942914371557,Team_TOV_PER:0.6718250010665661,Team_FTA_Rate:0.2610788740233689,Team_PF_Eff:0.26256185763227985,Opp_eFG_PER:0.2088872980236051,Opp_OReb_PER:0.19541383940345758,Opp_Poss:0.6935780230690215,Opp_Plays:0.5486935866983372,Opp_TOV_PER:0.18582820292989619,Opp_FTA_Rate:0.6788852086034705,Opp_PF_Eff:0.4060912508987188,Poss:0.3088302812550682,Off_Rtg:0.6414801099071699,Def_Rtg:0.043760283677333346,Net_Rtg:0.30071982801248764}, 
         {name:"FAU",Team_GP:0.4,Team_PTS:0.695970695970696,Team_FGM:0.725490196078431,Team_FGA:0.6557377049180331,Team_FG_PER:0.7177419354838709,Team_3PM:0.55,Team_3PA:0.49404761904761885,Team_3P_PER:0.5625,Team_FTM:0.5714285714285716,Team_FTA:0.6285714285714287,Team_FT_PER:0.3898305084745759,Team_OR:0.42268041237113396,Team_DR:0.5416666666666667,Team_REB:0.6,Team_AST:0.5777777777777777,Team_STL:0.48437499999999994,Team_BLK:0.29787234042553196,Team_TO:0.5306122448979592,Team_PF:0.4597701149425288,Opp_GP:0.6,Opp_PTS:0.32365145228215764,Opp_FGM:0.141304347826087,Opp_FGA:0.29012345679012325,Opp_FG_PER:0.27848101265822733,Opp_3PM:0.45833333333333326,Opp_3PA:0.4720000000000001,Opp_3P_PER:0.39999999999999986,Opp_FTM:0.6138613861386139,Opp_FTA:0.5602836879432626,Opp_FT_PER:0.5084745762711865,Opp_OR:0.2666666666666665,Opp_DR:0.4745762711864403,Opp_REB:0.31914893617021284,Opp_AST:0.8378378378378379,Opp_STL:0.6363636363636364,Opp_BLK:0.903225806451613,Opp_TO:0.3917525773195876,Opp_PF:0.5479452054794524,Team_Seed:0.5333333333333333,Team_eFG_PER:0.8118400934165084,Team_OReb_PER:0.5569292096775283,Team_Poss:0.5724791189186684,Team_Plays:0.592138207310967,Team_TOV_PER:0.6374655132740955,Team_FTA_Rate:0.4962142840793309,Team_PF_Eff:0.4443906494522691,Opp_eFG_PER:0.2752300767119825,Opp_OReb_PER:0.3011507583031598,Opp_Poss:0.46826451803951297,Opp_Plays:0.3871733966745848,Opp_TOV_PER:0.35023809054272254,Opp_FTA_Rate:0.5690650362701779,Opp_PF_Eff:0.5992079097283557,Poss:0.5478733410783694,Off_Rtg:0.7389763072089354,Def_Rtg:0.22848319084708316,Net_Rtg:0.5033550473639397}, 
@@ -674,12 +686,12 @@ function find_winner(){
         {name:"Tenn",Team_GP:0.2,Team_PTS:0.5860805860805861,Team_FGM:0.529411764705882,Team_FGA:0.7131147540983606,Team_FG_PER:0.4193548387096771,Team_3PM:0.5833333333333333,Team_3PA:0.601190476190476,Team_3P_PER:0.45312500000000017,Team_FTM:0.642857142857143,Team_FTA:0.6190476190476191,Team_FT_PER:0.6525423728813563,Team_OR:0.42268041237113396,Team_DR:0.6527777777777779,Team_REB:0.6608695652173909,Team_AST:0.7777777777777778,Team_STL:0.609375,Team_BLK:0.6595744680851064,Team_TO:0.693877551020408,Team_PF:0.29885057471264387,Opp_GP:0.8,Opp_PTS:0.5477178423236511,Opp_FGM:0.576086956521739,Opp_FGA:0.4753086419753085,Opp_FG_PER:0.8734177215189873,Opp_3PM:0.4375,Opp_3PA:0.3120000000000001,Opp_3P_PER:0.6705882352941179,Opp_FTM:0.3663366336633663,Opp_FTA:0.2765957446808512,Opp_FT_PER:0.6779661016949154,Opp_OR:0.2666666666666665,Opp_DR:0.25423728813559326,Opp_REB:0.1808510638297868,Opp_AST:0.689189189189189,Opp_STL:0.3939393939393941,Opp_BLK:0.7741935483870969,Opp_TO:0.5670103092783506,Opp_PF:0.5753424657534248,Team_Seed:0.9333333333333333,Team_eFG_PER:0.5151235892220775,Team_OReb_PER:0.4928361356015453,Team_Poss:0.517484540158955,Team_Plays:0.583124687030546,Team_TOV_PER:0.7990210908618919,Team_FTA_Rate:0.4696578300111306,Team_PF_Eff:0.7096082240569863,Opp_eFG_PER:0.7663106720733122,Opp_OReb_PER:0.3626142321673261,Opp_Poss:0.45016845710546405,Opp_Plays:0.35682238057534965,Opp_TOV_PER:0.5074576718169743,Opp_FTA_Rate:0.2549633099005838,Opp_PF_Eff:0.39252868799323276,Poss:0.5295524631392704,Off_Rtg:0.5737085434831282,Def_Rtg:0.5861892463208204,Net_Rtg:0.618345467024524}, 
         {name:"Peters",Team_GP:0.2,Team_PTS:0.06593406593406584,Team_FGM:0.0,Team_FGA:0.19672131147540978,Team_FG_PER:0.040322580645161296,Team_3PM:0.11666666666666671,Team_3PA:0.1369047619047618,Team_3P_PER:0.3750000000000002,Team_FTM:0.5952380952380953,Team_FTA:0.6666666666666666,Team_FT_PER:0.3474576271186437,Team_OR:0.5154639175257731,Team_DR:0.0833333333333335,Team_REB:0.382608695652174,Team_AST:0.1111111111111111,Team_STL:0.5,Team_BLK:0.574468085106383,Team_TO:0.18367346938775486,Team_PF:0.08045977011494246,Opp_GP:0.8,Opp_PTS:0.7344398340248962,Opp_FGM:0.7391304347826085,Opp_FGA:0.9135802469135803,Opp_FG_PER:0.5569620253164557,Opp_3PM:0.8333333333333334,Opp_3PA:0.8320000000000001,Opp_3P_PER:0.576470588235294,Opp_FTM:0.3168316831683168,Opp_FTA:0.21276595744680848,Opp_FT_PER:0.7457627118644067,Opp_OR:0.5111111111111113,Opp_DR:0.4576271186440678,Opp_REB:0.4361702127659577,Opp_AST:0.7567567567567566,Opp_STL:0.3939393939393941,Opp_BLK:0.41935483870967744,Opp_TO:0.5876288659793815,Opp_PF:0.6164383561643839,Team_Seed:0.13333333333333333,Team_eFG_PER:0.0,Team_OReb_PER:0.6402983006766967,Team_Poss:0.16335916509821263,Team_Plays:0.3590385578367554,Team_TOV_PER:0.15962735822800472,Team_FTA_Rate:0.6983998158016127,Team_PF_Eff:0.3433291169005974,Opp_eFG_PER:0.5879710291859963,Opp_OReb_PER:0.245826278694335,Opp_Poss:0.8735269495402548,Opp_Plays:0.7859593560306151,Opp_TOV_PER:0.6402932239778681,Opp_FTA_Rate:-0.0,Opp_PF_Eff:0.21927788442637694,Poss:0.13699856561944188,Off_Rtg:0.0076258690425536095,Def_Rtg:0.5730952981298861,Net_Rtg:0.16588218892146284}, 
         ];
-        var round_32 = [];
-        var round_16 = [];
-        var round_8 = [];
-        var round_4 = [];
-        var round_2 = [];
-        var round_1 = [];
+        var round_32 = ["UConn","NWest","SDSU","Yale","Duq","Illinois","Wash St","Iowa St","UNC","Mich St","GCU","Alabama","Clemson","Baylor","Dayton","Arizona","Houston","Texas AM","JMU","Duke","NC St","Oakland","Colorado","Marq","Purdue","Utah St","Gonzaga","Kansas","Oregon","Creigh","Texas","Tenn"];
+        var round_16 = ["UConn","SDSU","Illinois","Iowa St","UNC","Alabama","Clemson","Arizona","Houston","Duke","NC St","Marq","Purdue","Gonzaga","Creigh","Tenn"];
+        var round_8 = ["UConn","Illinois","Alabama","Clemson","Duke","NC St","Purdue","Tenn"];
+        var round_4 = ["UConn","Alabama","NC St","Purdue"];
+        var round_2 = ["UConn","Purdue"];
+        var round_1 = ["UConn"];
     }
     let jrs,off_rtg_weighted, def_rtg_weighted, efg_weighted, three_pt_weighted, oreb_per_weighted, tov_per_weighted, fta_rate_weighted, ft_per_weighted, opp_efg_weighted, opp_three_pt_weighted, opp_oreb_per_weighted, opp_tov_per_weighted, opp_fta_rate_weighted, poss_weighted, seed_weighted;
     let team_data = [];
@@ -741,7 +753,7 @@ function find_winner(){
         let team_no = j+64
         let team_no_id = "team_" + team_no;
         let team_name = document.getElementById(team_no_id).innerHTML;
-        if (study_year != current_year && study_year != "Year") {
+        if (study_year != "Year") {
             if (j < (96-64)){
                 if (round_32.includes(team_name)){
                     document.getElementById(team_no_id).style.color = "rgb(0, 187, 90)";
@@ -800,7 +812,7 @@ function find_winner(){
         else {
             document.getElementById(team_no_id).style.color = "black";
         }
-        if (study_year != current_year && study_year != "Year") {
+        if (study_year != "Year") {
             document.getElementById("bracket_score").innerHTML = bracket_score*10;
         }
         else {

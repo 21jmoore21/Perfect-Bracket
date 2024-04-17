@@ -437,8 +437,14 @@ function find_winner(){
         document.getElementById("region_2").innerHTML = "West";
         document.getElementById("region_3").innerHTML = "South";
         document.getElementById("region_4").innerHTML = "Midwest";
-        document.getElementById("bracket_score_text").innerHTML = ""
-        document.getElementById("bracket_score_text_two").innerHTML = ""
+        if (study_year == "Year"){
+            document.getElementById("bracket_score_text").innerHTML = "";
+            document.getElementById("bracket_score_text_two").innerHTML = "";
+        }
+        else if (study_year == current_year){
+            document.getElementById("bracket_score_text").innerHTML = "This Bracket Would Have Scored: ";
+            document.getElementById("bracket_score_text_two").innerHTML = "Points";            
+        }
         var team_stats = [{name:"UConn",per:'-'}, 
         {name:"Stets",per:'-'}, 
         {name:"FAU",per:'-'}, 
@@ -567,12 +573,12 @@ function find_winner(){
         {name:"Purdue",per:'76.86%'}, 
         {name:"Purdue",per:'45.49%'}, 
         ];
-        var round_32 = [];
-        var round_16 = [];
-        var round_8 = [];
-        var round_4 = [];
-        var round_2 = [];
-        var round_1 = [];
+        var round_32 = ["UConn","NWest","SDSU","Yale","Duq","Illinois","Wash St","Iowa St","UNC","Mich St","GCU","Alabama","Clemson","Baylor","Dayton","Arizona","Houston","Texas AM","JMU","Duke","NC St","Oakland","Colorado","Marq","Purdue","Utah St","Gonzaga","Kansas","Oregon","Creigh","Texas","Tenn"];
+        var round_16 = ["UConn","SDSU","Illinois","Iowa St","UNC","Alabama","Clemson","Arizona","Houston","Duke","NC St","Marq","Purdue","Gonzaga","Creigh","Tenn"];
+        var round_8 = ["UConn","Illinois","Alabama","Clemson","Duke","NC St","Purdue","Tenn"];
+        var round_4 = ["UConn","Alabama","NC St","Purdue"];
+        var round_2 = ["UConn","Purdue"];
+        var round_1 = ["UConn"];
     }
     let team_data = [];
     let orig_team_id = "team_";
@@ -586,7 +592,7 @@ function find_winner(){
 
         else if (63 < j && j < 80){ //round of 32
             document.getElementById(orig_team_id).innerHTML = team_stats[j].name + " (" + team_stats[j].per + ")";
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_32.includes(team_stats[j].name)){
@@ -599,7 +605,7 @@ function find_winner(){
         }
         else if (79 < j && j < 96){ //round of 32
             document.getElementById(orig_team_id).innerHTML = "(" + team_stats[j].per + ") " + team_stats[j].name;
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_32.includes(team_stats[j].name)){
@@ -614,7 +620,7 @@ function find_winner(){
 
         else if (95 < j && j < 104){ //sweet sixteen
             document.getElementById(orig_team_id).innerHTML = team_stats[j].name + " (" + team_stats[j].per + ")";
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_16.includes(team_stats[j].name)){
@@ -627,7 +633,7 @@ function find_winner(){
         }
         else if (103 < j && j < 112){ //sweet sixteen
             document.getElementById(orig_team_id).innerHTML = "(" + team_stats[j].per + ") " + team_stats[j].name;
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_16.includes(team_stats[j].name)){
@@ -642,7 +648,7 @@ function find_winner(){
 
         else if (111 < j && j < 116){ //elite eight
             document.getElementById(orig_team_id).innerHTML = team_stats[j].name + " (" + team_stats[j].per + ")";
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_8.includes(team_stats[j].name)){
@@ -655,7 +661,7 @@ function find_winner(){
         }
         else if (115 < j && j < 120){ //elite eight
             document.getElementById(orig_team_id).innerHTML = "(" + team_stats[j].per + ") " + team_stats[j].name;
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_8.includes(team_stats[j].name)){
@@ -670,7 +676,7 @@ function find_winner(){
         
         else if (119 < j && j < 122){ //final four
             document.getElementById(orig_team_id).innerHTML = team_stats[j].name + " (" + team_stats[j].per + ")";
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_4.includes(team_stats[j].name)){
@@ -683,7 +689,7 @@ function find_winner(){
         }
         else if (121 < j && j < 124){ //final four
             document.getElementById(orig_team_id).innerHTML = "(" + team_stats[j].per + ") " + team_stats[j].name;
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_4.includes(team_stats[j].name)){
@@ -698,7 +704,7 @@ function find_winner(){
 
         else if (j == 124){ //championship
             document.getElementById(orig_team_id).innerHTML = team_stats[j].name + " (" + team_stats[j].per + ")";
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_2.includes(team_stats[j].name)){
@@ -711,7 +717,7 @@ function find_winner(){
         }
         else if (j == 125){ //championship
             document.getElementById(orig_team_id).innerHTML = "(" + team_stats[j].per + ") " + team_stats[j].name;
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_2.includes(team_stats[j].name)){
@@ -726,7 +732,7 @@ function find_winner(){
 
         else if (j == 126){ //champion
             document.getElementById(orig_team_id).innerHTML = team_stats[j].name + " (" + team_stats[j].per + ")";
-            if (study_year == current_year || study_year == "Year") {
+            if (study_year == "Year") {
                 document.getElementById(orig_team_id).style.color = "black";
             }
             else if (round_1.includes(team_stats[j].name)){
@@ -738,7 +744,7 @@ function find_winner(){
             }
         }
     }
-    if (study_year != current_year && study_year != "Year") {
+    if (study_year != "Year") {
         document.getElementById("bracket_score").innerHTML = bracket_score*10;
     }
     else {

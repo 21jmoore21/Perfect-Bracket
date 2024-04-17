@@ -446,12 +446,12 @@ function show_results() {
     var round_1 = ['Baylor Bears'];
   }
   else if (study_year == current_year || study_year == "Year"){
-    var round_32 = [];
-    var round_16 = [];
-    var round_8 = [];
-    var round_4 = [];
-    var round_2 = [];
-    var round_1 = [];
+    var round_32 = ['UConn Huskies','Northwestern Wildcats','San Diego State Aztecs','Yale Bulldogs','Duquesne Dukes','Illinois Fighting Illini','Washington State Cougars','Iowa State Cyclones','North Carolina Tar Heels','Michigan State Spartans','Grand Canyon Lopes','Alabama Crimson Tide','Clemson Tigers','Baylor Bears','Dayton Flyers','Arizona Wildcats','Houston Cougars','Texas A&M Aggies','James Madison Dukes','Duke Blue Devils','NC State Wolfpack','Oakland Golden Grizzlies','Colorado Buffaloes','Marquette Golden Eagles','Purdue Boilermakers','Utah State Aggies','Gonzaga Bulldogs','Kansas Jayhawks','Oregon Ducks','Creighton Bluejays','Texas Longhorns','Tennessee Volunteers'];
+    var round_16 = ['UConn Huskies','San Diego State Aztecs','Illinois Fighting Illini','Iowa State Cyclones','North Carolina Tar Heels','Alabama Crimson Tide','Clemson Tigers','Arizona Wildcats','Houston Cougars','Duke Blue Devils','NC State Wolfpack','Marquette Golden Eagles','Purdue Boilermakers','Gonzaga Bulldogs','Creighton Bluejays','Tennessee Volunteers'];
+    var round_8 = ['UConn Huskies','Illinois Fighting Illini','Alabama Crimson Tide','Clemson Tigers','Duke Blue Devils','NC State Wolfpack','Purdue Boilermakers','Tennessee Volunteers'];
+    var round_4 = ['UConn Huskies','Alabama Crimson Tide','NC State Wolfpack','Purdue Boilermakers'];
+    var round_2 = ['UConn Huskies','Purdue Boilermakers'];
+    var round_1 = ['UConn Huskies'];
   }
   for (i = 1; i < (rows.length); i++) {
     var bold_weight = "700";

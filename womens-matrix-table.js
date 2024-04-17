@@ -446,12 +446,12 @@ function sortTable_name(n) {
       var round_1 = ['Stanford Cardinal'];
     }
     else if (study_year == current_year || study_year == "Year"){
-      var round_32 = [];
-      var round_16 = [];
-      var round_8 = [];
-      var round_4 = [];
-      var round_2 = [];
-      var round_1 = [];
+      var round_32 = ['South Carolina Gamecocks','North Carolina Tar Heels','Oklahoma Sooners','Indiana Hoosiers','Nebraska Cornhuskers','Oregon State Beavers','Ole Miss Rebels','Notre Dame Fighting Irish','Texas Longhorns','Alabama Crimson Tide','Utah Utes','Gonzaga Bulldogs','Tennessee Lady Volunteers','NC State Wolfpack','Iowa State Cyclones','Stanford Cardinal','Iowa Hawkeyes','West Virginia Mountaineers','Colorado Buffaloes','Kansas State Wildcats','Middle Tennessee Blue Raiders','LSU Tigers','Creighton Bluejays','UCLA Bruins','USC Trojans','Kansas Jayhawks','Baylor Bears','Virginia Tech Hokies','Syracuse Orange','UConn Huskies','Duke Blue Devils','Ohio State Buckeyes'];
+      var round_16 = ['South Carolina Gamecocks','Indiana Hoosiers','Oregon State Beavers','Notre Dame Fighting Irish','Texas Longhorns','Gonzaga Bulldogs','NC State Wolfpack','Stanford Cardinal','Iowa Hawkeyes','Colorado Buffaloes','LSU Tigers','UCLA Bruins','USC Trojans','Baylor Bears','UConn Huskies','Duke Blue Devils'];
+      var round_8 = ['South Carolina Gamecocks','Oregon State Beavers','Texas Longhorns','NC State Wolfpack','Iowa Hawkeyes','LSU Tigers','USC Trojans','UConn Huskies'];
+      var round_4 = ['South Carolina Gamecocks','NC State Wolfpack','Iowa Hawkeyes','UConn Huskies'];
+      var round_2 = ['South Carolina Gamecocks','Iowa Hawkeyes'];
+      var round_1 = ['South Carolina Gamecocks'];
     }
     for (i = 1; i < (rows.length); i++) {
       var bold_weight = "700";
