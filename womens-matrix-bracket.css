@@ -185,6 +185,14 @@ input[type=number] {
   font-size: 20px;
 }
 
+.national_champ_year {
+  text-align: center;
+  color: #333;
+  font-weight:bold;
+  font-size: 20px;
+  display: none;
+}
+
 .dropbtn {
   background-color: rgb(166, 166, 166);
   color: rgb(0, 0, 0);
@@ -655,4 +663,55 @@ body {
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
+  }
+
+  /* Styles specifically for printing */
+  @media print {
+
+    @page {
+      margin: 0.5cm;
+    }
+
+    .selection_button {
+      display: none;
+    }
+
+    .selection_button_break {
+      display: none;
+    }
+
+    .dropdown {
+      display: none;
+    }
+
+    .heading {
+      display: none;
+    }
+
+    .bottom_banner {
+      display: none;
+    }
+
+    .bracket_score {
+      display: none;
+    }
+
+    .bracket_score_text {
+      display: none;
+    }
+
+    .national_champ {
+      text-align: top;
+    }
+
+    .national_champ_year {
+      text-align: top;
+      display: inline;
+      padding-top: 125px;
+    }
+
+    body {
+      font-size: 12px; 
+    }
+
   }

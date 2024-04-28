@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="Icon.png">
   </head>
   <title>Men's Perfect Bracket Simulator</title>
-  <body style="background-color: white;" onload="find_winner()">
+  <body style="background-color: white;" onload="find_winner();print_year()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
         <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
@@ -302,6 +302,7 @@
                 <ul class='round finals'>
                     <li class='bracket_score_text'><span id="bracket_score_text"></span><span class="bracket_score" id="bracket_score"></span> <span id="bracket_score_text_two"></span></li>
                     <li id="bracket_score"></li>
+                    <li class='national_champ_year' id="national_champ">Women's</li>
                     <li class='national_champ'>National Champion</li>
                     <li class='game final' id="team_126"></li>
                     <li class='spacer'>&nbsp;</li>

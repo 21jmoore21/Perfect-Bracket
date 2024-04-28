@@ -1,5 +1,32 @@
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
+    if (year == "Year") {
+        document.getElementById('national_champ').innerHTML = "2024 Men's";
+    }
+    else if (year == 2023){
+        document.getElementById('national_champ').innerHTML = "2023 Men's";
+    }
+    else if (year == 2022){
+        document.getElementById('national_champ').innerHTML = "2022 Men's";
+    }
+    else if (year == 2021){
+        document.getElementById('national_champ').innerHTML = "2021 Men's";
+    }
+    else if (year == 2024){
+        document.getElementById('national_champ').innerHTML = "2024 Men's";
+    }
+}
+
+function print_year() {
+    year = document.getElementById('yearofstudy').innerHTML;
+    console.log(year)
+    if (year == "Year") {
+        document.getElementById('national_champ').innerHTML = "2024 Men's";
+    }
+    else {
+        document.getElementById('national_champ').innerHTML = year + " Men's";
+    }
+    
 }
 
 function find_winner(){
