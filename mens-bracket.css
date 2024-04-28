@@ -643,16 +643,7 @@ body {
 
   /* Styles specifically for printing */
   @media print {
-/*
-    .column_one {
-      display: none;
-    }
 
-    .column_two {
-      width: 100vw;
-    }
-*/
-    /* Adjust page margins */
     @page {
       margin: 0.5cm;
     }
@@ -727,11 +718,7 @@ body {
     }
 
     body {
-      font-size: 10px; 
-    }
-
-    span {
-      font-size: 10px;
+      font-size: 12px; 
     }
 
     h2 {
