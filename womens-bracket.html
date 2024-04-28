@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="Icon.png">
   </head>
   <title>Women's Perfect Bracket Simulator</title>
-  <body style="background-color: white;" onload="populate_teams()">
+  <body style="background-color: white;" onload="populate_teams();print_year()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
         <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
@@ -144,6 +144,7 @@
             <div class="give_me_space_2"></div>
             <span><button onclick="select_all();find_winner();" class="selection_button">Select All /</button><button onclick="deselect_all();find_winner();" class="selection_button">Deselect All</button></span><br>
             <span><button onclick="save_weights()" class="selection_button">Save /</button><button onclick="load_weights()" class="selection_button">Load Weights</button></span>
+            <span><button accesskey="p" onclick="window.print()" class="selection_button">Print Bracket</button></span>
             <div class="give_me_space_2"></div>
             <button id="run_button" accesskey="m" onclick="find_winner();scroll_to_top()" class="myButton">Run</button>
             <input type="file" accept=".txt" id="readfile" onclick="previewFile(find_winner)" class="hidden_button">
@@ -415,6 +416,7 @@
                 <ul class='round finals'>
                     <li class='bracket_score_text'><span id="bracket_score_text"></span><span class="bracket_score" id="bracket_score"></span> <span id="bracket_score_text_two"></span></li>
                     <li id="bracket_score"></li>
+                    <li class='national_champ_year' id="national_champ">Women's</li>
                     <li class='national_champ'>National Champion</li>
                     <li class='game final' id="team_126"></li>
                     <li class='spacer'>&nbsp;</li>

@@ -161,6 +161,14 @@ input[type=number] {
   font-size: 20px;
 }
 
+.national_champ_year {
+  text-align: center;
+  color: #333;
+  font-weight:bold;
+  font-size: 20px;
+  display: none;
+}
+
 .dropbtn {
   background-color: rgb(166, 166, 166);
   color: rgb(0, 0, 0);
@@ -631,4 +639,103 @@ body {
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
+  }
+
+/* Styles specifically for printing */
+@media print {
+/*
+    .column_one {
+      display: none;
+    }
+
+    .column_two {
+      width: 100vw;
+    }
+*/
+    /* Adjust page margins */
+    @page {
+      margin: 0.5cm;
+    }
+
+    .bottom_banner {
+      display: none;
+    }
+
+    .selection_button {
+      display: none;
+    }
+
+    .myButton {
+      display: none;
+    }
+/*
+    .topnav {
+      display: none;
+    }
+*/
+
+    .column_one {
+      display: none;
+    }
+
+    .column_two {
+      min-width: 100vw;
+    }
+
+    .ML_button {
+      display: none;
+    }
+
+    .dropdown {
+      display: none;
+    }
+
+    input[type="checkbox"] + label:before {
+      width: 20px;
+      height: 20px;
+    }
+
+    .give_me_space {
+      min-height: 10px;
+    }
+
+    .num_input {
+      max-width: 100px;
+      font-size: 10px;
+    }
+    
+    .bracket_score {
+      display: none;
+    }
+
+    .bracket_score_text {
+      display: none;
+    }
+
+    .national_champ {
+      text-align: top;
+    }
+
+    .national_champ_year {
+      text-align: top;
+      display: inline;
+      padding-top: 150px;
+    }
+
+    main {
+      padding-top: 0px;
+    }
+
+    body {
+      font-size: 10px; 
+    }
+
+    span {
+      font-size: 10px;
+    }
+
+    h2 {
+      display: none;
+    }
+
   }
