@@ -18,29 +18,44 @@
   <body style="background-color: white;" onload="find_winner() ; show_results()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
-        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
-        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./stats.html">Stats</a>
+        <a style="color:#f2f2f2;" onmouseover="this.style.color='#333';this.style.backgroundColor='rgb(194,194,194)'" onmouseout="this.style.color='#f2f2f2';this.style.backgroundColor='#333'" href="./about.html">About</a>
+        <a style="color:#f2f2f2;" onmouseover="this.style.color='#333';this.style.backgroundColor='rgb(194,194,194)'" onmouseout="this.style.color='#f2f2f2';this.style.backgroundColor='#333'" href="./stats.html">Stats</a>
         <div class="left-dropdown">
-          <button style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" class="left-dropbtn">Winner's Matrix</button>
+          <button class="left-dropbtn">Winner's Matrix</button>
           <div class="left-dropdown-content">
-            <a href="./mens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00be9f';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Men's Matrix</a><br>
-            <a href="./womens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00be9f';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Women's Matrix</a>
-        </div>
+            <div class="mens-inner-dropdown">
+            <a class="mens-matrix" href="./mens-matrix-table.html">Men's Matrix</a><br>
+            <div class="mens-dropright-content">
+                <a href="./mens-matrix-bracket.html">Bracket Mode</a>
+                <a href="./mens-matrix-matchup.html">Matchup Mode</a>
+                <a href="./mens-matrix-table.html">Table Mode</a>
+              </div>
+            </div>
+            <div class="womens-inner-dropdown">
+                <a class="womens-matrix" href="./womens-matrix-table.html">Women's Matrix</a><br>
+                <div class="womens-dropright-content">
+                    <a href="./womens-matrix-bracket.html">Bracket Mode</a>
+                    <a href="./womens-matrix-matchup.html">Matchup Mode</a>
+                    <a href="./womens-matrix-table.html">Table Mode</a>
+                  </div>
+                </div>
+          </div>
       </div>
-      <div class="dropdown-nav">
-        <button class = "dropbtn-nav">Bracket</button>
-        <div class="dropdown-content-nav">
-            <a href="./mens-bracket.html">Men's Bracket</a>
-            <a href="./womens-bracket.html">Women's Bracket</a>
+        <div class="dropdown-nav">
+            <button class = "dropbtn-nav">Men's Bracket</button>
+            <div class="dropdown-content-nav">
+                <a href="./womens-bracket.html">Women's Bracket</a>
+            </div>
         </div>
-    </div>
     </div>
     <main class="row" style="padding-top:45px;">
         <div class="column_two" style="background-color: white;">
             <div class="give_me_space"></div>
-            <a href="./womens-matrix-table.html" class="selection_button">Table Mode</a>
-            <a class="selection_button_break">|</a>
             <a href="./womens-matrix-bracket.html" class="selection_button">Bracket Mode</a>
+            <a class="selection_button_break">|</a>
+            <a href="./womens-matrix-matchup.html" class="selection_button">Matchup Mode</a>
+            <a class="selection_button_break">|</a>
+            <a href="./womens-matrix-table.html" class="selection_button">Table Mode</a>
             <div class="dropdown" style="float: right;">
                 <button class="dropbtn"><span id="yearofstudy">Year</span></button>
                 <div class="dropdown-content">

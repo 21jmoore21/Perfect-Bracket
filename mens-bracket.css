@@ -5,26 +5,28 @@
 }
 
 /* Style the dropdown button */
-.left-dropdown .left-dropbtn {
+.left-dropbtn {
     font-size: 17px;  
     border: none;
     outline: none;
     color: #f2f2f2;
     padding: 14px 16px;
-    background-color: inherit;
+    background: #333;
     font-family: inherit;
     margin: 0;
 }
 
-.left-dropdown button:hover {
-    background-color: rgb(194, 194, 194);
+.left-dropdown:hover .left-dropbtn{
+  background-color: rgb(194, 194, 194);
+  color: #333;
 }
 
 /* Style the dropdown content */
 .left-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #efefef;
+    background: #efefef;
+    color: #333;
     z-index: 1;
     text-align: center;
 }
@@ -35,19 +37,66 @@
     color: #333;
     text-decoration: none;
     display: block;
-    text-align: left;
     min-width: 130px;
 }
 
 /* Change color on hover for the dropdown links */
 .left-dropdown-content a:hover {
-  background-color: rgb(201, 201, 201);
+  background: #00aebe;
   color: white;
 }
 
 /* Show the dropdown content when the dropdown button is hovered over */
 .left-dropdown:hover .left-dropdown-content {
     display: block;
+}
+
+.mens-dropright-content {
+  background: #dcdcdc;
+  color: #333;
+  position: absolute;
+  top: 0%;
+  left: 100.5%;
+  min-width: 10vw;
+  display: none
+}
+
+.mens-inner-dropdown:hover .mens-dropright-content {
+  display: block;
+}
+
+.mens-inner-dropdown:hover .mens-matrix {
+  background: #00aebe;
+  color: white;
+}
+
+.mens-dropright-content a:hover {
+  background: #00aebe;
+  color: white;
+}
+
+.womens-dropright-content {
+  background: #dcdcdc;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  left: 100.5%;
+  min-width: 10vw;
+  display: none
+}
+
+.womens-inner-dropdown:hover .womens-dropright-content {
+  display: block;
+}
+
+.womens-inner-dropdown:hover .womens-matrix {
+  background: #00aebe;
+  color: white;
+}
+
+.womens-dropright-content a:hover {
+  background: #00aebe;
+  color: white;
 }
 
 .hidden_button{
@@ -237,16 +286,10 @@ input[type=number] {
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: rgb(194, 194, 194);
-  color: #333;
 }
 
 .topnav a.active {
@@ -659,11 +702,6 @@ body {
     .myButton {
       display: none;
     }
-/*
-    .topnav {
-      display: none;
-    }
-*/
 
     .column_one {
       display: none;
@@ -679,21 +717,7 @@ body {
 
     .dropdown {
       display: none;
-    }
-
-    input[type="checkbox"] + label:before {
-      width: 20px;
-      height: 20px;
-    }
-
-    .give_me_space {
-      min-height: 10px;
-    }
-
-    .num_input {
-      max-width: 100px;
-      font-size: 10px;
-    }
+    } 
     
     .bracket_score {
       display: none;
@@ -710,19 +734,11 @@ body {
     .national_champ_year {
       text-align: top;
       display: inline;
-      padding-top: 150px;
-    }
-
-    main {
-      padding-top: 0px;
+      padding-top: 15vw;
     }
 
     body {
-      font-size: 12px; 
-    }
-
-    h2 {
-      display: none;
+      font-size: 1.1vw; 
     }
 
   }

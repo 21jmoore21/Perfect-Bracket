@@ -18,13 +18,27 @@
   <body style="background-color: white;" onload="populate_teams();print_year()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
-        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./about.html">About</a>
-        <a style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" href="./stats.html">Stats</a>
+        <a style="color:#f2f2f2;" onmouseover="this.style.color='#333';this.style.backgroundColor='rgb(194,194,194)'" onmouseout="this.style.color='#f2f2f2';this.style.backgroundColor='#333'" href="./about.html">About</a>
+        <a style="color:#f2f2f2;" onmouseover="this.style.color='#333';this.style.backgroundColor='rgb(194,194,194)'" onmouseout="this.style.color='#f2f2f2';this.style.backgroundColor='#333'" href="./stats.html">Stats</a>
         <div class="left-dropdown">
-          <button style="color: #f2f2f2;" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#f2f2f2'" class="left-dropbtn">Winner's Matrix</button>
+          <button class="left-dropbtn">Winner's Matrix</button>
           <div class="left-dropdown-content">
-            <a href="./mens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00aebe';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Men's Matrix</a><br>
-            <a href="./womens-matrix-table.html" style="color: #333;" onmouseover="this.style.backgroundColor='#00aebe';this.style.color='white'" onmouseout="this.style.backgroundColor='#efefef' ;this.style.color='#333'">Women's Matrix</a>
+            <div class="mens-inner-dropdown">
+            <a class="mens-matrix" href="./mens-matrix-table.html">Men's Matrix</a><br>
+            <div class="mens-dropright-content">
+                <a href="./mens-matrix-bracket.html">Bracket Mode</a>
+                <a href="./mens-matrix-matchup.html">Matchup Mode</a>
+                <a href="./mens-matrix-table.html">Table Mode</a>
+              </div>
+            </div>
+            <div class="womens-inner-dropdown">
+                <a class="womens-matrix" href="./womens-matrix-table.html">Women's Matrix</a><br>
+                <div class="womens-dropright-content">
+                    <a href="./womens-matrix-bracket.html">Bracket Mode</a>
+                    <a href="./womens-matrix-matchup.html">Matchup Mode</a>
+                    <a href="./womens-matrix-table.html">Table Mode</a>
+                  </div>
+                </div>
           </div>
       </div>
         <div class="dropdown-nav">
