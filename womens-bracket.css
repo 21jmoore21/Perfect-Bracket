@@ -56,7 +56,8 @@ background: #dcdcdc;
 color: #333;
 position: absolute;
 top: 0%;
-left: 100.5%;
+left: 100%;
+min-width: 10vw;
 display: none
 }
 
@@ -79,7 +80,8 @@ background: #dcdcdc;
 color: #333;
 position: absolute;
 top: 50%;
-left: 100.5%;
+left: 100%;
+min-width: 10vw;
 display: none
 }
 
