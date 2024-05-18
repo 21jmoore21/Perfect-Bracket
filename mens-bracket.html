@@ -11,7 +11,6 @@
   gtag('config', 'G-2KBQQ51689');
 </script>
     <link rel="stylesheet" type="text/css" href="mens-bracket.css">
-    <script src="mens-bracket.js"></script>
     <link rel="icon" type="image/x-icon" href="Icon.png">
   </head>
   <title>Men's Perfect Bracket Simulator</title>
@@ -168,10 +167,20 @@
         </div>
         <div class="column_two" style="background-color: white;">
             <div class="give_me_space"></div>
-            <button onclick="ML_settings() ; find_winner()" class="ML_button" style="margin-left:1.5%">AI Prediction</button>
-            <button onclick="three_pt_settings() ; find_winner()" class="ML_button">3pt Heavy</button>
-            <button onclick="random_settings() ; find_winner()" class="ML_button">Random</button>
-            <span id="perfect_button"></span>
+            <button class="simplify_button" style="margin-left:1.5%">Simplify</button>
+            <button onclick="ML_settings() ; find_winner()" class="ML_button">AI Prediction</button>
+            <button class="ML_random_button" id="ML_random_button"><span class="random_button" onclick="random_settings() ; find_winner()">Random </span><span class="caret" onclick="toggleSlider() ; position_random_slider()">&#9660;</span></button>
+            <div class="random_slider" id="random_slider">
+              <div class="range_container">
+                <input class="form_control_container__time__input" type="number" id="fromInput" value="0" min="-100" max="100"/>
+                <div class="sliders_control">
+                  <input class="random_min_slider" id="fromSlider" type="range" value="0" min="-100" max="100"/>
+                  <input class="random_max_slider" id="toSlider" type="range" value="100" min="-100" max="100"/>
+                </div>
+                <input class="form_control_container__time__input" type="number" id="toInput" value="100" min="-100" max="100"/>
+              </div>
+            </div>
+            <button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>
             <div class="dropdown" style="float: right;">
                 <button class="dropbtn"><span id="yearofstudy">Year</span></button>
                 <div class="dropdown-content">
@@ -686,5 +695,6 @@
     <div class="bottom_banner">
         <p>“Perfection is not attainable, but if we chase perfection we can catch excellence” - Vince Lombardi<p></p><a class="bottom_banner_2">Questions? Contact: perfectbracketsim@gmail.com</a></p>
       </div>
+      <script src="mens-bracket.js"></script>
   </body>
 </html>

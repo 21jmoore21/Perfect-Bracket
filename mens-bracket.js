@@ -1,3 +1,122 @@
+function position_random_slider() {
+    var element = document.getElementById("ML_random_button");
+    var rect = element.getBoundingClientRect();
+
+    var dist = rect.left; // Distance from the left edge of the offset parent to the left edge of the element
+
+    var element_slider = document.getElementById("random_slider");
+    var dist_var = dist + 'px'
+    element_slider.style.marginLeft = dist_var;
+}
+
+function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#333', '#00aebe', controlSlider);
+    if (from > to) {
+        fromSlider.value = to;
+        fromInput.value = to;
+    } else {
+        fromSlider.value = from;
+    }
+}
+    
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#333', '#00aebe', controlSlider);
+    setToggleAccessible(toInput);
+    if (from <= to) {
+        toSlider.value = to;
+        toInput.value = to;
+    } else {
+        toInput.value = from;
+    }
+}
+
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#333', '#00aebe', toSlider);
+  if (from > to) {
+    fromSlider.value = to;
+    fromInput.value = to;
+  } else {
+    fromInput.value = from;
+  }
+}
+
+function controlToSlider(fromSlider, toSlider, toInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#333', '#00aebe', toSlider);
+  setToggleAccessible(toSlider);
+  if (from <= to) {
+    toSlider.value = to;
+    toInput.value = to;
+  } else {
+    toInput.value = from;
+    toSlider.value = from;
+  }
+}
+
+function getParsed(currentFrom, currentTo) {
+  const from = parseInt(currentFrom.value, 10);
+  const to = parseInt(currentTo.value, 10);
+  return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+    const rangeDistance = to.max-to.min;
+    const fromPosition = from.value - to.min;
+    const toPosition = to.value - to.min;
+    controlSlider.style.background = `linear-gradient(
+      to right,
+      ${sliderColor} 0%,
+      ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+      ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+      ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+  const toSlider = document.querySelector('#toSlider');
+  if (Number(currentTarget.value) <= 0 ) {
+    toSlider.style.zIndex = 2;
+  } else {
+    toSlider.style.zIndex = 0;
+  }
+}
+
+const fromSlider = document.querySelector('#fromSlider');
+const toSlider = document.querySelector('#toSlider');
+const fromInput = document.querySelector('#fromInput');
+const toInput = document.querySelector('#toInput');
+fillSlider(fromSlider, toSlider, '#333', '#00aebe', toSlider);
+setToggleAccessible(toSlider);
+
+fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+
+function toggleSlider() {
+  var slider = document.getElementById("random_slider");
+  if (slider.style.display === "block") {
+    slider.style.display = "none";
+  } else {
+    slider.style.display = "block";
+    document.addEventListener("click", hideSliderOutside);
+  }
+}
+
+function hideSliderOutside(event) {
+  var slider = document.getElementById("random_slider");
+  var button = document.querySelector(".caret");
+  if (!slider.contains(event.target) && !button.contains(event.target)) {
+    slider.style.display = "none";
+    document.removeEventListener("click", hideSliderOutside);
+  }
+}
+
 function populate_teams(){
     document.getElementById("region_1").innerHTML = "East";
     document.getElementById("region_2").innerHTML = "West";
@@ -77,7 +196,6 @@ function populate_teams(){
 
 function print_year() {
     year = document.getElementById('yearofstudy').innerHTML;
-    console.log(year)
     if (year == "Year") {
         document.getElementById('national_champ').innerHTML = "2024 Men's";
     }
@@ -256,19 +374,11 @@ function ML_settings() {
     }
 }
 
-function three_pt_settings() {
-    const slider_weights = [80,-10,50,100,30,20,10,50,-20,0,5,25,0,10,30]
-    for (let j = 0, len = 15; j < len; j++) {
-        let id = j+1;
-        document.getElementById("checkbox"+id).checked = true;
-        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
-        document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
-    }
-}
-
 function random_settings() {
-    const slider_weights = Array(15).fill(null).map((u, i) => Math.floor(Math.random()*101))
+    var min_val = document.getElementById('fromInput').value
+    var max_val = document.getElementById('toInput').value
+    var range = (max_val - min_val + 1)
+    const slider_weights = Array(15).fill(null).map((u, i) => Number(Math.floor(Math.random()*range))+ Number(min_val))
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
@@ -290,7 +400,7 @@ function perfect_settings() {
     else if (study_year == 2021){
         var slider_weights = [94, 79, 68, 92, 69, 44, 60, -100, -55, 78, -35, -27, 55, -80, 6]
     }
-    else if (study_year == 2024){
+    else if (study_year == 2024 || study_year == "Year"){
         var slider_weights = [10, 2, 37, 92, 97, 68, 28, 83, 18, 29, 46, -100, -100, -67, 69]
     }
     for (let j = 0, len = 15; j < len; j++) {
@@ -334,23 +444,18 @@ function toggleLabel(checkboxId, labelId, slider_value,slider_val_id) {
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
     if (year == "Year") {
-        document.getElementById("perfect_button").innerHTML = "";
         document.getElementById('national_champ').innerHTML = "2024 Men's";
     }
     else if (year == 2023){
-        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
         document.getElementById('national_champ').innerHTML = "2023 Men's";
     }
     else if (year == 2022){
-        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
         document.getElementById('national_champ').innerHTML = "2022 Men's";
     }
     else if (year == 2021){
-        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
         document.getElementById('national_champ').innerHTML = "2021 Men's";
     }
     else if (year == 2024){
-        document.getElementById("perfect_button").innerHTML = "<button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>";
         document.getElementById('national_champ').innerHTML = "2024 Men's";
     }
 }
