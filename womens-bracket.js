@@ -416,17 +416,6 @@ function ML_settings() {
     }
 }
 
-function three_pt_settings() {
-    const slider_weights = [80,-10,50,100,30,20,10,50,-20,0,5,25,0,10,30]
-    for (let j = 0, len = 15; j < len; j++) {
-        let id = j+1;
-        document.getElementById("checkbox"+id).checked = true;
-        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
-        document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
-    }
-}
-
 function random_settings() {
     var min_val = document.getElementById('fromInput').value
     var max_val = document.getElementById('toInput').value
