@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+.left-dropbtn {
+  cursor: pointer;
+}
+
 .left-dropdown:hover .left-dropbtn{
 color: rgb(175,175,175);
 }
@@ -271,6 +275,10 @@ main {
   float: right;
   overflow: hidden;
   margin-left: 0%;
+}
+
+.dropbtn-nav {
+  cursor: pointer;
 }
 
 .dropdown-nav .dropbtn-nav {
