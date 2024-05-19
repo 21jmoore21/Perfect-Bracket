@@ -163,78 +163,78 @@
 
 /* Style the dropdown content */
 .left-dropdown-content {
-    display: none;
-    position: absolute;
-    background: #efefef;
-    color: #333;
-    z-index: 1;
-    text-align: center;
+  display: none;
+  position: absolute;
+  background: #efefef;
+  color: #333;
+  z-index: 1;
+  text-align: center;
 }
 
 /* Style the dropdown links */
 .left-dropdown-content a {
-    float: none;
-    color: #333;
-    text-decoration: none;
-    display: block;
-    min-width: 130px;
+  float: none;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  min-width: 130px;
 }
 
 /* Change color on hover for the dropdown links */
 .left-dropdown-content a:hover {
-  background: #00aebe;
-  color: white;
+background: #00aebe;
+color: white;
 }
 
 /* Show the dropdown content when the dropdown button is hovered over */
 .left-dropdown:hover .left-dropdown-content {
-    display: block;
+  display: block;
 }
 
 .mens-dropright-content {
-  background: #dcdcdc;
-  color: #333;
-  position: absolute;
-  top: 0%;
-  left: 100%;
-  display: none
+background: #dcdcdc;
+color: #333;
+position: absolute;
+top: 0%;
+left: 100%;
+display: none
 }
 
 .mens-inner-dropdown:hover .mens-dropright-content {
-  display: block;
+display: block;
 }
 
 .mens-inner-dropdown:hover .mens-matrix {
-  background: #00aebe;
-  color: white;
+background: #00aebe;
+color: white;
 }
 
 .mens-dropright-content a:hover {
-  background: #00aebe;
-  color: white;
+background: #00aebe;
+color: white;
 }
 
 .womens-dropright-content {
-  background: #dcdcdc;
-  color: #333;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  display: none
+background: #dcdcdc;
+color: #333;
+position: absolute;
+top: 50%;
+left: 100%;
+display: none
 }
 
 .womens-inner-dropdown:hover .womens-dropright-content {
-  display: block;
+display: block;
 }
 
 .womens-inner-dropdown:hover .womens-matrix {
-  background: #00aebe;
-  color: white;
+background: #00aebe;
+color: white;
 }
 
 .womens-dropright-content a:hover {
-  background: #00aebe;
-  color: white;
+background: #00aebe;
+color: white;
 }
 
 .hidden_button{

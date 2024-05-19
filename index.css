@@ -24,8 +24,8 @@ color: rgb(175,175,175);
 .left-dropdown-content {
   display: none;
   position: absolute;
-  background: #efefef;
-  color: #333;
+  background: #333;
+  color: #efefef;
   z-index: 1;
   text-align: center;
 }
@@ -33,7 +33,7 @@ color: rgb(175,175,175);
 /* Style the dropdown links */
 .left-dropdown-content a {
   float: none;
-  color: #333;
+  color: #efefef;
   text-decoration: none;
   display: block;
   min-width: 130px;
@@ -51,12 +51,12 @@ color: white;
 }
 
 .mens-dropright-content {
-background: #dcdcdc;
-color: #333;
-position: absolute;
-top: 0%;
-left: 100%;
-display: none
+  background: #333;
+  color: #efefef;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  display: none
 }
 
 .mens-inner-dropdown:hover .mens-dropright-content {
@@ -74,12 +74,12 @@ color: white;
 }
 
 .womens-dropright-content {
-background: #dcdcdc;
-color: #333;
-position: absolute;
-top: 50%;
-left: 100%;
-display: none
+  background: #333;
+  color: #efefef;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: none
 }
 
 .womens-inner-dropdown:hover .womens-dropright-content {
