@@ -1,3 +1,53 @@
+.perfect_active_year {
+  display: none;
+}
+
+.perfect_year_pick {
+  color: rgb(129, 129, 129);
+}
+
+.perfect_year_pick:hover {
+  cursor: pointer; /* Change this to the desired cursor type */
+}
+
+.ML_perfect_button {
+  margin-left: 0.5%;
+  background:#00be9f;
+  background-color:#00be9f;
+  border-radius:50px;
+  border:0px solid #030303;
+  display:inline-block;
+  cursor:pointer;
+  min-width: 50px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  color:#ffffff;
+  padding: 12px 16px;
+  text-decoration:none;
+}
+
+.perfect_button:hover {
+  color:#333;
+}
+
+.perfect-caret:hover {
+  color: #333;
+}
+
+.perfect_dropdown {
+  display: none;
+  position: absolute;
+  width: 20%;
+  max-width: 150px;
+  background-color: #ddd;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  left: 0;
+  margin-top: 3px;
+}
+
 .ML_random_button {
   margin-left: 0.5%;
   background:#00be9f;
@@ -842,6 +892,10 @@ body {
     }
 
     .ML_random_button {
+      display: none;
+    }
+
+    .ML_perfect_button {
       display: none;
     }
 

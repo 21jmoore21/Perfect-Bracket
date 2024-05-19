@@ -1,3 +1,45 @@
+function update_perfect_year(year_id) {
+    var year = document.getElementById(year_id).innerHTML;
+
+    var all_years = document.querySelectorAll(".perfect_year_pick");
+    all_years.forEach(function(element) {
+        element.style.color = 'rgb(129, 129, 129)'; // Change to any desired color
+    });
+
+    document.getElementById(year_id).style.color = "#333";
+    document.getElementById("perfect_active_year").innerHTML = year;
+}
+
+function position_perfect_dropdown() {
+    var element = document.getElementById("ML_perfect_button");
+    var rect = element.getBoundingClientRect();
+
+    var dist = rect.left; // Distance from the left edge of the offset parent to the left edge of the element
+
+    var element_slider = document.getElementById("perfect_dropdown");
+    var dist_var = dist + 'px'
+    element_slider.style.marginLeft = dist_var;
+}
+
+function togglePer() {
+  var slider = document.getElementById("perfect_dropdown");
+  if (slider.style.display === "block") {
+    slider.style.display = "none";
+  } else {
+    slider.style.display = "block";
+    document.addEventListener("click", hidePerOutside);
+  }
+}
+
+function hidePerOutside(event) {
+  var slider = document.getElementById("perfect_dropdown");
+  var button = document.querySelector(".perfect-caret");
+  if (!slider.contains(event.target) && !button.contains(event.target)) {
+    slider.style.display = "none";
+    document.removeEventListener("click", hidePerOutside);
+  }
+}
+
 function position_random_slider() {
     var element = document.getElementById("ML_random_button");
     var rect = element.getBoundingClientRect();
@@ -389,7 +431,7 @@ function random_settings() {
 }
 
 function perfect_settings() {
-    let study_year = document.getElementById("yearofstudy").innerHTML;
+    let study_year = document.getElementById("perfect_active_year").innerHTML;
     let current_year = 2024;
     if (study_year == 2023){
         var slider_weights = [66, -13, -97, 57, -1, -85, -80, 56, -42, 83, 84, 62, 34, 53, 96]
@@ -400,8 +442,11 @@ function perfect_settings() {
     else if (study_year == 2021){
         var slider_weights = [94, 79, 68, 92, 69, 44, 60, -100, -55, 78, -35, -27, 55, -80, 6]
     }
-    else if (study_year == 2024 || study_year == "Year"){
+    else if (study_year == 2024){
         var slider_weights = [10, 2, 37, 92, 97, 68, 28, 83, 18, 29, 46, -100, -100, -67, 69]
+    }
+    else if (study_year == "Overall"){
+        var slider_weights = [55, -85, 13, 71, 25, -22, -54, 34, 37, 98, -49, 39, -17, 37, 60]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
@@ -445,18 +490,23 @@ function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
     if (year == "Year") {
         document.getElementById('national_champ').innerHTML = "2024 Men's";
+        update_perfect_year('ovr_perfect_year');
     }
     else if (year == 2023){
         document.getElementById('national_champ').innerHTML = "2023 Men's";
+        update_perfect_year('2023_perfect_year');
     }
     else if (year == 2022){
         document.getElementById('national_champ').innerHTML = "2022 Men's";
+        update_perfect_year('2022_perfect_year');
     }
     else if (year == 2021){
         document.getElementById('national_champ').innerHTML = "2021 Men's";
+        update_perfect_year('2021_perfect_year');
     }
     else if (year == 2024){
         document.getElementById('national_champ').innerHTML = "2024 Men's";
+        update_perfect_year('2024_perfect_year');
     }
 }
 

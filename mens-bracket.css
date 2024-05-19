@@ -1,3 +1,15 @@
+.perfect_active_year {
+  display: none;
+}
+
+.perfect_year_pick {
+  color: rgb(129, 129, 129);
+}
+
+.perfect_year_pick:hover {
+  cursor: pointer; /* Change this to the desired cursor type */
+}
+
 .ML_perfect_button {
   margin-left: 0.5%;
   background:#00aebe;
@@ -884,6 +896,10 @@ body {
     }
 
     .ML_random_button {
+      display: none;
+    }
+
+    .ML_perfect_button {
       display: none;
     }
 
