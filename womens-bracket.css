@@ -118,8 +118,7 @@
 }
 
 .left-dropdown:hover .left-dropbtn{
-background-color: rgb(194, 194, 194);
-color: #333;
+color: rgb(175,175,175);
 }
 
 /* Style the dropdown content */
@@ -301,7 +300,7 @@ input[type=number] {
 	text-decoration:none;
 }
 .simplify_button:hover {
-  color:#00be9f;
+  color: rgb(175, 175, 175);
 }
 
 .bracket_score {
@@ -420,6 +419,14 @@ input[type=number] {
   color: #333;
 }
 
+.topnav-btn {
+  color: #f2f2f2;
+}
+
+.topnav-btn:hover {
+  color: rgb(175, 175, 175);
+}
+
 .dropdown-nav {
   float: right;
   overflow: hidden;
@@ -461,7 +468,7 @@ input[type=number] {
 }
 
 .dropdown-content-nav a:hover {
-  background-color: #00be9f;
+  background-color: rgb(201, 201, 201);
   color: white;
 }
 

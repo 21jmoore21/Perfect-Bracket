@@ -17,8 +17,8 @@
   <body style="background-color: white;" onload="populate_teams();print_year()">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
-        <a style="color:#f2f2f2;" onmouseover="this.style.color='#333';this.style.backgroundColor='rgb(194,194,194)'" onmouseout="this.style.color='#f2f2f2';this.style.backgroundColor='#333'" href="./about.html">About</a>
-        <a style="color:#f2f2f2;" onmouseover="this.style.color='#333';this.style.backgroundColor='rgb(194,194,194)'" onmouseout="this.style.color='#f2f2f2';this.style.backgroundColor='#333'" href="./stats.html">Stats</a>
+        <a class="topnav-btn" href="./about.html">About</a>
+        <a class="topnav-btn" href="./stats.html">Stats</a>
         <div class="left-dropdown">
           <button class="left-dropbtn">Winner's Matrix</button>
           <div class="left-dropdown-content">
@@ -180,7 +180,14 @@
                 <input class="form_control_container__time__input" type="number" id="toInput" value="100" min="-100" max="100"/>
               </div>
             </div>
-            <button onclick='perfect_settings() ; find_winner()' class='ML_button'>Perfect</button>
+            <button class="ML_perfect_button" id="ML_perfect_button"><span class="perfect_button" onclick='perfect_settings() ; find_winner()'>Perfect </span><span class="perfect-caret" onclick="togglePer() ; position_perfect_dropdown()">&#9660;</span></button>
+            <div class="perfect_dropdown" id="perfect_dropdown">
+                <a>Overall</a>
+                <a>2024</a>
+                <a>2023</a>
+                <a>2022</a>
+                <a>2021</a>
+            </div>
             <div class="dropdown" style="float: right;">
                 <button class="dropbtn"><span id="yearofstudy">Year</span></button>
                 <div class="dropdown-content">

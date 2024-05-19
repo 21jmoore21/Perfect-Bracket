@@ -17,8 +17,7 @@
 }
 
 .left-dropdown:hover .left-dropbtn{
-background-color: rgb(194, 194, 194);
-color: #333;
+color: rgb(175,175,175);
 }
 
 /* Style the dropdown content */
@@ -321,6 +320,14 @@ input[type=number] {
 
 .topnav a.active:hover {
   color: #333;
+}
+
+.topnav-btn {
+  color: #f2f2f2;
+}
+
+.topnav-btn:hover {
+  color: rgb(175, 175, 175);
 }
 
 .dropdown-nav {
