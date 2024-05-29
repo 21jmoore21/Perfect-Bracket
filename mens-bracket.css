@@ -4,6 +4,7 @@
 
 .perfect_year_pick {
   color: rgb(129, 129, 129);
+  padding-right: 2px;
 }
 
 .perfect_year_pick:hover {
