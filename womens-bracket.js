@@ -443,7 +443,7 @@ function perfect_settings() {
         var slider_weights = [-92, -59, 56, -9, -3, 55, -45, -66, 85, 6, 6, 15, -8, 26, 96]
     }
     else if (study_year == 2024){
-        var slider_weights = [98, -28, -29, 84, -43, -14, 83, -98, 79, -63, 3, -3, 95, 30, 91]
+        var slider_weights = [47, 78, -68, 90, -23, -78, -11, -10, 26, -43, -39, -91, 1, 60, 78]
     }
     else if (study_year == "Overall"){
         var slider_weights = [41, 99, 21, -52, 6, 82, -50, -49, -56, 63, -33, -40, -10, -11, 96]
