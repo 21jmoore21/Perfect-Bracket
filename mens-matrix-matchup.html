@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2KBQQ51689"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2KBQQ51689');
+</script>
+    <link rel="stylesheet" type="text/css" href="mens-matrix-matchup.css">
+    <script src="mens-matrix-matchup.js"></script>
+    <link rel="icon" type="image/x-icon" href="Icon.png">
+  </head>
+  <title>Men's Perfect Bracket Simulator</title>
+  <body style="background-color: white;" onload="populate_teams()">
+    <div class="topnav">
+        <a class="active" href="./index.html">Home</a>
+        <a class="topnav-btn" href="./about.html">About</a>
+        <a class="topnav-btn" href="./stats.html">Stats</a>
+        <div class="left-dropdown">
+          <button class="left-dropbtn">Winner's Matrix</button>
+          <div class="left-dropdown-content">
+            <div class="mens-inner-dropdown">
+            <a class="mens-matrix" href="./mens-matrix-table.html">Men's Matrix</a><br>
+            <div class="mens-dropright-content">
+                <a href="./mens-matrix-bracket.html">Bracket Mode</a>
+                <a href="./mens-matrix-matchup.html">Matchup Mode</a>
+                <a href="./mens-matrix-table.html">Table Mode</a>
+              </div>
+            </div>
+            <div class="womens-inner-dropdown">
+                <a class="womens-matrix" href="./womens-matrix-table.html">Women's Matrix</a><br>
+                <div class="womens-dropright-content">
+                    <a href="./womens-matrix-bracket.html">Bracket Mode</a>
+                    <a href="./womens-matrix-matchup.html">Matchup Mode</a>
+                    <a href="./womens-matrix-table.html">Table Mode</a>
+                  </div>
+                </div>
+          </div>
+      </div>
+        <div class="dropdown-nav">
+            <button class = "dropbtn-nav">Bracket</button>
+            <div class="dropdown-content-nav">
+                <a href="./mens-bracket.html">Men's Bracket</a>
+                <a href="./womens-bracket.html">Women's Bracket</a>
+            </div>
+        </div>
+    </div>
+    <main class="row" style="padding-top:45px;background-color: white;">
+      <div class="column_two" style="background-color: white;">
+        <div class="give_me_space"></div>
+        <a href="./mens-matrix-bracket.html" class="selection_button">Bracket Mode</a>
+        <a class="selection_button_break">|</a>
+        <a href="./mens-matrix-matchup.html" class="selection_button">Matchup Mode</a>
+        <a class="selection_button_break">|</a>
+        <a href="./mens-matrix-table.html" class="selection_button">Table Mode</a>
+        <div class="dropdown" style="float: right;">
+            <button class="dropbtn"><span id="yearofstudy">Year</span></button>
+            <div class="dropdown-content">
+              <button onclick="change_year(2024);populate_teams();clear_input()" class="dropdownButton">2024</button>
+              <button onclick="change_year(2023);populate_teams();clear_input()" class="dropdownButton">2023</button>
+              <button onclick="change_year(2022);populate_teams();clear_input()" class="dropdownButton">2022</button>
+              <button onclick="change_year(2021);populate_teams();clear_input()" class="dropdownButton">2021</button>
+            </div>
+          </div>
+        <div>
+            <p class="heading">Men's Winner's Matrix</p>
+        </div>
+        <div class="give_me_space"></div>
+        <div class="give_me_space"></div>
+      <div class="give_me_space"></div>
+      <div class="column_1"></div>
+      <div class="column_2">
+        <a class="matchup_headings">Team 1</a>
+        <div class="give_me_space"></div>
+        <div class="team_dropdown">
+          <button class="teambtn"><span class="team_1" id="team_1">Select Team 1 ...</span><span class="caret">&#9660;</span></button>
+          <div class="team_dropdown-content">
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_1"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_2"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_3"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_4"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_5"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_6"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_7"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_8"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_9"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_10"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_11"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_12"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_13"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_14"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_15"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_16"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_17"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_18"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_19"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_20"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_21"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_22"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_23"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_24"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_25"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_26"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_27"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_28"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_29"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_30"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_31"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_32"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_33"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_34"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_35"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_36"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_37"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_38"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_39"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_40"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_41"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_42"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_43"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_44"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_45"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_46"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_47"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_48"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_49"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_50"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_51"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_52"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_53"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_54"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_55"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_56"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_57"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_58"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_59"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_60"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_61"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_62"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_63"></button>
+            <button onclick="team1_change_team(this.innerHTML)" class="teamdropdownButton" id="team1_64"></button>
+          </div>
+        </div>
+      </div>
+      <div class="column_3">
+        <a class="matchup_headings">Team 2</a>
+        <div class="give_me_space"></div>
+        <div class="team_dropdown">
+          <button class="teambtn"><span class="team_2" id="team_2">Select Team 2 ...</span><span class="caret">&#9660;</span></button>
+          <div class="team_dropdown-content">
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_1"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_2"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_3"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_4"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_5"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_6"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_7"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_8"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_9"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_10"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_11"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_12"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_13"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_14"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_15"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_16"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_17"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_18"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_19"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_20"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_21"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_22"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_23"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_24"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_25"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_26"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_27"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_28"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_29"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_30"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_31"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_32"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_33"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_34"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_35"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_36"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_37"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_38"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_39"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_40"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_41"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_42"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_43"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_44"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_45"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_46"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_47"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_48"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_49"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_50"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_51"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_52"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_53"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_54"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_55"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_56"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_57"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_58"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_59"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_60"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_61"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_62"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_63"></button>
+            <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_64"></button>
+          </div>
+        </div>
+      </div>
+      <div class="column_4">
+        <a class="matchup_headings">Number of Simulations</a>
+        <div class="give_me_space"></div>
+        <input min="0" max="100000" value="1000" type="number" id="num_sims" class="num_input"></input>
+      </div>
+      <div class="column_5">
+        <a class="matchup_headings">Run The Sim</a>
+        <div class="give_me_space"></div>
+        <button onclick="calculating_results()" class="run_button">Run</button>
+      </div>
+    <div class="give_me_space"></div>
+    <div class="give_me_space"></div>
+    <div class="result_text" id="result_text"></div>
+    <div class="result_text_2" id="result_text_2"></div>
+    <div class="result_text_3" id="result_text_3"></div>
+    <div class="result_text_3" id="result_text_4"></div>
+    <div class="give_me_space"></div>
+    <div class="give_me_space"></div>
+    <div class="give_me_space"></div>
+    </div>
+    </main>
+    <div class="bottom_banner">
+        <p>“Perfection is not attainable, but if we chase perfection we can catch excellence” - Vince Lombardi<p></p><a class="bottom_banner_2">Questions? Contact: perfectbracketsim@gmail.com</a></p>
+      </div>
+  </body>
+</html>
