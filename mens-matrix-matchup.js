@@ -15,8 +15,8 @@ function team2_change_team(team){
 }
 
 function clear_input(){
-  document.getElementById("team_1").innerHTML = "Select Team 1 ...";
-  document.getElementById("team_2").innerHTML = "Select Team 2 ...";
+  document.getElementById("team_1").innerHTML = "Select Team 1...";
+  document.getElementById("team_2").innerHTML = "Select Team 2...";
 }
 
 function calculating_results(){
@@ -585,15 +585,15 @@ function find_winner(){
   var team_1 = document.getElementById("team_1").innerHTML;
   var team_2 = document.getElementById("team_2").innerHTML;
 
-  if (team_1 == "Select Team 1 ...") {
-    if (team_2 == "Select Team 2 ...") {
+  if (team_1 == "Select Team 1...") {
+    if (team_2 == "Select Team 2...") {
       document.getElementById("result_text").innerHTML = "Please Select Team 1 and Team 2";
     }
     else {
       document.getElementById("result_text").innerHTML = "Please Select Team 1";
     }
   }
-  else if (team_2 == "Select Team 2 ...") {
+  else if (team_2 == "Select Team 2...") {
     document.getElementById("result_text").innerHTML = "Please Select Team 2";
   }
   else {
