@@ -81,6 +81,11 @@
   z-index: 1;
   max-height: 20vh;
   overflow-y: auto;
+  overflow: scroll;
+}
+
+.team_dropdown-content::-webkit-scrollbar {
+  display: none;
 }
 
 .team_dropdown-content a {
