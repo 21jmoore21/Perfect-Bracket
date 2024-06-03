@@ -27,7 +27,16 @@ function calculating_results(){
   setTimeout(function() {
     // Call the long-running function
     find_winner();
-}, 10); // Short delay to allow the initial update
+  }, 10); // Short delay to allow the initial update
+}
+
+function limit_input(val) {
+  let input = val //document.getElementById(val);
+  let n = input.value;
+  n = Number(n);
+  if (n < 1) {
+      input.value = 1;
+  } 
 }
 
 function populate_teams(){
