@@ -1,3 +1,192 @@
+// When the user clicks the button, open the popup 
+function show_popup_menu() {
+    // Get the popup
+    var popup = document.getElementById("popupMenu");
+    popup.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the popup
+function close_popup_menu() {
+    // Get the popup
+    var popup = document.getElementById("popupMenu");
+    popup.style.display = "none";
+    document.getElementById("questionnaireForm").reset(); // Reset the form
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+    // Get the popup
+    var popup = document.getElementById("popupMenu");
+    if (event.target == popup) {
+        popup.style.display = "none";
+        document.getElementById("questionnaireForm").reset(); // Reset the form
+    }
+}
+
+// Handle form submission
+function submit_form() {
+    // Get the popup
+    var popup = document.getElementById("popupMenu");
+    var selectedAnswers = [];
+    for (var i = 1; i <= 5; i++) {
+        var selectedOption = document.querySelector('input[name="question' + i + '"]:checked').value;
+        selectedAnswers.push(selectedOption);
+    }
+    popup.style.display = "none";
+    const form = document.getElementById('questionnaireForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    })
+
+    var slider_weights = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+    if (selectedAnswers[0] == "Offense") {
+        slider_weights[0] = 50;
+        slider_weights[1] = -10;
+
+        if (selectedAnswers[1] == "Shooting") {
+            slider_weights[2] = 75;
+            slider_weights[3] = 60;
+            slider_weights[4] = 30;
+            slider_weights[5] = 30;
+            slider_weights[6] = 50;
+            slider_weights[7] = 80;
+        }
+        else if (selectedAnswers[1] == "Passing") {
+            slider_weights[2] = 45;
+            slider_weights[3] = 30;
+            slider_weights[4] = 30;
+            slider_weights[5] = 80;
+            slider_weights[6] = 40;
+            slider_weights[7] = 40;
+        }
+        else if (selectedAnswers[1] == "Rebounding") {
+            slider_weights[2] = 45;
+            slider_weights[3] = 30;
+            slider_weights[4] = 80;
+            slider_weights[5] = 30;
+            slider_weights[6] = 45;
+            slider_weights[7] = 40;
+        }
+
+        if (selectedAnswers[2] == "Rebounding") {
+            slider_weights[8] = 15;
+            slider_weights[9] = 10;
+            slider_weights[10] = 50;
+            slider_weights[11] = 20;
+            slider_weights[12] = 10;
+        }
+        else if (selectedAnswers[2] == "Shot Blocking") {
+            slider_weights[8] = 25;
+            slider_weights[9] = 20;
+            slider_weights[10] = 10;
+            slider_weights[11] = 10;
+            slider_weights[12] = 25;
+        }
+        else if (selectedAnswers[2] == "Steals") {
+            slider_weights[8] = 25;
+            slider_weights[9] = 20;
+            slider_weights[10] = 15;
+            slider_weights[11] = 50;
+            slider_weights[12] = 15;
+        }
+    }
+    else if (selectedAnswers[0] == "Defense") {
+        slider_weights[0] = -10;
+        slider_weights[1] = 50;
+        if (selectedAnswers[1] == "Shooting") {
+            slider_weights[2] = 45;
+            slider_weights[3] = 40;
+            slider_weights[4] = 10;
+            slider_weights[5] = 10;
+            slider_weights[6] = 30;
+            slider_weights[7] = 50;
+        }
+        else if (selectedAnswers[1] == "Passing") {
+            slider_weights[2] = 15;
+            slider_weights[3] = 10;
+            slider_weights[4] = 10;
+            slider_weights[5] = 50;
+            slider_weights[6] = 20;
+            slider_weights[7] = 20;
+        }
+        else if (selectedAnswers[1] == "Rebounding") {
+            slider_weights[2] = 25;
+            slider_weights[3] = 10;
+            slider_weights[4] = 50;
+            slider_weights[5] = 10;
+            slider_weights[6] = 15;
+            slider_weights[7] = 10;
+        }
+
+        if (selectedAnswers[2] == "Rebounding") {
+            slider_weights[8] = 35;
+            slider_weights[9] = 30;
+            slider_weights[10] = 80;
+            slider_weights[11] = 40;
+            slider_weights[12] = 30;
+        }
+        else if (selectedAnswers[2] == "Shot Blocking") {
+            slider_weights[8] = 75;
+            slider_weights[9] = 60;
+            slider_weights[10] = 30;
+            slider_weights[11] = 30;
+            slider_weights[12] = 55;
+        }
+        else if (selectedAnswers[2] == "Steals") {
+            slider_weights[8] = 50;
+            slider_weights[9] = 30;
+            slider_weights[10] = 45;
+            slider_weights[11] = 80;
+            slider_weights[12] = 50;
+        }
+    }
+
+    if (selectedAnswers[3] == "Fast") {
+        slider_weights[13] = 50;
+    }
+    else if (selectedAnswers[3] == "Medium") {
+        slider_weights[13] = 0;
+    }
+    else if (selectedAnswers[3] == "Slow") {
+        slider_weights[13] = -50;
+    }
+
+    if (selectedAnswers[4] == 1) {
+        slider_weights[14] = 20;
+    }
+    else if (selectedAnswers[4] == 2) {
+        slider_weights[14] = 40;
+    }
+    else if (selectedAnswers[4] == 3) {
+        slider_weights[14] = 60;
+    }
+    else if (selectedAnswers[4] == 4) {
+        slider_weights[14] = 80;
+    }
+    else if (selectedAnswers[4] == 5) {
+        slider_weights[14] = 100;
+    }
+     
+    for (let j = 0, len = 15; j < len; j++) {
+        let id = j+1;
+        document.getElementById("checkbox"+id).checked = true;
+        toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
+        document.getElementById("slider"+id).value = slider_weights[j];
+        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
+    }
+    find_winner();
+}
+
+// Clear Pop Up Form
+function clear_popup_form() {
+    var radioButtons = document.querySelectorAll('#questionnaireForm input[type="radio"]');
+    radioButtons.forEach(function(radio) {
+        radio.checked = false;
+    });
+}
+
 function update_perfect_year(year_id) {
     var year = document.getElementById(year_id).innerHTML;
 

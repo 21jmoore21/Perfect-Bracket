@@ -167,7 +167,126 @@
         </div>
         <div class="column_two" style="background-color: white;">
             <div class="give_me_space"></div>
-            <button class="simplify_button" style="margin-left:1.5%">Simplify</button>
+            <button class="simplify_button" style="margin-left:1.5%" id="openPopupBtn" onclick="show_popup_menu()">Simplify</button>
+            <div id="popupMenu" class="popup">
+                <div class="popup-content">
+                    <span id="closePopupBtn" class="close" onclick="close_popup_menu()">&times;</span>
+                    <div class="give_me_space_3"></div>
+                    <a class="popup-heading">What Makes A Team Great</a>
+                    <div class="give_me_space"></div>
+                    <form id="questionnaireForm">
+                        <div class="form-group">
+                            <text class="popup-question">1. What is more important to win the tournament?</text>
+                            <div class="options">
+                                <label for="option1">
+                                    <input type="radio" id="option1" name="question1" value="Offense" required>
+                                    <span class="custom-radio"></span>
+                                    Offense
+                                </label>
+                                <label for="option2">
+                                    <input type="radio" id="option2" name="question1" value="Defense">
+                                    <span class="custom-radio"></span>
+                                    Defense
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <text class="popup-question">2. What is most important to a team's offense?</text>
+                            <div class="options">
+                                <label for="option3">
+                                    <input type="radio" id="option3" name="question2" value="Shooting" required>
+                                    <span class="custom-radio"></span>
+                                    Shooting
+                                </label>
+                                <label for="option4">
+                                    <input type="radio" id="option4" name="question2" value="Passing" required>
+                                    <span class="custom-radio"></span>
+                                    Passing
+                                </label>
+                                <label for="option5">
+                                    <input type="radio" id="option5" name="question2" value="Rebounding">
+                                    <span class="custom-radio"></span>
+                                    Rebounding
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <text class="popup-question">3. What is most important to a team's defense?</text>
+                            <div class="options">
+                                <label for="option6">
+                                    <input type="radio" id="option6" name="question3" value="Rebounding" required>
+                                    <span class="custom-radio"></span>
+                                    Rebounding
+                                </label>
+                                <label for="option7">
+                                    <input type="radio" id="option7" name="question3" value="Shot Blocking">
+                                    <span class="custom-radio"></span>
+                                    Shot Blocking
+                                </label>
+                                <label for="option8">
+                                    <input type="radio" id="option8" name="question3" value="Steals">
+                                    <span class="custom-radio"></span>
+                                    Steals
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <text class="popup-question">4. What is the best pace for teams to play at?</text>
+                            <div class="options">
+                                <label for="option10">
+                                    <input type="radio" id="option10" name="question4" value="Fast" required>
+                                    <span class="custom-radio"></span>
+                                    Fast
+                                </label>
+                                <label for="option11">
+                                    <input type="radio" id="option11" name="question4" value="Medium">
+                                    <span class="custom-radio"></span>
+                                    Medium
+                                </label>
+                                <label for="option12">
+                                    <input type="radio" id="option12" name="question4" value="Slow">
+                                    <span class="custom-radio"></span>
+                                    Slow
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <text class="popup-question">5. On a scale of 1 - 5, how important is seeding?</text>
+                            <div class="options">
+                                <label for="option13">
+                                    <input type="radio" id="option13" name="question5" value="1" required>
+                                    <span class="custom-radio"></span>
+                                    1
+                                </label>
+                                <label for="option14">
+                                    <input type="radio" id="option14" name="question5" value="2">
+                                    <span class="custom-radio"></span>
+                                    2
+                                </label>
+                                <label for="option15">
+                                    <input type="radio" id="option15" name="question5" value="3">
+                                    <span class="custom-radio"></span>
+                                    3
+                                </label>
+                                <label for="option16">
+                                    <input type="radio" id="option16" name="question5" value="4">
+                                    <span class="custom-radio"></span>
+                                    4
+                                </label>
+                                <label for="option17">
+                                    <input type="radio" id="option17" name="question5" value="5">
+                                    <span class="custom-radio"></span>
+                                    5
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="form-group-submit" onclick="submit_form()">Submit</button>
+                            <span class="form-group-clear" onclick="clear_popup_form()">Clear</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <button onclick="ML_settings() ; find_winner()" class="ML_button">AI Prediction</button>
             <button class="ML_random_button" id="ML_random_button"><span class="random_button" onclick="random_settings() ; find_winner()">Random </span><span class="caret" onclick="toggleSlider() ; position_random_slider()">&#9660;</span></button>
             <div class="random_slider" id="random_slider">
