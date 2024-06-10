@@ -85,8 +85,8 @@
 }
 
 .form-group .options .custom-radio {
-  min-width: 13px;
-  min-height: 13px;
+  min-width: 12px;
+  min-height: 12px;
   border-radius: 50%;
   background-color: #ddd;
   border: #ddd 3px solid;
