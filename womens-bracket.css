@@ -85,10 +85,11 @@
 }
 
 .form-group .options .custom-radio {
-  min-width: 16px;
-  min-height: 16px;
+  min-width: 13px;
+  min-height: 13px;
   border-radius: 50%;
   background-color: #ddd;
+  border: #ddd 3px solid;
   display: inline-block;
   margin-right: 5px;
   position: relative;
@@ -97,22 +98,11 @@
 
 .form-group .options .custom-radio:hover {
   background-color: rgb(190, 190, 190);
+  border: rgb(190, 190, 190) 3px solid;
 }
 
 .form-group .options input[type="radio"]:checked + .custom-radio {
-  background-color: #ddd; /* Change the color when checked */
-}
-
-.form-group .options .custom-radio::after {
-  content: "";
-  min-width: 11px;
-  min-height: 11px;
-  background-color: #00be9f;
-  border-radius: 50%;
-  position: absolute;
-  top: 2.5px;
-  left: 2.5px;
-  display: none;
+  background-color: #00be9f; /* Change the color when checked */
 }
 
 .form-group .options input[type="radio"]:checked + .custom-radio::after {
