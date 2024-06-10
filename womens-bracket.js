@@ -1280,7 +1280,7 @@ function find_winner(){
             }
         }
         else { //round 1
-            if (round_1.length == 1) {
+            if (round_1.length == 1 || eliminated_teams.includes(winners_team_name)) {
                 if (round_1.includes(winners_team_name)) {
                     document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
                     bracket_score = bracket_score + 32;
