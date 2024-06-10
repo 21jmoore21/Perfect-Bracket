@@ -1,3 +1,21 @@
+function optimize_weights() {
+    var slider_weights = [];
+    for (var i=1; i <= 15; i++) {
+        var weight
+        let name = "checkbox" + i;
+        let slider_name = "slider" + i;
+        let checkbox = document.getElementById(name);
+        if (checkbox.checked) {
+            weight = document.getElementById(slider_name).value;
+        }
+        else {
+            weight = 0;
+        }
+        slider_weights.push(weight)
+    }
+    console.log(slider_weights)
+}
+
 // When the user clicks the button, open the popup 
 function show_popup_menu() {
     // Get the popup
@@ -484,7 +502,7 @@ function previewFile(myCallback) {
 
 function save_weights() {
     var content_1, content_2, content_3, content_4, content_5, content_6, content_7, content_8, content_9, content_10, content_11, content_12, content_13, content_14, content_15;
-    let current_year = 2024;
+    let current_year = 2025;
     const link = document.createElement("a");
     if (document.getElementById("checkbox1").checked == true) {
         content_1 = document.getElementById("slider1").value + '\r\n';
