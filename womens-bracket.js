@@ -1,3 +1,20 @@
+function optimize_weights() {
+    var slider_weights = [];
+    for (var i=1; i <= 15; i++) {
+        var weight
+        let name = "checkbox" + i;
+        let slider_name = "slider" + i;
+        let checkbox = document.getElementById(name);
+        if (checkbox.checked) {
+            weight = document.getElementById(slider_name).value;
+        }
+        else {
+            weight = 0;
+        }
+        slider_weights.push(weight)
+    }
+}
+
 // When the user clicks the button, open the popup 
 function show_popup_menu() {
     // Get the popup

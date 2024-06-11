@@ -13,7 +13,6 @@ function optimize_weights() {
         }
         slider_weights.push(weight)
     }
-    console.log(slider_weights)
 }
 
 // When the user clicks the button, open the popup 
