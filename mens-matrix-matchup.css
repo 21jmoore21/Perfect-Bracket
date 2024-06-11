@@ -1,11 +1,76 @@
-.column_1 {
-  min-width: 7vw;
+.team_year_btn {
+  background-color: rgb(208, 208, 208);
+  color: rgb(0, 0, 0);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-width: 60px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.team_year_dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.team_year_dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  text-align:center;
+  background-color: #d9d9d9;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.team_year_dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.team_year_dropdown-content a:hover {
+  background-color: #00aebe;
+  color:#ffffff;
+}
+
+.team_year_dropdown:hover .team_year_dropdown-content {
+  display: block;
+}
+
+.team_year_dropdown:hover .team_year_btn {
+  background-color: #333;
+  color:#ffffff;
+}
+
+.team_year_dropdownButton {
+	background:#d9d9d9;
+	background-color:#d9d9d9;
+	border-radius:0px;
+	border:0px solid #030303;
+	display:inline-block;
+	cursor:pointer;
+  min-width: 60px;
+  text-align: center;
+  min-height: 10px;
+  font-size: 16px;
+	color:#000000;
+	text-decoration:none;
+}
+.team_year_dropdownButton:hover {
+	background:#00aebe;
+	background-color:#00aebe;
+  color:#ffffff;
 }
 
 .column_2 {
-  padding-left: 7vw;
+  padding-left: 1vw;
   float: left;
-  width: 20vw;
+  width: 26vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +79,7 @@
 
 .column_3 {
   float: left;
-  width: 20vw;
+  width: 26vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,13 +97,12 @@
 
 .column_5 {
   float: left;
-  width: 23vw;
+  width: 21vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .team_1 {
   float: left;
@@ -60,7 +124,7 @@
   color: rgb(0, 0, 0);
   padding-top: 15px;
   padding-bottom: 15px;
-  min-width: 15vw;
+  min-width: 14vw;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -70,6 +134,7 @@
 .team_dropdown {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .team_dropdown-content {
@@ -115,7 +180,7 @@
 	border:0px solid #030303;
 	display:inline-block;
 	cursor:pointer;
-  min-width: 15vw;
+  min-width: 14vw;
   min-height: 10px;
   font-size: 16px;
 	color:#000000;
@@ -169,9 +234,10 @@
 
 .num_input {
   background-color: rgb(208, 208, 208);
-  border-color: transparent;
+  border: 0px transparent;
   font-size: 16px;
   padding: 15px;
+  vertical-align: middle;
   text-align: center;
   color: rgb(0, 0, 0);
   min-width: 10vw;
@@ -194,9 +260,10 @@ input[type=number] {
 .run_button {
   cursor: pointer;
   background-color: rgb(208, 208, 208);
-  border-color: transparent;
+  border: 0px transparent;
   font-size: 16px;
   padding: 15px;
+  vertical-align: middle;
   text-align: center;
   color: rgb(0, 0, 0);
   min-width: 5vw;

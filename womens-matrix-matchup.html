@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="Icon.png">
   </head>
   <title>Women's Matchup Mode</title>
-  <body style="background-color: white;" onload="populate_teams()">
+  <body style="background-color: white;" onload="populate_teams(1);populate_teams(2)">
     <div class="topnav">
         <a class="active" href="./index.html">Home</a>
         <a class="topnav-btn" href="./about.html">About</a>
@@ -50,32 +50,32 @@
         </div>
     </div>
     <main class="row" style="padding-top:45px;background-color: white;">
-      <div class="column_two" style="background-color: white;">
+      <div class="column_two" style="background-color: white; font-size: 0;">
         <div class="give_me_space"></div>
         <a href="./womens-matrix-bracket.html" class="selection_button">Bracket Mode</a>
         <a class="selection_button_break">|</a>
         <a href="./womens-matrix-matchup.html" class="selection_button">Matchup Mode</a>
         <a class="selection_button_break">|</a>
         <a href="./womens-matrix-table.html" class="selection_button">Table Mode</a>
-        <div class="dropdown" style="float: right;">
-            <button class="dropbtn"><span id="yearofstudy">Year</span></button>
-            <div class="dropdown-content">
-              <button onclick="change_year(2024);populate_teams();clear_input()" class="dropdownButton">2024</button>
-              <button onclick="change_year(2023);populate_teams();clear_input()" class="dropdownButton">2023</button>
-              <button onclick="change_year(2022);populate_teams();clear_input()" class="dropdownButton">2022</button>
-              <button onclick="change_year(2021);populate_teams();clear_input()" class="dropdownButton">2021</button>
-            </div>
-          </div>
         <div>
             <p class="heading">Women's Matchup Mode</p>
         </div>
         <div class="give_me_space"></div>
         <div class="give_me_space"></div>
       <div class="give_me_space"></div>
-      <div class="column_1"></div>
       <div class="column_2">
         <a class="matchup_headings">Team 1</a>
         <div class="give_me_space"></div>
+        <div>
+        <div class="team_year_dropdown">
+          <button class="team_year_btn"><span class="team_1_year" id="team_1_year">Year</span></button>
+          <div class="team_year_dropdown-content">
+            <button onclick="change_year(2024,'team_1_year');populate_teams(1);clear_input(1)" class="team_year_dropdownButton">2024</button>
+            <button onclick="change_year(2023,'team_1_year');populate_teams(1);clear_input(1)" class="team_year_dropdownButton">2023</button>
+            <button onclick="change_year(2022,'team_1_year');populate_teams(1);clear_input(1)" class="team_year_dropdownButton">2022</button>
+            <button onclick="change_year(2021,'team_1_year');populate_teams(1);clear_input(1)" class="team_year_dropdownButton">2021</button>
+          </div>
+        </div>
         <div class="team_dropdown">
           <button class="teambtn"><span class="team_1" id="team_1">Select Team 1...</span><span class="caret">&#9660;</span></button>
           <div class="team_dropdown-content">
@@ -146,9 +146,20 @@
           </div>
         </div>
       </div>
+      </div>
       <div class="column_3">
         <a class="matchup_headings">Team 2</a>
         <div class="give_me_space"></div>
+        <div>
+        <div class="team_year_dropdown">
+          <button class="team_year_btn"><span class="team_2_year" id="team_2_year">Year</span></button>
+          <div class="team_year_dropdown-content">
+            <button onclick="change_year(2024,'team_2_year');populate_teams(2);clear_input(2)" class="team_year_dropdownButton">2024</button>
+            <button onclick="change_year(2023,'team_2_year');populate_teams(2);clear_input(2)" class="team_year_dropdownButton">2023</button>
+            <button onclick="change_year(2022,'team_2_year');populate_teams(2);clear_input(2)" class="team_year_dropdownButton">2022</button>
+            <button onclick="change_year(2021,'team_2_year');populate_teams(2);clear_input(2)" class="team_year_dropdownButton">2021</button>
+          </div>
+        </div>
         <div class="team_dropdown">
           <button class="teambtn"><span class="team_2" id="team_2">Select Team 2...</span><span class="caret">&#9660;</span></button>
           <div class="team_dropdown-content">
@@ -218,6 +229,7 @@
             <button onclick="team2_change_team(this.innerHTML)" class="teamdropdownButton" id="team2_64"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="column_4">
         <a class="matchup_headings">Number of Simulations</a>
