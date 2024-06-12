@@ -1,3 +1,30 @@
+.calc_results {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.calc_results_content {
+  background-color: white;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  font-size: 18px;
+  border: 1px solid #888;
+  vertical-align: middle;
+  width: 40vw; /* Could be more or less, depending on screen size */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
 .popup {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
