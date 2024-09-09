@@ -1030,7 +1030,7 @@ function save_weights() {
 }
 
 function ML_settings() {
-    const slider_weights = [-10, -61, 96, 88, 100, 30, 2, 51, 98, 85, -57, 19, 2, -14, 90]
+    const slider_weights = [21, -54, 83, 47, 40, -26, -3, 41, 17, 98, 32, 28, -46, -20, 92]
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
         document.getElementById("checkbox"+id).checked = true;
@@ -1070,7 +1070,7 @@ function perfect_settings() {
         var slider_weights = [10, 2, 37, 92, 97, 68, 28, 83, 18, 29, 46, -100, -100, -67, 69]
     }
     else if (study_year == "Overall"){
-        var slider_weights = [-10, -61, 96, 88, 100, 30, 2, 51, 98, 85, -57, 19, 2, -14, 90]
+        var slider_weights = [21, -54, 83, 47, 40, -26, -3, 41, 17, 98, 32, 28, -46, -20, 92]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
