@@ -171,7 +171,7 @@
             <div id="calc_results" class="calc_results">
                 <div class="calc_results_content">Calculating Optimized Weights...</div>
             </div>
-            <button class="simplify_button" style="margin-left:1.5%" id="openPopupBtn" onclick="show_popup_menu() ; trackButton('Simplify')">Simplify</button>
+            <button class="simplify_button" style="margin-left:1.5%" id="openPopupBtn" onclick="trackButton('Simplify') ; show_popup_menu()">Simplify</button>
             <div id="popupMenu" class="popup">
                 <div class="popup-content">
                     <span id="closePopupBtn" class="close" onclick="close_popup_menu()">&times;</span>
@@ -291,8 +291,8 @@
                     </form>
                 </div>
             </div>
-            <button onclick="ML_settings() ; fill_ml_bracket() ; trackButton('ML Button')" class="ML_button">AI Prediction</button>
-            <button class="ML_random_button" id="ML_random_button"><span class="random_button" onclick="random_settings() ; find_winner() ; trackButton('Random')">Random </span><span class="caret" onclick="toggleSlider() ; position_random_slider()">&#9660;</span></button>
+            <button onclick="trackButton('ML Button') ; ML_settings() ; fill_ml_bracket()" class="ML_button">AI Prediction</button>
+            <button class="ML_random_button" id="ML_random_button"><span class="random_button" onclick="trackButton('Random') ; random_settings() ; find_winner()">Random </span><span class="caret" onclick="toggleSlider() ; position_random_slider()">&#9660;</span></button>
             <div class="random_slider" id="random_slider">
               <div class="range_container">
                 <input class="form_control_container__time__input" type="number" id="fromInput" value="0" min="-100" max="100"/>
@@ -303,7 +303,7 @@
                 <input class="form_control_container__time__input" type="number" id="toInput" value="100" min="-100" max="100"/>
               </div>
             </div>
-            <button class="ML_perfect_button" id="ML_perfect_button"><span class="perfect_button" onclick="perfect_settings() ; find_winner() ; trackButton('Perfect')">Perfect </span><span class="perfect-caret" onclick="togglePer() ; position_perfect_dropdown()">&#9660;</span></button>
+            <button class="ML_perfect_button" id="ML_perfect_button"><span class="perfect_button" onclick="trackButton('Perfect') ; perfect_settings() ; find_winner()">Perfect </span><span class="perfect-caret" onclick="togglePer() ; position_perfect_dropdown()">&#9660;</span></button>
             <div class="perfect_dropdown" id="perfect_dropdown">
                 <a class="perfect_active_year" id="perfect_active_year">Overall</a>
                 <a class="perfect_year_pick" id="ovr_perfect_year" onclick="update_perfect_year('ovr_perfect_year')">Overall</a>
@@ -315,10 +315,10 @@
             <div class="dropdown" style="float: right;">
                 <button class="dropbtn"><span id="yearofstudy">Year</span></button>
                 <div class="dropdown-content">
-                  <button onclick="change_year(2024)" class="dropdownButton">2024</button>
-                  <button onclick="change_year(2023)" class="dropdownButton">2023</button>
-                  <button onclick="change_year(2022)" class="dropdownButton">2022</button>
-                  <button onclick="change_year(2021)" class="dropdownButton">2021</button>
+                  <button onclick="change_year(2024) ; find_winner()" class="dropdownButton">2024</button>
+                  <button onclick="change_year(2023) ; find_winner()" class="dropdownButton">2023</button>
+                  <button onclick="change_year(2022) ; find_winner()" class="dropdownButton">2022</button>
+                  <button onclick="change_year(2021) ; find_winner()" class="dropdownButton">2021</button>
                 </div>
               </div>
             <section style="clear:both;">
