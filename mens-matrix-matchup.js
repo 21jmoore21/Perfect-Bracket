@@ -699,8 +699,8 @@ function find_winner(){
     var percent = 100*team_1_wins/no_sims;
 
     document.getElementById("result_text").innerHTML = "<span class='bolded_result'>Result: </span>The <span class='bolded_result'>" + t1_study_year + " " + team_1 + "</span> won <span class='color_bolded'>" + percent.toFixed(1) + "%</span> of the time against the <span class='bolded_result'>" + t2_study_year + " " + team_2;
-    document.getElementById("result_text_2").innerHTML = "<span class='bolded_result'>" + team_1 + " Wins: </span>" + team_1_wins;
-    document.getElementById("result_text_3").innerHTML = "<span class='bolded_result'>" + team_2 + " Wins: </span>" + team_2_wins;
+    document.getElementById("result_text_2").innerHTML = "<span class='bolded_result'>" + t1_study_year + " " + team_1 + " Wins: </span>" + team_1_wins;
+    document.getElementById("result_text_3").innerHTML = "<span class='bolded_result'>" + t2_study_year + " " + team_2 + " Wins: </span>" + team_2_wins;
     document.getElementById("result_text_4").innerHTML = "<span class='bolded_result'>Ties: </span>" + ties;
   }
 }
