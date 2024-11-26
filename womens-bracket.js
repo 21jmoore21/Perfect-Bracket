@@ -1029,15 +1029,203 @@ function previewFile(myCallback) {
     URL.rev
 }
 
+let lastClicked = null;
+
+function trackButton(buttonName) {
+    lastClicked = buttonName;
+    console.log(lastClicked)
+}
+
 function ML_settings() {
-    const slider_weights = [92, 21, 12, -30, -23, 77, 26, -56, 23, 17, 13, -37, -34, -22, 97]
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
-        document.getElementById("checkbox"+id).checked = true;
+        document.getElementById("checkbox"+id).checked = false;
         toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
-        document.getElementById("slider"+id).value = slider_weights[j];
-        document.getElementById("slider_" + id + "_value").value = slider_weights[j];
     }
+}
+
+function fill_ml_bracket() {
+    year = document.getElementById("yearofstudy").innerHTML;
+    if (year == "Year") {
+        var all_teams = ['S Car', 'Presb', 'UNC', 'Mich St', 'Okla', 'FGCU', 'Indiana', 'Fairfield', 'Neb', 'Texas AM', 'Or St', 'E Wash', 'Ole Miss', 'Marq', 'N Dame', 'Kent St', 'Texas', 'Drexel', 'Alabama', 'Florida St', 'Utah', 'S Dak St', 'Gonzaga', 'UC I', 'Tenn', 'GB', 'NC St', 'Chatta', 'Iowa St', 'MD', 'Stanford', 'Norf St', 'Iowa', 'H Cross', 'WVU', 'Prince', 'Colorado', 'Drake', 'K State', 'Portland', 'Louis', 'Mid Tenn', 'LSU', 'Rice', 'Creigh', 'UNLV', 'UCLA', 'C Bapt', 'USC', 'T AM CC', 'Kansas', 'Michigan', 'Baylor', 'Vandy', 'VA Tech', 'Marsh', 'Syracuse', 'Arizona', 'UConn', 'JSU', 'Duke', 'Rich', 'Ohio St', 'Maine', 'S Car', 'Mich St', 'Okla', 'Indiana', 'Neb', 'Or St', 'Ole Miss', 'N Dame', 'Texas', 'Florida St', 'Utah', 'Gonzaga', 'Tenn', 'NC St', 'MD', 'Stanford', 'Iowa', 'WVU', 'Drake', 'K State', 'Mid Tenn', 'LSU', 'UNLV', 'UCLA', 'USC', 'Michigan', 'Baylor', 'VA Tech', 'Syracuse', 'UConn', 'Rich', 'Ohio St', 'S Car', 'Okla', 'Or St', 'N Dame', 'Texas', 'Gonzaga', 'NC St', 'Stanford', 'Iowa', 'K State', 'LSU', 'UNLV', 'USC', 'VA Tech', 'UConn', 'Rich', 'S Car', 'N Dame', 'Texas', 'Stanford', 'Iowa', 'LSU', 'USC', 'UConn', 'S Car', 'Stanford', 'Iowa', 'UConn', 'S Car', 'Iowa', 'S Car'];
+        var round_32 = [];
+        var round_16 = [];
+        var round_8 = [];
+        var round_4 = [];
+        var round_2 = [];
+        var round_1 = [];
+    }
+    else if (year == 2023){
+        var all_teams = ['S Car', 'Norf St', 'USF', 'Marq', 'Okla', 'Portland', 'UCLA', 'Sac St', 'Creigh', 'Miss St', 'N Dame', 'S Utah', 'Arizona', 'WVU', 'MD', 'H Cross', 'Stanford', 'S Heart', 'Ole Miss', 'Gonzaga', 'Louis', 'Drake', 'Texas', 'E Car', 'Colorado', 'Mid Tenn', 'Duke', 'Iona', 'Florida St', 'Georgia', 'Iowa', 'SE LA', 'Indiana', 'Tenn T', 'Okla St', 'Miami', 'Wash St', 'FGCU', 'Villa', 'Cleve St', 'Michigan', 'UNLV', 'LSU', 'Hawaii', 'NC St', 'Prince', 'Utah', 'G Webb', 'VA Tech', 'Chatta', 'USC', 'S Dak St', 'Iowa St', 'Toledo', 'Tenn', 'St Louis', 'UNC', 'St Johns', 'Ohio St', 'JMU', 'Baylor', 'Alabama', 'UConn', 'Vermont', 'S Car', 'USF', 'Okla', 'UCLA', 'Creigh', 'N Dame', 'Arizona', 'MD', 'Stanford', 'Ole Miss', 'Louis', 'Texas', 'Colorado', 'Duke', 'Florida St', 'Iowa', 'Indiana', 'Okla St', 'FGCU', 'Villa', 'UNLV', 'LSU', 'NC St', 'G Webb', 'VA Tech', 'S Dak St', 'Iowa St', 'Tenn', 'St Johns', 'Ohio St', 'Baylor', 'UConn', 'S Car', 'UCLA', 'N Dame', 'MD', 'Stanford', 'Louis', 'Colorado', 'Iowa', 'Okla St', 'Villa', 'LSU', 'NC St', 'VA Tech', 'Tenn', 'Ohio St', 'UConn', 'S Car', 'MD', 'Stanford', 'Iowa', 'Villa', 'LSU', 'Tenn', 'Ohio St', 'S Car', 'Iowa', 'LSU', 'Ohio St', 'S Car', 'LSU', 'S Car'];
+        var round_32 = ['S Car', 'USF', 'Okla', 'UCLA', 'Miss St', 'N Dame', 'Arizona', 'MD', 'Stanford', 'Ole Miss', 'Louis', 'Texas', 'Colorado', 'Duke', 'Georgia', 'Iowa', 'Indiana', 'Miami', 'FGCU', 'Villa', 'Michigan', 'LSU', 'Prince', 'Utah', 'VA Tech', 'S Dak St', 'Toledo', 'Tenn', 'UNC', 'Ohio St', 'Baylor', 'UConn'];
+        var round_16 = ['S Car', 'UCLA', 'N Dame', 'MD', 'Ole Miss', 'Louis', 'Colorado', 'Iowa', 'Miami', 'Villa', 'LSU', 'Utah', 'VA Tech', 'Tenn', 'Ohio St', 'UConn'];
+        var round_8 = ['S Car', 'MD', 'Louis', 'Iowa', 'Miami', 'LSU', 'VA Tech', 'Ohio St'];
+        var round_4 = ['S Car', 'Iowa', 'LSU', 'VA Tech'];
+        var round_2 = ['Iowa', 'LSU'];
+        var round_1 = ['LSU'];
+    }
+    else if (year == 2022){
+        var all_teams = ['S Car', 'Howard', 'Miami', 'USF', 'UNC', 'SFA', 'Arizona', 'UNLV', 'Georgia', 'Dayton', 'Iowa St', 'UT Arl', 'Colorado', 'Creigh', 'Iowa', 'Illinois St', 'Louis', 'Albany', 'Neb', 'Gonzaga', 'Oregon', 'Belmont', 'Tenn', 'Buffalo', 'BYU', 'Villa', 'Michigan', 'Amer', 'Ole Miss', 'S Dak', 'Baylor', 'Hawaii', 'Stanford', 'Mont St', 'Kansas', 'GA Tech', 'VA Tech', 'FGCU', 'MD', 'Dela', 'Ohio St', 'Mizz St', 'LSU', 'JSU', 'Utah', 'Ark', 'Texas', 'Fairfield', 'NC St', 'Long', 'Wash St', 'K State', 'N Dame', 'Mass', 'Okla', 'IUPUI', 'Kentucky', 'Prince', 'Indiana', 'Charlotte', 'UCF', 'Florida', 'UConn', 'Mercer', 'S Car', 'Miami', 'UNC', 'UNLV', 'Georgia', 'Iowa St', 'Creigh', 'Iowa', 'Louis', 'Neb', 'Oregon', 'Buffalo', 'BYU', 'Michigan', 'S Dak', 'Baylor', 'Stanford', 'Kansas', 'FGCU', 'MD', 'Ohio St', 'LSU', 'Utah', 'Texas', 'NC St', 'K State', 'N Dame', 'Okla', 'Kentucky', 'Indiana', 'Florida', 'UConn', 'S Car', 'UNLV', 'Iowa St', 'Creigh', 'Louis', 'Buffalo', 'BYU', 'Baylor', 'Stanford', 'MD', 'Ohio St', 'Texas', 'NC St', 'N Dame', 'Kentucky', 'UConn', 'S Car', 'Iowa St', 'Louis', 'Baylor', 'Stanford', 'Texas', 'NC St', 'UConn', 'S Car', 'Louis', 'Stanford', 'UConn', 'S Car', 'UConn', 'S Car'];
+        var round_32 = ['S Car', 'Miami', 'UNC', 'Arizona', 'Georgia', 'Iowa St', 'Creigh', 'Iowa', 'Louis', 'Gonzaga', 'Belmont', 'Tenn', 'Villa', 'Michigan', 'S Dak', 'Baylor', 'Stanford', 'Kansas', 'FGCU', 'MD', 'Ohio St', 'LSU', 'Utah', 'Texas', 'NC St', 'K State', 'N Dame', 'Okla', 'Prince', 'Indiana', 'UCF', 'UConn'];
+        var round_16 = ['S Car', 'UNC', 'Iowa St', 'Creigh', 'Louis', 'Tenn', 'Michigan', 'S Dak', 'Stanford', 'MD', 'Ohio St', 'Texas', 'NC St', 'N Dame', 'Indiana', 'UConn'];
+        var round_8 = ['S Car', 'Creigh', 'Louis', 'Michigan', 'Stanford', 'Texas', 'NC St', 'UConn'];
+        var round_4 = ['S Car', 'Louis', 'Stanford', 'UConn'];
+        var round_2 = ['S Car', 'UConn'];
+        var round_1 = ['S Car'];
+    }
+    else if (year == 2021){
+        var all_teams = ['Stanford', 'Ut Vall', 'Okla St', 'Wake F', 'Mizz St', 'Davis', 'Ark', 'Wright St', 'Oregon', 'S Dak', 'Georgia', 'Drexel', 'NWest', 'UCF', 'Louis', 'Marist', 'S Car', 'Mercer', 'Or St', 'Florida St', 'GA Tech', 'SFA', 'WVU', 'Lehigh', 'Texas', 'Bradley', 'UCLA', 'Wyo', 'Alabama', 'UNC', 'MD', 'Mt St M', 'UConn', 'H Point', 'Syracuse', 'S Dak St', 'Iowa', 'C Mich', 'Kentucky', 'Idaho St', 'Michigan', 'FGCU', 'Tenn', 'Mid Tenn', 'VA Tech', 'Marq', 'Baylor', 'JSU', 'NC St', 'NC AT', 'USF', 'Wash St', 'Gonzaga', 'Belmont', 'Indiana', 'VCU', 'Rutgers', 'BYU', 'Arizona', 'S Brook', 'Iowa St', 'Mich St', 'Texas AM', 'Troy', 'Stanford', 'Okla St', 'Mizz St', 'Ark', 'Oregon', 'Georgia', 'NWest', 'Louis', 'S Car', 'Or St', 'GA Tech', 'WVU', 'Texas', 'UCLA', 'Alabama', 'MD', 'UConn', 'Syracuse', 'Iowa', 'Kentucky', 'FGCU', 'Tenn', 'Marq', 'Baylor', 'NC St', 'Wash St', 'Belmont', 'Indiana', 'Rutgers', 'Arizona', 'Iowa St', 'Texas AM', 'Stanford', 'Ark', 'Oregon', 'Louis', 'S Car', 'WVU', 'Texas', 'MD', 'UConn', 'Iowa', 'FGCU', 'Baylor', 'NC St', 'Indiana', 'Arizona', 'Texas AM', 'Stanford', 'Louis', 'S Car', 'MD', 'UConn', 'Baylor', 'Indiana', 'Arizona', 'Stanford', 'S Car', 'UConn', 'Arizona', 'Stanford', 'UConn', 'Stanford'];
+        var round_32 = ['Stanford', 'Okla St', 'Mizz St', 'Wright St', 'Oregon', 'Georgia', 'NWest', 'Louis', 'S Car', 'Or St', 'GA Tech', 'WVU', 'Texas', 'UCLA', 'Alabama', 'MD', 'UConn', 'Syracuse', 'Iowa', 'Kentucky', 'Michigan', 'Tenn', 'VA Tech', 'Baylor', 'NC St','USF', 'Belmont', 'Indiana', 'BYU', 'Arizona', 'Iowa St', 'Texas AM'];
+        var round_16 = ['Stanford', 'Mizz St', 'Oregon', 'Louis', 'S Car', 'GA Tech', 'Texas', 'MD', 'UConn', 'Iowa', 'Michigan', 'Baylor', 'NC St', 'Indiana', 'Arizona', 'Texas AM'];
+        var round_8 = ['Stanford', 'Louis', 'S Car', 'Texas', 'UConn', 'Baylor', 'Indiana', 'Arizona'];
+        var round_4 = ['Stanford', 'S Car', 'UConn', 'Arizona'];
+        var round_2 = ['Stanford', 'Arizona'];
+        var round_1 = ['Stanford'];
+    }
+    else if (year == 2024){
+        var all_teams = ['S Car', 'Presb', 'UNC', 'Mich St', 'Okla', 'FGCU', 'Indiana', 'Fairfield', 'Neb', 'Texas AM', 'Or St', 'E Wash', 'Ole Miss', 'Marq', 'N Dame', 'Kent St', 'Texas', 'Drexel', 'Alabama', 'Florida St', 'Utah', 'S Dak St', 'Gonzaga', 'UC I', 'Tenn', 'GB', 'NC St', 'Chatta', 'Iowa St', 'MD', 'Stanford', 'Norf St', 'Iowa', 'H Cross', 'WVU', 'Prince', 'Colorado', 'Drake', 'K State', 'Portland', 'Louis', 'Mid Tenn', 'LSU', 'Rice', 'Creigh', 'UNLV', 'UCLA', 'C Bapt', 'USC', 'T AM CC', 'Kansas', 'Michigan', 'Baylor', 'Vandy', 'VA Tech', 'Marsh', 'Syracuse', 'Arizona', 'UConn', 'JSU', 'Duke', 'Rich', 'Ohio St', 'Maine', 'S Car', 'Mich St', 'Okla', 'Indiana', 'Neb', 'Or St', 'Ole Miss', 'N Dame', 'Texas', 'Florida St', 'Utah', 'Gonzaga', 'Tenn', 'NC St', 'MD', 'Stanford', 'Iowa', 'WVU', 'Drake', 'K State', 'Mid Tenn', 'LSU', 'UNLV', 'UCLA', 'USC', 'Michigan', 'Baylor', 'VA Tech', 'Syracuse', 'UConn', 'Rich', 'Ohio St', 'S Car', 'Okla', 'Or St', 'N Dame', 'Texas', 'Gonzaga', 'NC St', 'Stanford', 'Iowa', 'K State', 'LSU', 'UNLV', 'USC', 'VA Tech', 'UConn', 'Rich', 'S Car', 'N Dame', 'Texas', 'Stanford', 'Iowa', 'LSU', 'USC', 'UConn', 'S Car', 'Stanford', 'Iowa', 'UConn', 'S Car', 'Iowa', 'S Car'];
+        var round_32 = ["S Car","UNC","Okla","Indiana","Neb","Or St","Ole Miss","N Dame","Texas","Alabama","Utah","Gonzaga","Tenn","NC St","Iowa St","Stanford","Iowa","WVU","Colorado","K State","Mid Tenn","LSU","Creigh","UCLA","USC","Kansas","Baylor","VA Tech","Syracuse","UConn","Duke","Ohio St"];
+        var round_16 = ["S Car","Indiana","Or St","N Dame","Texas","Gonzaga","NC St","Stanford","Iowa","Colorado","LSU","UCLA","USC","Baylor","UConn","Duke"];
+        var round_8 = ["S Car","Or St","Texas","NC St","Iowa","LSU","USC","UConn"];
+        var round_4 = ["S Car","NC St","Iowa","UConn"];
+        var round_2 = ["S Car","Iowa"];
+        var round_1 = ["S Car"];   
+    }
+    for (let j = 0, len = 127; j < len; j++) {
+        document.getElementById("team_"+j).innerHTML = all_teams[j];
+    }
+    let bracket_score = 0;
+    var eliminated_teams = [];
+    var winners_id = 64;
+    for (let j = 0, len = (64*2 - 2); j < len; j+=2) {
+        let winners_id_team = "team_" + winners_id;
+        let winners_team_name = document.getElementById(winners_id_team).innerHTML;
+
+        let team_id = "team_" + j;
+        let team_name = document.getElementById(team_id).innerHTML;
+
+        let next_id = j+1;
+        let next_team_id = "team_" + next_id;
+        let next_team_name = document.getElementById(next_team_id).innerHTML;
+        
+        if (j < 32) { //round 32 left side
+            if (round_32.includes(team_name) || round_32.includes(next_team_name)) {
+                if (round_32.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    ++bracket_score;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        else if (j < 64) { //round 32 right side
+            if (round_32.includes(team_name) || round_32.includes(next_team_name)) {
+                if (round_32.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    ++bracket_score;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        else if (j < 96) { //round 16
+            if (round_16.includes(team_name) || round_16.includes(next_team_name) || eliminated_teams.includes(winners_team_name) || round_16.length == 16) {
+                if (round_16.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    bracket_score = bracket_score + 2;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        else if (j < 112) { //round 8
+            if (round_8.includes(team_name) || round_8.includes(next_team_name) || eliminated_teams.includes(winners_team_name) || round_8.length == 8) {
+                if (round_8.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    bracket_score = bracket_score + 4;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        else if (j < 120) { //round 4
+            if (round_4.includes(team_name) || round_4.includes(next_team_name) || eliminated_teams.includes(winners_team_name) || round_4.length == 4) {
+                if (round_4.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    bracket_score = bracket_score + 8;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        else if (j < 124) { //round 2
+            if (round_2.includes(team_name) || round_2.includes(next_team_name) || eliminated_teams.includes(winners_team_name) || round_2.length == 2) {
+                if (round_2.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    bracket_score = bracket_score + 16;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        else { //round 1
+            if (round_1.length == 1 || eliminated_teams.includes(winners_team_name)) {
+                if (round_1.includes(winners_team_name)) {
+                    document.getElementById(winners_id_team).style.color = "rgb(0, 187, 90)";
+                    bracket_score = bracket_score + 32;
+                }
+                else {
+                    document.getElementById(winners_id_team).style.color = "red";
+                    eliminated_teams.push(winners_team_name);
+                }
+            }
+            else {
+                document.getElementById(winners_id_team).style.color = "black";
+            }
+        }
+        ++winners_id
+    }
+    if (round_32.length == 0 && round_16.length == 0 && round_8.length == 0 && round_4.length == 0 && round_2.length == 0 && round_1.length == 0) {
+        document.getElementById("bracket_score").innerHTML = "";
+        document.getElementById("bracket_score_text").innerHTML = "";
+        document.getElementById("bracket_score_text_two").innerHTML = "";
+    }
+    else {
+        document.getElementById("bracket_score_text").innerHTML = "This Bracket Would Have Scored: ";
+        document.getElementById("bracket_score_text_two").innerHTML = "Points";
+        document.getElementById("bracket_score").innerHTML = bracket_score*10;
+    }
+    document.getElementById('readfile').value = null; // Clear File Form
 }
 
 function random_settings() {
@@ -1113,24 +1301,31 @@ function toggleLabel(checkboxId, labelId, slider_value,slider_val_id) {
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
     if (year == "Year") {
-        document.getElementById('national_champ').innerHTML = "2024 Men's";
+        document.getElementById('national_champ').innerHTML = "2024 Women's";
         update_perfect_year('ovr_perfect_year');
     }
     else if (year == 2023){
-        document.getElementById('national_champ').innerHTML = "2023 Men's";
+        document.getElementById('national_champ').innerHTML = "2023 Women's";
         update_perfect_year('2023_perfect_year');
     }
     else if (year == 2022){
-        document.getElementById('national_champ').innerHTML = "2022 Men's";
+        document.getElementById('national_champ').innerHTML = "2022 Women's";
         update_perfect_year('2022_perfect_year');
     }
     else if (year == 2021){
-        document.getElementById('national_champ').innerHTML = "2021 Men's";
+        document.getElementById('national_champ').innerHTML = "2021 Women's";
         update_perfect_year('2021_perfect_year');
     }
     else if (year == 2024){
-        document.getElementById('national_champ').innerHTML = "2024 Men's";
+        document.getElementById('national_champ').innerHTML = "2024 Women's";
         update_perfect_year('2024_perfect_year');
+    }
+
+    if (lastClicked == 'ML Button'){
+        fill_ml_bracket()
+    }
+    else {
+        find_winner()
     }
 }
 
