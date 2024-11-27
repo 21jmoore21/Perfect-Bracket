@@ -156,11 +156,11 @@
 
             <div class="give_me_space_2"></div>
             <span><button onclick="select_all();find_winner()" class="selection_button">Select All /</button><button onclick="deselect_all();find_winner();" class="selection_button">Deselect All</button></span><br>
-            <span><button onclick="run_optimize_weights()" class="selection_button">Optimize Weights</button></span><br>
+            <span><button onclick="trackButton('Optimize Weights') ; run_optimize_weights()" class="selection_button">Optimize Weights</button></span><br>
             <span><button onclick="save_weights()" class="selection_button">Save /</button><button onclick="load_weights()" class="selection_button">Load Weights</button></span><br>
             <span><button accesskey="p" onclick="window.print()" class="selection_button">Print Bracket</button></span>
             <div class="give_me_space_2"></div>
-            <button id='run_button' accesskey="m" onclick="find_winner();scroll_to_top()" class="myButton">Run</button>
+            <button id='run_button' accesskey="m" onclick="trackButton('Run') ; find_winner() ; scroll_to_top()" class="myButton">Run</button>
             <input type="file" accept=".txt" id="readfile" onclick="previewFile(find_winner)" class="hidden_button">
             <div class="give_me_space"></div>
             <div class="give_me_space"></div>
