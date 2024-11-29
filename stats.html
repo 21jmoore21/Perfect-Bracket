@@ -50,13 +50,13 @@
     </div>
     <main class="row" style="padding-top:45px; color: #333;">
         <h1 style="padding-left:10px"><a class="heading">The Perfect Bracket Simulator: </a>How The Stats Are Processed</h1>
-        <p style="padding-left:10px ; padding-right: 10px; color: black;">All stats for this website are from NCAA's Extended Stats page. After 
-            retrieving all of the stats, I used python to do some cleaning up of the data and getting it into a format that fit 
+        <p style="padding-left:10px ; padding-right: 10px; color: black;">All stats for this website are from ESPN's college basketball statistics. After 
+            retrieving all of the stats, I used python to clean up of the data and get it into a format that fits 
             my use case. Once the data was cleaned up, I knew I would have to scale the stats so that metrics like points per game
             wouldn't have a much larger impact on the combination than other stats like assists per game. In order to even the playing field,
             I scaled all of the data so that for every stat, the team with the highest value for that stat was set to 1,
             the team with the lowest value was set to 0 and all other teams are linearly scaled between the two. For example, if 
-            Gonzaga averaged the most ppg out of all teams in the tournament field, their new ppg value would be scaled to 1.</p>
+            Kansas averaged the most ppg out of all teams in the tournament field, their new ppg value would be scaled to 1.</p>
             <p style="padding-left:10px ; padding-right: 10px; color: black;">For stats such as ppg, if that stat has a higher weight assigned to 
             it, the teams that averaged a high ppg will be predicted to perform better. For stats such as turnovers, where it is 
             undesirable to have a lot, the data was inverted to ensure that the team who averaged the least amount of turnovers had 
@@ -67,7 +67,7 @@
             This is helpful in seeing how close two teams are predicted to be, as well as understanding which teams have good stats in some
             areas and others don't. The teams score is not displayed in any rounds other than the first, but the score does not change 
             round per round. If you wish to make slight adjustments to a stat to see how that affects the teams score, simply click on 
-            the slider for that stat and use the arrows on your keyboard to make changes in weight by increments of 1 or click on the current weight
+            the slider for that stat and use the left/right arrows on your keyboard to make changes in weight by increments of 1 or click on the current weight
             and type your desired value.</p>
             </br>
             <p style="padding-left:10px ; padding-right: 10px; color: black; font-size: 22px; font-weight: bold;"><u>Stats Formulas:</u></p>
