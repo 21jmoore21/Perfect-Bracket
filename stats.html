@@ -53,25 +53,25 @@
 
         <h1 class="section_header"><u>Summary</u></h1>
 
-        <p style="padding-left:10px ; padding-right: 10px; color: black;">All stats for this website are from ESPN's college basketball statistics. After 
-            retrieving all of the stats, I used python to clean up of the data and get it into a format that fits 
-            my use case. Once the data was cleaned up, I knew I would have to scale the stats so that metrics like points per game
-            wouldn't have a much larger impact on the combination than other stats like assists per game. In order to even the playing field,
-            I scaled all of the data so that for every stat, the team with the highest value for that stat was set to 1,
-            the team with the lowest value was set to 0 and all other teams are linearly scaled between the two. For example, if 
-            Kansas averaged the most ppg out of all teams in the tournament field, their new ppg value would be scaled to 1.</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">For stats such as ppg, if that stat has a higher weight assigned to 
-            it, the teams that averaged a high ppg will be predicted to perform better. For stats such as turnovers, where it is 
-            undesirable to have a lot, the data was inverted to ensure that the team who averaged the least amount of turnovers had 
-            their TOV value scaled to 1. This means, if the TOV weight is set higher, the teams that took care of the ball will 
-            be predicted to perform better.</p>
-            <p style="padding-bottom:20px ; padding-left:10px ; padding-right: 10px; color: black;">Once you have the combination of weights set that you believe will
-            predict that perfect bracket and hit run, the score for each team will be displayed by the team name in the first round.
-            This is helpful in seeing how close two teams are predicted to be, as well as understanding which teams have good stats in some
-            areas and others don't. The team's score is not displayed in any rounds other than the first, but the score does not change 
-            round per round. If you wish to make slight adjustments to a stat to see how that affects the teams score, simply click on 
-            the slider for that stat and use the left/right arrows on your keyboard to make changes in weight by increments of 1 or click on the current weight
-            and type your desired value.</p>
+        <p style="padding-left:10px ; padding-right: 10px; color: black;">All statistics for this website are sourced from ESPN's college 
+          basketball data. After retrieving the stats, Python was used to clean and format the data for this specific use case. To ensure balanced 
+          metric comparisons, the stats were scaled so that no single metric, such as points per game, outweighed others like assists per game. 
+          This scaling process adjusted each stat so that the highest value for a team was set to 1, the lowest to 0, and all other values were 
+          linearly scaled in between. For instance, if Kansas led all tournament teams in points per game, their scaled value for that metric 
+          would be 1.</p>
+
+        <p style="padding-left:10px ; padding-right: 10px; color: black;">
+          For stats such as points per game (PPG), where higher values are desirable, assigning a higher weight to the stat means teams with higher 
+          PPG averages are predicted to perform better. Conversely, for stats like turnovers (TOV), where lower values are preferable, the data 
+          was inverted so that the team with the fewest turnovers had their TOV value scaled to 1. As a result, if the TOV weight is increased, 
+          teams that took care of the ball will be predicted to perform better.</p>
+
+        <p style="padding-bottom:20px ; padding-left:10px ; padding-right: 10px; color: black;">Once you've created the combination of weights 
+          you believe will create the perfect bracket and hit "Run," each team's score will be displayed next to their name in the first round. 
+          This allows you to see how closely matched two teams are and identify areas where a team excels or falls short. Scores are 
+          only shown for the first round but remain consistent throughout all rounds. To fine-tune a stat's weight and see how it affects team 
+          scores, you can adjust the slider using the left/right arrow keys for increments of 1 or type your desired weight directly into the 
+          input field.</p>
 
             <h1 class="section_header"><u>Formulas</u></h1>
             
