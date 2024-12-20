@@ -50,6 +50,9 @@
     </div>
     <main class="row" style="padding-top:45px; color: #333;">
         <h1 style="padding-left:10px"><a class="heading">The Perfect Bracket Simulator: </a>How The Stats Are Processed</h1>
+
+        <h1 class="section_header"><u>Summary</u></h1>
+
         <p style="padding-left:10px ; padding-right: 10px; color: black;">All stats for this website are from ESPN's college basketball statistics. After 
             retrieving all of the stats, I used python to clean up of the data and get it into a format that fits 
             my use case. Once the data was cleaned up, I knew I would have to scale the stats so that metrics like points per game
@@ -62,35 +65,36 @@
             undesirable to have a lot, the data was inverted to ensure that the team who averaged the least amount of turnovers had 
             their TOV value scaled to 1. This means, if the TOV weight is set higher, the teams that took care of the ball will 
             be predicted to perform better.</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">Once you have the combination of weights set that you believe will
+            <p style="padding-bottom:20px ; padding-left:10px ; padding-right: 10px; color: black;">Once you have the combination of weights set that you believe will
             predict that perfect bracket and hit run, the score for each team will be displayed by the team name in the first round.
             This is helpful in seeing how close two teams are predicted to be, as well as understanding which teams have good stats in some
-            areas and others don't. The teams score is not displayed in any rounds other than the first, but the score does not change 
+            areas and others don't. The team's score is not displayed in any rounds other than the first, but the score does not change 
             round per round. If you wish to make slight adjustments to a stat to see how that affects the teams score, simply click on 
             the slider for that stat and use the left/right arrows on your keyboard to make changes in weight by increments of 1 or click on the current weight
             and type your desired value.</p>
-            </br>
-            <p style="padding-left:10px ; padding-right: 10px; color: black; font-size: 22px; font-weight: bold;"><u>Stats Formulas:</u></p>
+
+            <h1 class="section_header"><u>Formulas</u></h1>
             
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Offensive Rating [Off Rtg] = 100 * ( Points / Poss )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Defensive Rating [Def Rtg] = 100 * ( Opp Points / Poss )</p>
+            <ul class="formulas_list">
+              <li>Offensive Rating [Off Rtg] = 100 * ( Points / Poss ) </li>
+              <li>Defensive Rating [Def Rtg] = 100 * ( Opp Points / Poss ) </li>
 
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Effective Field Goal Percentage [eFG%] = 100 * ( FGM + 0.5*3PM ) / FGA</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Three Point Percentage [3pt%] = 100 * ( 3PM / 3PA )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Offensive Rebounding Percentage [OReb%] = 100 * OReb / ( OReb + Opp DReb )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Turnover Percentage [TOV%] = 100 * TOV / ( FGA + 0.44*FTA + TOV )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Free Throw Attempt Rate [FTA%] = 100 * ( FTA / FGA )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Free Throw Percentage [FT%] = 100 * ( FTM / FTA )</p>
+              <li>Effective Field Goal Percentage [eFG%] = 100 * ( FGM + 0.5*3PM ) / FGA </li>
+              <li>Three Point Percentage [3pt%] = 100 * ( 3PM / 3PA ) </li>
+              <li>Offensive Rebounding Percentage [OReb%] = 100 * OReb / ( OReb + Opp DReb )</li>
+              <li>Turnover Percentage [TOV%] = 100 * TOV / ( FGA + 0.44*FTA + TOV )</li>
+              <li>Free Throw Attempt Rate [FTA%] = 100 * ( FTA / FGA )</li>
+              <li>Free Throw Percentage [FT%] = 100 * ( FTM / FTA )</li>
 
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Opponent Effective Field Goal Percentage [Opp eFG%] = 100 * ( Opp FGM + 0.5*Opp 3PM ) / Opp FGA</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Opponent Three Point Percentage [Opp 3pt%] = 100 * ( Opp 3PM / Opp 3PA )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Opponent Offensive Rebounding Percentage [Opp OReb%] = 100 * Opp OReb / ( Opp OReb + DReb )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Opponent Turnover Percentage [Opp TOV%] = 100 * Opp TOV / ( Opp FGA + 0.44*Opp FTA + Opp TOV )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Opponent Free Throw Attempt Rate [Opp FTA%] = 100 * ( Opp FTA / Opp FGA )</p>
+              <li>Opponent Effective Field Goal Percentage [Opp eFG%] = 100 * ( Opp FGM + 0.5*Opp 3PM ) / Opp FGA</li>
+              <li>Opponent Three Point Percentage [Opp 3pt%] = 100 * ( Opp 3PM / Opp 3PA )</li>
+              <li>Opponent Offensive Rebounding Percentage [Opp OReb%] = 100 * Opp OReb / ( Opp OReb + DReb )</li>
+              <li>Opponent Turnover Percentage [Opp TOV%] = 100 * Opp TOV / ( Opp FGA + 0.44*Opp FTA + Opp TOV )</li>
+              <li>Opponent Free Throw Attempt Rate [Opp FTA%] = 100 * ( Opp FTA / Opp FGA )</li>
 
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Possessions [Poss] = 0.5* ( (FGA + 0.4*FTA - 1.07/100*OReb% * ( FGA - FGM ) + TOV) + (Opp FGA + 0.4*Opp FTA - 1.07/100*Opp OReb% * ( Opp FGA - Opp FGM ) + Opp TOV) )</p>
-            <p style="padding-left:10px ; padding-right: 10px; color: black;">- Seed In March Madness [Seed] = Seed Selected By Selection Committee</p>
-            <br>
+              <li>Possessions [Poss] = 0.5* ( (FGA + 0.4*FTA - 1.07/100*OReb% * ( FGA - FGM ) + TOV) + (Opp FGA + 0.4*Opp FTA - 1.07/100*Opp OReb% * ( Opp FGA - Opp FGM ) + Opp TOV) )</li>
+              <li>Seed In March Madness [Seed] = Seed Selected By Selection Committee </li>
+            </p>
             </main>
     <div class="bottom_banner">
       <p>“Perfection is not attainable, but if we chase perfection we can catch excellence” - Vince Lombardi<p></p><a class="bottom_banner_2">Questions? Contact: perfectbracketsim@gmail.com</a></p>
