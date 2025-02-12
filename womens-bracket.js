@@ -729,7 +729,14 @@ function submit_form() {
         document.getElementById("slider"+id).value = slider_weights[j];
         document.getElementById("slider_" + id + "_value").value = slider_weights[j];
     }
-    find_winner();
+    let name = "optimize_weights_checkbox";
+    let checkbox = document.getElementById(name);
+    if (checkbox.checked) {
+        run_optimize_weights();
+    }
+    else {
+        find_winner();
+    }
 }
 
 // Clear Pop Up Form
@@ -738,6 +745,7 @@ function clear_popup_form() {
     radioButtons.forEach(function(radio) {
         radio.checked = false;
     });
+    document.getElementById("optimize_weights_checkbox").checked = false;
 }
 
 function update_perfect_year(year_id) {
