@@ -3,6 +3,7 @@
   <head>
         <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KBQQ51689"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -76,24 +77,27 @@
             <h1 class="section_header"><u>Formulas</u></h1>
             
             <ul class="formulas_list">
-              <li>Offensive Rating [Off Rtg] = 100 * ( Points / Poss ) </li>
-              <li>Defensive Rating [Def Rtg] = 100 * ( Opp Points / Poss ) </li>
+              <li><b>Offensive Rating: </b> \( \text{Off Rtg} = 100 \times \frac{\text{Points}}{\text{Possessions}} \)</li>
+              <li><b>Defensive Rating: </b> \( \text{Def Rtg} = 100 \times \frac{\text{Opp Points}}{\text{Possessions}} \)</li>
 
-              <li>Effective Field Goal Percentage [eFG%] = 100 * ( FGM + 0.5*3PM ) / FGA </li>
-              <li>Three Point Percentage [3pt%] = 100 * ( 3PM / 3PA ) </li>
-              <li>Offensive Rebounding Percentage [OReb%] = 100 * OReb / ( OReb + Opp DReb )</li>
-              <li>Turnover Percentage [TOV%] = 100 * TOV / ( FGA + 0.44*FTA + TOV )</li>
-              <li>Free Throw Attempt Rate [FTA%] = 100 * ( FTA / FGA )</li>
-              <li>Free Throw Percentage [FT%] = 100 * ( FTM / FTA )</li>
+              <li><b>Effective Field Goal Percentage:</b> \( \text{eFG%} = 100 \times \frac{\text{FGM} + 0.5 \times \text{3PM}}{\text{FGA}} \)</li>
+              <li><b>Three Point Percentage:</b> \( \text{3pt%} = 100 \times \frac{\text{3PM}}{\text{3PA}} \)</li>
+              <li><b>Offensive Rebounding Percentage:</b> \( \text{OReb%} = 100 \times \frac{\text{OReb}}{\text{OReb} + \text{Opp DReb}} \)</li>
+              <li><b>Turnover Percentage:</b> \( \text{TOV%} = 100 \times \frac{\text{TOV}}{\text{FGA} + 0.44 \times \text{FTA} + \text{TOV}} \)</li>
+              <li><b>Free Throw Attempt Rate:</b> \( \text{FTA%} = 100 \times \frac{\text{FTA}}{\text{FGA}} \)</li>
+              <li><b>Free Throw Percentage:</b> \( \text{FT%} = 100 \times \frac{\text{FTM}}{\text{FTA}} \)</li>
 
-              <li>Opponent Effective Field Goal Percentage [Opp eFG%] = 100 * ( Opp FGM + 0.5*Opp 3PM ) / Opp FGA</li>
-              <li>Opponent Three Point Percentage [Opp 3pt%] = 100 * ( Opp 3PM / Opp 3PA )</li>
-              <li>Opponent Offensive Rebounding Percentage [Opp OReb%] = 100 * Opp OReb / ( Opp OReb + DReb )</li>
-              <li>Opponent Turnover Percentage [Opp TOV%] = 100 * Opp TOV / ( Opp FGA + 0.44*Opp FTA + Opp TOV )</li>
-              <li>Opponent Free Throw Attempt Rate [Opp FTA%] = 100 * ( Opp FTA / Opp FGA )</li>
+              <li><b>Opponent Effective Field Goal Percentage:</b> \( \text{Opp eFG%} = 100 \times \frac{\text{Opp FGM} + 0.5 \times \text{Opp 3PM}}{\text{Opp FGA}} \)</li>
+              <li><b>Opponent Three Point Percentage:</b> \( \text{Opp 3pt%} = 100 \times \frac{\text{Opp 3PM}}{\text{Opp 3PA}} \)</li>
+              <li><b>Opponent Offensive Rebounding Percentage:</b> \( \text{Opp OReb%} = 100 \times \frac{\text{Opp OReb}}{\text{Opp OReb} + \text{DReb}} \)</li>
+              <li><b>Opponent Turnover Percentage:</b> \( \text{Opp TOV%} = 100 \times \frac{\text{Opp TOV}}{\text{Opp FGA} + 0.44 \times \text{Opp FTA} + \text{Opp TOV}} \)</li>
+              <li><b>Opponent Free Throw Attempt Rate:</b> \( \text{Opp FTA%} = 100 \times \frac{\text{Opp FTA}}{\text{Opp FGA}} \)</li>
 
-              <li>Possessions [Poss] = 0.5* ( (FGA + 0.4*FTA - 1.07/100*OReb% * ( FGA - FGM ) + TOV) + (Opp FGA + 0.4*Opp FTA - 1.07/100*Opp OReb% * ( Opp FGA - Opp FGM ) + Opp TOV) )</li>
-              <li>Seed In March Madness [Seed] = Seed Selected By Selection Committee </li>
+              <li><b>Possessions:</b> 
+                \( \text{Poss} = 0.5 \times \left( \left( \text{FGA} + 0.4 \times \text{FTA} - \frac{1.07}{100} \times \text{OReb%} \times (\text{FGA} - \text{FGM}) + \text{TOV} \right) \right. \)
+                \( + \left. \left( \text{Opp FGA} + 0.4 \times \text{Opp FTA} - \frac{1.07}{100} \times \text{Opp OReb%} \times (\text{Opp FGA} - \text{Opp FGM}) + \text{Opp TOV} \right) \right) \)
+              </li>
+              <li><b>Seed In March Madness: </b> \( \text{Seed} = \text{Seed Selected By Selection Committee} \)</li>
             </p>
 
             <br>
