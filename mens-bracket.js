@@ -965,12 +965,18 @@ function previewFile(myCallback) {
                 return line.split(': ');
             })
 
-            for (let j = 0, len = 15; j < len; j++) {
-                let id = j+1;
-                document.getElementById("checkbox"+id).checked = true;
-                toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
-                document.getElementById("slider"+id).value = array[j+1][1];
-                document.getElementById("slider_" + id + "_value").value = array[j+1][1];
+            if (array[2][0] == "Bracket was created using the AI Prediction preset") {
+                document.getElementById("ML Button").click();
+                lastClicked = 'ML Button';
+            }
+            else {
+                for (let j = 0, len = 15; j < len; j++) {
+                    let id = j+1;
+                    document.getElementById("checkbox"+id).checked = true;
+                    toggleLabel("checkbox"+id,"label"+id,"slider"+id,"slider_"+id+"_value");
+                    document.getElementById("slider"+id).value = array[j+1][1];
+                    document.getElementById("slider_" + id + "_value").value = array[j+1][1];
+                }  
             }
             myCallback();
         })
@@ -1080,9 +1086,15 @@ function save_weights() {
         var points = document.getElementById("bracket_score").innerHTML;
         var score = "This Bracket Would Have Scored " + points + " Points In " + year + "\r\n";
     }
-    var content = ["Men's Perfect Bracket Weights\r\n" + "Off Rtg: " + content_1 + "Def Rtg: " + content_2 + "eFG%: " + content_3 + "3pt%: " + content_4 + "OReb%: " + content_5 
-    + "TOV%: " + content_6 + "FTA%: " + content_7 + "FT%: " + content_8 + "Opp eFG%: " + content_9 + "Opp 3pt%: " + content_10 + "Opp OReb%: " + content_11 
-    + 'Opp TOV%: ' + content_12 + 'Opp FTA%: ' + content_13 + 'Poss: ' + content_14 + 'Seed: ' + content_15 + score + "https://www.perfect-bracket.com/mens-bracket.html"];
+    if (lastClicked == 'ML Button') {
+        var content = ["Men's Perfect Bracket Weights\r\n" + " \r\n" + "Bracket was created using the AI Prediction preset\r\n" + " \r\n"
+        + score + "https://www.perfect-bracket.com/mens-bracket.html"];
+    }
+    else {
+        var content = ["Men's Perfect Bracket Weights\r\n" + "Off Rtg: " + content_1 + "Def Rtg: " + content_2 + "eFG%: " + content_3 + "3pt%: " + content_4 + "OReb%: " + content_5 
+        + "TOV%: " + content_6 + "FTA%: " + content_7 + "FT%: " + content_8 + "Opp eFG%: " + content_9 + "Opp 3pt%: " + content_10 + "Opp OReb%: " + content_11 
+        + 'Opp TOV%: ' + content_12 + 'Opp FTA%: ' + content_13 + 'Poss: ' + content_14 + 'Seed: ' + content_15 + score + "https://www.perfect-bracket.com/mens-bracket.html"];
+    }
     const file = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(file);
     link.download = "Mens_Perfect_Bracket_Weights.txt";
