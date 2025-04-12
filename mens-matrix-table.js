@@ -63,12 +63,12 @@ var team_stats_2025 = [{name:"Duke Blue Devils (1)",Round_of_32:'100.0%',Sweet_S
 {name:"SIU Edwardsville Cougars (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 {name:"Georgia Bulldogs (9)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 ];
-var round_32_2025 = [];
-var round_16_2025 = [];
-var round_8_2025 = [];
-var round_4_2025 = [];
-var round_2_2025 = [];
-var round_1_2025 = [];
+var round_32_2025 = ['Auburn Tigers','Creighton Bluejays','Michigan Wolverines','Texas A&M Aggies','Ole Miss Rebels','Iowa State Cyclones','New Mexico Lobos','Michigan State Spartans','Florida Gators','UConn Huskies','Colorado State Rams','Maryland Terrapins','Drake Bulldogs','Texas Tech Red Raiders','Arkansas Razorbacks',"St. John's Red Storm",'Duke Blue Devils','Baylor Bears','Oregon Ducks','Arizona Wildcats','BYU Cougars','Wisconsin Badgers',"Saint Mary's Gaels",'Alabama Crimson Tide','Houston Cougars','Gonzaga Bulldogs','McNeese Cowboys','Purdue Boilermakers','Illinois Fighting Illini','Kentucky Wildcats','UCLA Bruins','Tennessee Volunteers'];
+var round_16_2025 = ['Auburn Tigers','Michigan Wolverines','Ole Miss Rebels','Michigan State Spartans','Florida Gators','Maryland Terrapins','Texas Tech Red Raiders','Arkansas Razorbacks','Duke Blue Devils','Arizona Wildcats','BYU Cougars','Alabama Crimson Tide','Houston Cougars','Purdue Boilermakers','Kentucky Wildcats','Tennessee Volunteers'];
+var round_8_2025 = ['Auburn Tigers','Michigan State Spartans','Florida Gators','Texas Tech Red Raiders','Duke Blue Devils','Alabama Crimson Tide','Houston Cougars','Tennessee Volunteers'];
+var round_4_2025 = ['Auburn Tigers','Florida Gators','Duke Blue Devils','Houston Cougars'];
+var round_2_2025 = ['Florida Gators','Houston Cougars'];
+var round_1_2025 = ['Florida Gators'];
 
 
 var team_stats_2024 = [{name:"Purdue Boilermakers (1)",Round_of_32:'100.0%',Sweet_Sixteen:'99.95%',Elite_Eight:'87.38%',Final_Four:'82.97%',Championship:'76.3%',Champion:'45.14%'}, 
@@ -574,12 +574,12 @@ function show_results() {
     var round_1 = round_1_2025;
   }
   else if (study_year == "Year"){
-    var round_32 = round_32_2025;
-    var round_16 = round_16_2025;
-    var round_8 = round_8_2025;
-    var round_4 = round_4_2025;
-    var round_2 = round_2_2025;
-    var round_1 = round_1_2025;
+    var round_32 = [];
+    var round_16 = [];
+    var round_8 = [];
+    var round_4 = [];
+    var round_2 = [];
+    var round_1 = [];
   }
   for (i = 1; i < (rows.length); i++) {
     var bold_weight = "700";

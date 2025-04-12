@@ -126,12 +126,12 @@ var team_stats_2025 = [{name:"Auburn",per:'-'},
 {name:"Duke",per:'99.59%'}, 
 {name:"Duke",per:'99.15%'}, 
 ];
-var round_32_2025 = [];
-var round_16_2025 = [];
-var round_8_2025 = [];
-var round_4_2025 = [];
-var round_2_2025 = [];
-var round_1_2025 = [];
+var round_32_2025 = ['Auburn','Creigh','Michigan','Texas AM','Ole Miss','Iowa St','N Mex','Mich St','Florida','UConn','Col St','MD','Drake','TTU','Ark','St Johns','Duke','Baylor','Oregon','Arizona','BYU','Wisc','St Marys','Alabama','Houston','Gonzaga','McN','Purdue','Illinois','Kentucky','UCLA','Tenn'];
+var round_16_2025 = ['Auburn','Michigan','Ole Miss','Mich St','Florida','MD','TTU','Ark','Duke','Arizona','BYU','Alabama','Houston','Purdue','Kentucky','Tenn'];
+var round_8_2025 = ['Auburn','Mich St','Florida','TTU','Duke','Alabama','Houston','Tenn'];
+var round_4_2025 = ['Auburn','Florida','Duke','Houston'];
+var round_2_2025 = ['Florida','Houston'];
+var round_1_2025 = ['Florida'];
 
 
 var team_stats_2024 = [{name:"UConn",per:'-'}, 
@@ -712,7 +712,7 @@ function print_year() {
 }
 
 function find_winner(){
-    let current_year = 2025;
+    let current_year = 2026;
     let study_year = document.getElementById("yearofstudy").innerHTML;
     if (study_year == 2023){
         document.getElementById("region_1").innerHTML = "South";
@@ -779,8 +779,8 @@ function find_winner(){
         document.getElementById("region_2").innerHTML = "West";
         document.getElementById("region_3").innerHTML = "East";
         document.getElementById("region_4").innerHTML = "Midwest";
-        document.getElementById("bracket_score_text").innerHTML = "";
-        document.getElementById("bracket_score_text_two").innerHTML = "";
+        document.getElementById("bracket_score_text").innerHTML = "This Bracket Would Have Scored: ";
+        document.getElementById("bracket_score_text_two").innerHTML = "Points";
         var team_stats = team_stats_2025;
         var round_32 = round_32_2025;
         var round_16 = round_16_2025;
@@ -797,12 +797,12 @@ function find_winner(){
         document.getElementById("bracket_score_text").innerHTML = "";
         document.getElementById("bracket_score_text_two").innerHTML = "";
         var team_stats = team_stats_2025;
-        var round_32 = round_32_2025;
-        var round_16 = round_16_2025;
-        var round_8 = round_8_2025;
-        var round_4 = round_4_2025;
-        var round_2 = round_2_2025;
-        var round_1 = round_1_2025;
+        var round_32 = [];
+        var round_16 = [];
+        var round_8 = [];
+        var round_4 = [];
+        var round_2 = [];
+        var round_1 = [];
     }
     let team_data = [];
     let orig_team_id = "team_";
