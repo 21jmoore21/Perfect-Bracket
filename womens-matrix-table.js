@@ -63,12 +63,12 @@ var team_stats_2025 = [{name:"UConn Huskies (2)",Round_of_32:'100.0%',Sweet_Sixt
 {name:"William & Mary Tribe (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 {name:"Stephen F. Austin Ladyjacks (14)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 ];
-var round_32_2025 = [];
-var round_16_2025 = [];
-var round_8_2025 = [];
-var round_4_2025 = [];
-var round_2_2025 = [];
-var round_1_2025 = [];
+var round_32_2025 = ['UCLA Bruins','Richmond Spiders','Ole Miss Rebels','Baylor Bears','Florida State Seminoles','LSU Tigers','Michigan State Spartans','NC State Wolfpack','USC Trojans','Mississippi State Bulldogs','Kansas State Wildcats','Kentucky Wildcats','Iowa Hawkeyes','Oklahoma Sooners','South Dakota State Jackrabbits','UConn Huskies','South Carolina Gamecocks','Indiana Hoosiers','Alabama Crimson Tide','Maryland Terrapins','West Virginia Mountaineers','North Carolina Tar Heels','Oregon Ducks','Duke Blue Devils','Texas Longhorns','Illinois Fighting Illini','Tennessee Lady Volunteers','Ohio State Buckeyes','Michigan Wolverines','Notre Dame Fighting Irish','Louisville Cardinals','TCU Horned Frogs'];
+var round_16_2025 = ['UCLA Bruins','Ole Miss Rebels','LSU Tigers','NC State Wolfpack','USC Trojans','Kansas State Wildcats','Oklahoma Sooners','UConn Huskies','South Carolina Gamecocks','Maryland Terrapins','North Carolina Tar Heels','Duke Blue Devils','Texas Longhorns','Tennessee Lady Volunteers','Notre Dame Fighting Irish','TCU Horned Frogs'];
+var round_8_2025 = ['UCLA Bruins','LSU Tigers','USC Trojans','UConn Huskies','South Carolina Gamecocks','Duke Blue Devils','Texas Longhorns','TCU Horned Frogs'];
+var round_4_2025 = ['UCLA Bruins','UConn Huskies','South Carolina Gamecocks','Texas Longhorns'];
+var round_2_2025 = ['UConn Huskies','South Carolina Gamecocks'];
+var round_1_2025 = ['UConn Huskies'];
 
 
 var team_stats_2024 = [{name:"South Carolina Gamecocks (1)",Round_of_32:'100.0%',Sweet_Sixteen:'99.98%',Elite_Eight:'99.97%',Final_Four:'99.7%',Championship:'93.17%',Champion:'79.99%'}, 
@@ -532,7 +532,6 @@ function show_results() {
   var table, rows = 0;
   table = document.getElementById("winner_matrix");
   rows = table.rows;
-  let current_year = 2024;
   var study_year = document.getElementById("yearofstudy").innerHTML;
   if (study_year == 2023){
     var round_32 = round_32_2023;
@@ -575,12 +574,12 @@ function show_results() {
     var round_1 = round_1_2025;
   }
   else if (study_year == "Year"){
-    var round_32 = round_32_2025;
-    var round_16 = round_16_2025;
-    var round_8 = round_8_2025;
-    var round_4 = round_4_2025;
-    var round_2 = round_2_2025;
-    var round_1 = round_1_2025;
+    var round_32 = [];
+    var round_16 = [];
+    var round_8 = [];
+    var round_4 = [];
+    var round_2 = [];
+    var round_1 = [];
   }
   for (i = 1; i < (rows.length); i++) {
     var bold_weight = "700";

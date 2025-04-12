@@ -63,12 +63,12 @@ var team_stats_2025 = [{name:"UCLA",Team_GP:0.5714285714285714,Team_PTS:0.678321
 {name:"TCU",Team_GP:0.8571428571428571,Team_PTS:0.6433566433566432,Team_FGM:0.6434782608695652,Team_FGA:0.3711790393013102,Team_FG_PER:0.7625899280575541,Team_3PM:0.8648648648648648,Team_3PA:0.6759259259259258,Team_3P_PER:0.8333333333333335,Team_FTM:0.3440860215053763,Team_FTA:0.3189655172413793,Team_FT_PER:0.6898395721925136,Team_OR:0.3861386138613861,Team_DR:0.5555555555555557,Team_REB:0.48101265822784794,Team_AST:0.7297297297297297,Team_STL:0.10416666666666666,Team_BLK:0.7777777777777778,Team_TO:0.8641975308641976,Team_PF:0.6875000000000001,Opp_GP:0.14285714285714285,Opp_PTS:0.729064039408867,Opp_FGM:0.7142857142857142,Opp_FGA:0.5664739884393065,Opp_FG_PER:0.760869565217391,Opp_3PM:0.6808510638297873,Opp_3PA:0.7699115044247786,Opp_3P_PER:0.19540229885057497,Opp_FTM:0.5487804878048781,Opp_FTA:0.5491803278688524,Opp_FT_PER:0.5900000000000005,Opp_OR:0.7446808510638296,Opp_DR:0.840909090909091,Opp_REB:0.9,Opp_AST:0.661764705882353,Opp_STL:0.723404255319149,Opp_BLK:1.0,Opp_TO:0.14754098360655746,Opp_PF:0.2842105263157894,Team_Seed:0.9333333333333333,Team_eFG_PER:0.8434963913392141,Team_OReb_PER:0.5452858423257486,Team_Poss:0.3017459918962223,Team_Plays:0.3440233236151603,Team_TOV_PER:0.6926094431933484,Team_FTA_Rate:0.3164378325934201,Team_PF_Eff:0.4259599506942344,Opp_eFG_PER:0.7716488268262177,Opp_OReb_PER:0.7577718906495471,Opp_Poss:0.6950218498036692,Opp_Plays:0.6875829383886258,Opp_TOV_PER:0.17356219066792097,Opp_FTA_Rate:0.6337971782251572,Opp_PF_Eff:0.819611780455154,Poss:0.3033135958254542,Off_Rtg:0.9194039710215323,Def_Rtg:0.5427689044241876,Net_Rtg:0.7503263910575801}, 
 {name:"FDU",Team_GP:0.5714285714285714,Team_PTS:0.29020979020979015,Team_FGM:0.2869565217391304,Team_FGA:0.2882096069868994,Team_FG_PER:0.36690647482014405,Team_3PM:0.6756756756756757,Team_3PA:0.587962962962963,Team_3P_PER:0.5701754385964913,Team_FTM:0.2903225806451613,Team_FTA:0.24999999999999992,Team_FT_PER:0.7379679144385024,Team_OR:0.5148514851485148,Team_DR:0.36111111111111105,Team_REB:0.43037974683544306,Team_AST:0.31531531531531537,Team_STL:0.06249999999999995,Team_BLK:0.0,Team_TO:0.8888888888888891,Team_PF:0.8875,Opp_GP:0.42857142857142855,Opp_PTS:0.8571428571428569,Opp_FGM:0.7142857142857142,Opp_FGA:0.6416184971098265,Opp_FG_PER:0.673913043478261,Opp_3PM:0.7872340425531915,Opp_3PA:0.7522123893805309,Opp_3P_PER:0.5632183908045978,Opp_FTM:0.804878048780488,Opp_FTA:0.8196721311475409,Opp_FT_PER:0.44000000000000056,Opp_OR:0.574468085106383,Opp_DR:0.6590909090909092,Opp_REB:0.7000000000000001,Opp_AST:0.7205882352941175,Opp_STL:0.9361702127659575,Opp_BLK:0.8695652173913042,Opp_TO:0.13934426229508207,Opp_PF:0.3684210526315789,Team_Seed:0.13333333333333333,Team_eFG_PER:0.45689004554326657,Team_OReb_PER:0.5884627919608908,Team_Poss:0.12049988702630975,Team_Plays:0.25466472303207,Team_TOV_PER:0.6688399239819348,Team_FTA_Rate:0.2859067381107787,Team_PF_Eff:0.0463105654956248,Opp_eFG_PER:0.7206005665838228,Opp_OReb_PER:0.5212619619757576,Opp_Poss:0.887308194562356,Opp_Plays:0.8227488151658764,Opp_TOV_PER:0.21205294625632834,Opp_FTA_Rate:0.8321986902036661,Opp_PF_Eff:1.0,Poss:0.11671295017431665,Off_Rtg:0.6231354656122526,Def_Rtg:0.5080002928731578,Net_Rtg:0.5405571095295814}, 
 ];
-var round_32_2025 = [];
-var round_16_2025 = [];
-var round_8_2025 = [];
-var round_4_2025 = [];
-var round_2_2025 = [];
-var round_1_2025 = [];
+var round_32_2025 = ['UCLA','Rich','Ole Miss','Baylor','Florida St','LSU','Mich St','NC St','USC','Miss St','K State','Kentucky','Iowa','Okla','S Dak St','UConn','S Car','Indiana','Alabama','MD','WVU','UNC','Oregon','Duke','Texas','Illinois','Tenn','Ohio St','Michigan','N Dame','Louis','TCU'];
+var round_16_2025 = ['UCLA','Ole Miss','LSU','NC St','USC','K State','Okla','UConn','S Car','MD','UNC','Duke','Texas','Tenn','N Dame','TCU'];
+var round_8_2025 = ['UCLA','LSU','USC','UConn','S Car','Duke','Texas','TCU'];
+var round_4_2025 = ['UCLA','UConn','S Car','Texas'];
+var round_2_2025 = ['UConn','S Car'];
+var round_1_2025 = ['UConn'];
 
 
 var team_stats_2024 = [{name:"S Car",Team_GP:0.6,Team_PTS:0.809116809116809,Team_FGM:1.0,Team_FGA:0.7910447761194028,Team_FG_PER:0.8828828828828832,Team_3PM:0.41463414634146334,Team_3PA:0.2560386473429952,Team_3P_PER:0.9647887323943662,Team_FTM:0.4426229508196721,Team_FTA:0.53125,Team_FT_PER:0.10897435897435828,Team_OR:0.7373737373737375,Team_DR:1.0,Team_REB:0.9863013698630135,Team_AST:0.7520661157024793,Team_STL:0.4848484848484849,Team_BLK:1.0,Team_TO:0.6164383561643835,Team_PF:0.8023255813953487,Opp_GP:0.4,Opp_PTS:0.803921568627451,Opp_FGM:0.7,Opp_FGA:0.2870813397129186,Opp_FG_PER:1.0,Opp_3PM:0.6458333333333334,Opp_3PA:0.5761589403973509,Opp_3P_PER:0.8692307692307693,Opp_FTM:0.6551724137931035,Opp_FTA:0.6176470588235294,Opp_FT_PER:0.7543859649122798,Opp_OR:0.19047619047619038,Opp_DR:0.8285714285714288,Opp_REB:0.655629139072848,Opp_AST:0.7380952380952381,Opp_STL:0.5882352941176471,Opp_BLK:0.47999999999999987,Opp_TO:0.4407894736842105,Opp_PF:0.40000000000000013,Team_Seed:1.0,Team_eFG_PER:0.7169506398077451,Team_OReb_PER:0.7807675491863008,Team_Poss:0.6370656640506911,Team_Plays:0.6875764993880046,Team_TOV_PER:0.7757728926170454,Team_FTA_Rate:0.44698501291591247,Team_PF_Eff:1.0,Opp_eFG_PER:1.0,Opp_OReb_PER:0.46902879263638797,Opp_Poss:0.4007035040145703,Opp_Plays:0.2937306501547987,Opp_TOV_PER:0.38433325404331753,Opp_FTA_Rate:0.6742975044213009,Opp_PF_Eff:0.6074192818665385,Poss:0.6177123110104105,Off_Rtg:0.8795588793022409,Def_Rtg:1.0,Net_Rtg:1.0}, 
@@ -372,7 +372,7 @@ function run_optimize_weights() {
 }
 
 function optimize_weights() {
-    var years = [2021,2022,2023,2024];
+    var years = [2021,2022,2023,2024,2025];
     var max_val_dict = {weights:[],total_score:0};
     var slider_weights = [];
     for (var i=1; i <= 15; i++) {
@@ -987,7 +987,7 @@ function previewFile(myCallback) {
 
   function save_weights() {
     var content_1, content_2, content_3, content_4, content_5, content_6, content_7, content_8, content_9, content_10, content_11, content_12, content_13, content_14, content_15;
-    let current_year = 2025;
+    let current_year = 2026;
     const link = document.createElement("a");
     if (document.getElementById("checkbox1").checked == true) {
         content_1 = document.getElementById("slider1").value + '\r\n';
@@ -1122,12 +1122,12 @@ function fill_ml_bracket() {
     year = document.getElementById("yearofstudy").innerHTML;
     if (year == "Year") {
         var all_teams = ['UCLA', 'Southern', 'Rich', 'GA Tech', 'Ole Miss', 'Ball St', 'Baylor', 'GCU', 'Florida St', 'G Mason', 'LSU', 'SDSU', 'Mich St', 'Harvard', 'NC St', 'Vermont', 'USC', 'UNC G', 'Cal', 'Miss St', 'K State', 'Fairfield', 'Kentucky', 'Liberty', 'Iowa', 'Murr St', 'Okla', 'FGCU', 'Okla St', 'S Dak St', 'UConn', 'Ark St', 'S Car', 'Tenn T', 'Utah', 'Indiana', 'Alabama', 'GB', 'MD', 'Norf St', 'WVU', 'Columbia', 'UNC', 'Or St', 'Vandy', 'Oregon', 'Duke', 'Lehigh', 'Texas', 'W & M', 'Illinois', 'Creigh', 'Tenn', 'USF', 'Ohio St', 'Mont St', 'Michigan', 'Iowa St', 'N Dame', 'SFA', 'Louis', 'Neb', 'TCU', 'FDU', 'UCLA', 'Rich', 'Ole Miss', 'Baylor', 'Florida St', 'LSU', 'Harvard', 'NC St', 'USC', 'Cal', 'K State', 'Kentucky', 'Iowa', 'Okla', 'Okla St', 'UConn', 'S Car', 'Utah', 'Alabama', 'MD', 'WVU', 'UNC', 'Vandy', 'Duke', 'Texas', 'Illinois', 'Tenn', 'Ohio St', 'Michigan', 'N Dame', 'Neb', 'TCU', 'UCLA', 'Baylor', 'LSU', 'NC St', 'USC', 'K State', 'Okla', 'UConn', 'S Car', 'Alabama', 'UNC', 'Duke', 'Texas', 'Ohio St', 'N Dame', 'TCU', 'UCLA', 'LSU', 'K State', 'UConn', 'S Car', 'UNC', 'Texas', 'N Dame', 'UCLA', 'UConn', 'S Car', 'Texas', 'UConn', 'S Car', 'UConn'];
-        var round_32 = round_32_2025;
-        var round_16 = round_16_2025;
-        var round_8 = round_8_2025;
-        var round_4 = round_4_2025;
-        var round_2 = round_2_2025;
-        var round_1 = round_1_2025;
+        var round_32 = [];
+        var round_16 = [];
+        var round_8 = [];
+        var round_4 = [];
+        var round_2 = [];
+        var round_1 = [];
     }
     else if (year == 2023){
         var all_teams = ['S Car', 'Norf St', 'USF', 'Marq', 'Okla', 'Portland', 'UCLA', 'Sac St', 'Creigh', 'Miss St', 'N Dame', 'S Utah', 'Arizona', 'WVU', 'MD', 'H Cross', 'Stanford', 'S Heart', 'Ole Miss', 'Gonzaga', 'Louis', 'Drake', 'Texas', 'E Car', 'Colorado', 'Mid Tenn', 'Duke', 'Iona', 'Florida St', 'Georgia', 'Iowa', 'SE LA', 'Indiana', 'Tenn T', 'Okla St', 'Miami', 'Wash St', 'FGCU', 'Villa', 'Cleve St', 'Michigan', 'UNLV', 'LSU', 'Hawaii', 'NC St', 'Prince', 'Utah', 'G Webb', 'VA Tech', 'Chatta', 'USC', 'S Dak St', 'Iowa St', 'Toledo', 'Tenn', 'St Louis', 'UNC', 'St Johns', 'Ohio St', 'JMU', 'Baylor', 'Alabama', 'UConn', 'Vermont', 'S Car', 'USF', 'Okla', 'UCLA', 'Miss St', 'N Dame', 'Arizona', 'MD', 'Stanford', 'Ole Miss', 'Louis', 'Texas', 'Colorado', 'Duke', 'Florida St', 'Iowa', 'Indiana', 'Miami', 'FGCU', 'Villa', 'Michigan', 'LSU', 'NC St', 'Utah', 'VA Tech', 'S Dak St', 'Iowa St', 'Tenn', 'UNC', 'Ohio St', 'Baylor', 'UConn', 'S Car', 'UCLA', 'N Dame', 'MD', 'Stanford', 'Louis', 'Colorado', 'Iowa', 'Indiana', 'Villa', 'LSU', 'Utah', 'VA Tech', 'Tenn', 'Ohio St', 'UConn', 'S Car', 'N Dame', 'Stanford', 'Iowa', 'Indiana', 'LSU', 'VA Tech', 'UConn', 'S Car', 'Stanford', 'LSU', 'UConn', 'S Car', 'LSU', 'S Car'];
@@ -1339,6 +1339,9 @@ function perfect_settings() {
     else if (study_year == 2024){
         var slider_weights = [47, 78, -68, 90, -23, -78, -11, -10, 26, -43, -39, -91, 1, 60, 78]
     }
+    else if (study_year == 2025){
+        var slider_weights = [47, 78, -68, 90, -23, -78, -11, -10, 26, -43, -39, -91, 1, 60, 78]
+    }
     else if (study_year == "Overall"){
         var slider_weights = [92, 21, 12, -30, -23, 77, 26, -56, 23, 17, 13, -37, -34, -22, 97]
     }
@@ -1404,7 +1407,7 @@ function change_year(year){
     }
     else if (year == 2025){
         document.getElementById('national_champ').innerHTML = "2025 Women's";
-        update_perfect_year('ovr_perfect_year');
+        update_perfect_year('2025_perfect_year');
     }
 
     if (lastClicked == 'ML Button'){
@@ -1522,12 +1525,12 @@ function find_winner(){
             document.getElementById("region_3").innerHTML = "Birm.";
             document.getElementById("region_4").innerHTML = "Birm.";
             var team_stats = team_stats_2025;
-            var round_32 = round_32_2025;
-            var round_16 = round_16_2025;
-            var round_8 = round_8_2025;
-            var round_4 = round_4_2025;
-            var round_2 = round_2_2025;
-            var round_1 = round_1_2025;
+            var round_32 = [];
+            var round_16 = [];
+            var round_8 = [];
+            var round_4 = [];
+            var round_2 = [];
+            var round_1 = [];
         }
         let jrs,off_rtg_weighted, def_rtg_weighted, efg_weighted, three_pt_weighted, oreb_per_weighted, tov_per_weighted, fta_rate_weighted, ft_per_weighted, opp_efg_weighted, opp_three_pt_weighted, opp_oreb_per_weighted, opp_tov_per_weighted, opp_fta_rate_weighted, poss_weighted, seed_weighted;
         let team_data = [];
