@@ -1338,7 +1338,7 @@ function perfect_settings() {
         var slider_weights = [10, 2, 37, 92, 97, 68, 28, 83, 18, 29, 46, -100, -100, -67, 69]
     }
     else if (study_year == 2025){
-        var slider_weights = [12, 49, 66, 46, 97, -36, -81, -75, 2, 91, 40, 10, -90, 27, 96]
+        var slider_weights = [86, 31, -74, 41, 8, -30, -63, -39, 13, 40, 20, -88, -57, 18, 98]
     }
     else if (study_year == "Overall"){
         var slider_weights = [21, -54, 83, 47, 40, -26, -3, 41, 17, 98, 32, 28, -46, -20, 92]
