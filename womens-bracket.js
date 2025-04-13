@@ -1340,10 +1340,10 @@ function perfect_settings() {
         var slider_weights = [47, 78, -68, 90, -23, -78, -11, -10, 26, -43, -39, -91, 1, 60, 78]
     }
     else if (study_year == 2025){
-        var slider_weights = [-37, 27, 38, -16, 58, 97, -20, 36, 79, -75, 90, 38, -23, 90, 95]
+        var slider_weights = [23, 22, 68, -69, 66, 81, -13, -49, 57, -78, 42, 64, 29, 95, 93]
     }
     else if (study_year == "Overall"){
-        var slider_weights = [92, 21, 12, -30, -23, 77, 26, -56, 23, 17, 13, -37, -34, -22, 97]
+        var slider_weights = [91, 85, -62, 40, -66, 17, 43, -26, 54, 12, -8, -31, -7, -17, 97]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;

@@ -1341,7 +1341,7 @@ function perfect_settings() {
         var slider_weights = [86, 31, -74, 41, 8, -30, -63, -39, 13, 40, 20, -88, -57, 18, 98]
     }
     else if (study_year == "Overall"){
-        var slider_weights = [21, -54, 83, 47, 40, -26, -3, 41, 17, 98, 32, 28, -46, -20, 92]
+        var slider_weights = [50, -93, 65, 100, 82, 53, 34, 50, 100, 70, -6, 73, -31, 9, 100]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
