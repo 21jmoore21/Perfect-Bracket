@@ -1,3 +1,138 @@
+var team_stats_2026 = [{name:"UConn",per:'-'}, 
+{name:"Lehigh",per:'-'}, 
+{name:"Okla St",per:'-'}, 
+{name:"Wash",per:'-'}, 
+{name:"Ohio St",per:'-'}, 
+{name:"SDSU",per:'-'}, 
+{name:"Ole Miss",per:'-'}, 
+{name:"Belmont",per:'-'}, 
+{name:"NC St",per:'-'}, 
+{name:"S Dak St",per:'-'}, 
+{name:"TCU",per:'-'}, 
+{name:"McNeese",per:'-'}, 
+{name:"Neb",per:'-'}, 
+{name:"Utah",per:'-'}, 
+{name:"LSU",per:'-'}, 
+{name:"Sam H",per:'-'}, 
+{name:"Texas",per:'-'}, 
+{name:"Long",per:'-'}, 
+{name:"Minn",per:'-'}, 
+{name:"Syracuse",per:'-'}, 
+{name:"Duke",per:'-'}, 
+{name:"Rice",per:'-'}, 
+{name:"TTU",per:'-'}, 
+{name:"Or St",per:'-'}, 
+{name:"Prince",per:'-'}, 
+{name:"AZ St",per:'-'}, 
+{name:"Mich St",per:'-'}, 
+{name:"W Ill",per:'-'}, 
+{name:"UNC",per:'-'}, 
+{name:"USC",per:'-'}, 
+{name:"Vandy",per:'-'}, 
+{name:"FDU",per:'-'}, 
+{name:"S Car",per:'-'}, 
+{name:"Texas S",per:'-'}, 
+{name:"N Dame",per:'-'}, 
+{name:"Illinois",per:'-'}, 
+{name:"Tenn",per:'-'}, 
+{name:"GB",per:'-'}, 
+{name:"Iowa",per:'-'}, 
+{name:"Miami OH",per:'-'}, 
+{name:"Alabama",per:'-'}, 
+{name:"Virginia",per:'-'}, 
+{name:"Michigan",per:'-'}, 
+{name:"Marsh",per:'-'}, 
+{name:"Oregon",per:'-'}, 
+{name:"Miss St",per:'-'}, 
+{name:"Louis",per:'-'}, 
+{name:"Bingham",per:'-'}, 
+{name:"UCLA",per:'-'}, 
+{name:"C Bapt",per:'-'}, 
+{name:"Iowa St",per:'-'}, 
+{name:"Georgia",per:'-'}, 
+{name:"Baylor",per:'-'}, 
+{name:"UC I",per:'-'}, 
+{name:"Okla",per:'-'}, 
+{name:"Mont St",per:'-'}, 
+{name:"WVU",per:'-'}, 
+{name:"Fairfield",per:'-'}, 
+{name:"MD",per:'-'}, 
+{name:"Charles",per:'-'}, 
+{name:"Stanford",per:'-'}, 
+{name:"Rhode Isl",per:'-'}, 
+{name:"Kentucky",per:'-'}, 
+{name:"E Kent",per:'-'}, 
+{name:"UConn",per:'100.0%'}, 
+{name:"Okla St",per:'99.8%'}, 
+{name:"Ohio St",per:'100.0%'}, 
+{name:"Ole Miss",per:'100.0%'}, 
+{name:"NC St",per:'90.36%'}, 
+{name:"TCU",per:'100.0%'}, 
+{name:"Neb",per:'99.94%'}, 
+{name:"LSU",per:'100.0%'}, 
+{name:"Texas",per:'99.92%'}, 
+{name:"Minn",per:'92.16%'}, 
+{name:"Duke",per:'92.45%'}, 
+{name:"TTU",per:'99.92%'}, 
+{name:"Prince",per:'80.28%'}, 
+{name:"Mich St",per:'93.21%'}, 
+{name:"UNC",per:'99.81%'}, 
+{name:"Vandy",per:'100.0%'}, 
+{name:"S Car",per:'100.0%'}, 
+{name:"N Dame",per:'62.33%'}, 
+{name:"Tenn",per:'96.73%'}, 
+{name:"Iowa",per:'99.87%'}, 
+{name:"Alabama",per:'98.3%'}, 
+{name:"Michigan",per:'100.0%'}, 
+{name:"Miss St",per:'73.08%'}, 
+{name:"Louis",per:'100.0%'}, 
+{name:"UCLA",per:'100.0%'}, 
+{name:"Iowa St",per:'79.79%'}, 
+{name:"UC I",per:'51.64%'}, 
+{name:"Okla",per:'100.0%'}, 
+{name:"WVU",per:'91.39%'}, 
+{name:"MD",per:'99.87%'}, 
+{name:"Stanford",per:'58.67%'}, 
+{name:"Kentucky",per:'97.9%'}, 
+{name:"UConn",per:'99.94%'}, 
+{name:"Ohio St",per:'60.02%'}, 
+{name:"TCU",per:'99.92%'}, 
+{name:"LSU",per:'100.0%'}, 
+{name:"Texas",per:'99.91%'}, 
+{name:"TTU",per:'98.5%'}, 
+{name:"Mich St",per:'93.21%'}, 
+{name:"Vandy",per:'100.0%'}, 
+{name:"S Car",per:'100.0%'}, 
+{name:"Iowa",per:'84.8%'}, 
+{name:"Michigan",per:'99.51%'}, 
+{name:"Louis",per:'99.53%'}, 
+{name:"UCLA",per:'100.0%'}, 
+{name:"Okla",per:'90.0%'}, 
+{name:"MD",per:'98.49%'}, 
+{name:"Kentucky",per:'95.79%'}, 
+{name:"UConn",per:'99.8%'}, 
+{name:"LSU",per:'99.97%'}, 
+{name:"Texas",per:'99.59%'}, 
+{name:"Vandy",per:'70.87%'}, 
+{name:"S Car",per:'100.0%'}, 
+{name:"Michigan",per:'77.32%'}, 
+{name:"UCLA",per:'89.67%'}, 
+{name:"MD",per:'94.75%'}, 
+{name:"LSU",per:'92.2%'}, 
+{name:"Texas",per:'89.36%'}, 
+{name:"S Car",per:'99.85%'}, 
+{name:"UCLA",per:'87.14%'}, 
+{name:"LSU",per:'92.18%'}, 
+{name:"S Car",per:'92.05%'}, 
+{name:"LSU",per:'87.66%'}, 
+];
+var round_32_2026 = [];
+var round_16_2026 = [];
+var round_8_2026 = [];
+var round_4_2026 = [];
+var round_2_2026 = [];
+var round_1_2026 = [];
+
 var team_stats_2025 = [{name:"UCLA",per:'-'}, 
 {name:"Southern",per:'-'}, 
 {name:"Rich",per:'-'}, 
@@ -681,7 +816,7 @@ var round_1_2021 = ['Stanford'];
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
     if (year == "Year") {
-        document.getElementById('national_champ').innerHTML = "2025 Women's";
+        document.getElementById('national_champ').innerHTML = "2026 Women's";
     }
     else if (year == 2023){
         document.getElementById('national_champ').innerHTML = "2023 Women's";
@@ -698,12 +833,15 @@ function change_year(year){
     else if (year == 2025){
         document.getElementById('national_champ').innerHTML = "2025 Women's";
     }
+    else if (year == 2026){
+        document.getElementById('national_champ').innerHTML = "2026 Women's";
+    }
 }
 
 function print_year() {
     year = document.getElementById('yearofstudy').innerHTML;
     if (year == "Year") {
-        document.getElementById('national_champ').innerHTML = "2025 Women's";
+        document.getElementById('national_champ').innerHTML = "2026 Women's";
     }
     else {
         document.getElementById('national_champ').innerHTML = year + " Women's";
@@ -789,14 +927,29 @@ function find_winner(){
         var round_2 = round_2_2025;
         var round_1 = round_1_2025;
     }
-    else if (study_year == "Year"){
-        document.getElementById("region_1").innerHTML = "Spokane";
-        document.getElementById("region_2").innerHTML = "Spokane";
-        document.getElementById("region_3").innerHTML = "Birm.";
-        document.getElementById("region_4").innerHTML = "Birm.";
+    else if (study_year == 2026){
+        document.getElementById("region_1").innerHTML = "Fort Worth";
+        document.getElementById("region_2").innerHTML = "Fort Worth";
+        document.getElementById("region_3").innerHTML = "Sac.";
+        document.getElementById("region_4").innerHTML = "Sac.";
         document.getElementById("bracket_score_text").innerHTML = "";
         document.getElementById("bracket_score_text_two").innerHTML = "";
-        var team_stats = team_stats_2025;
+        var team_stats = team_stats_2026;
+        var round_32 = round_32_2026;
+        var round_16 = round_16_2026;
+        var round_8 = round_8_2026;
+        var round_4 = round_4_2026;
+        var round_2 = round_2_2026;
+        var round_1 = round_1_2026;
+    }
+    else if (study_year == "Year"){
+        document.getElementById("region_1").innerHTML = "Fort Worth";
+        document.getElementById("region_2").innerHTML = "Fort Worth";
+        document.getElementById("region_3").innerHTML = "Sac.";
+        document.getElementById("region_4").innerHTML = "Sac.";
+        document.getElementById("bracket_score_text").innerHTML = "";
+        document.getElementById("bracket_score_text_two").innerHTML = "";
+        var team_stats = team_stats_2026;
         var round_32 = [];
         var round_16 = [];
         var round_8 = [];

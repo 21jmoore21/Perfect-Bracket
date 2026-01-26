@@ -1,3 +1,138 @@
+var team_stats_2026 = [{name:"Arizona",per:'-'}, 
+{name:"Dartmouth",per:'-'}, 
+{name:"St Marys",per:'-'}, 
+{name:"NC St",per:'-'}, 
+{name:"Clemson",per:'-'}, 
+{name:"Liberty",per:'-'}, 
+{name:"Alabama",per:'-'}, 
+{name:"FAU",per:'-'}, 
+{name:"Tenn",per:'-'}, 
+{name:"McN",per:'-'}, 
+{name:"Houston",per:'-'}, 
+{name:"Portland St",per:'-'}, 
+{name:"Utah St",per:'-'}, 
+{name:"USC",per:'-'}, 
+{name:"Gonzaga",per:'-'}, 
+{name:"Long Island",per:'-'}, 
+{name:"Duke",per:'-'}, 
+{name:"Colgate",per:'-'}, 
+{name:"St Louis",per:'-'}, 
+{name:"Wisc",per:'-'}, 
+{name:"Kansas",per:'-'}, 
+{name:"Murr St",per:'-'}, 
+{name:"Florida",per:'-'}, 
+{name:"Troy",per:'-'}, 
+{name:"Louis",per:'-'}, 
+{name:"Ohio St",per:'-'}, 
+{name:"BYU",per:'-'}, 
+{name:"SFA",per:'-'}, 
+{name:"UCF",per:'-'}, 
+{name:"Texas AM",per:'-'}, 
+{name:"Neb",per:'-'}, 
+{name:"NDSU",per:'-'}, 
+{name:"Michigan",per:'-'}, 
+{name:"PVAMU",per:'-'}, 
+{name:"Miami",per:'-'}, 
+{name:"Seton H",per:'-'}, 
+{name:"Ark",per:'-'}, 
+{name:"UT Val",per:'-'}, 
+{name:"TTU",per:'-'}, 
+{name:"Hawaii",per:'-'}, 
+{name:"UNC",per:'-'}, 
+{name:"Miami OH",per:'-'}, 
+{name:"Illinois",per:'-'}, 
+{name:"Wright St",per:'-'}, 
+{name:"St Johns",per:'-'}, 
+{name:"Auburn",per:'-'}, 
+{name:"Iowa St",per:'-'}, 
+{name:"UT Martin",per:'-'}, 
+{name:"UConn",per:'-'}, 
+{name:"Vermont",per:'-'}, 
+{name:"Iowa",per:'-'}, 
+{name:"Georgia",per:'-'}, 
+{name:"Virginia",per:'-'}, 
+{name:"G Mason",per:'-'}, 
+{name:"Mich St",per:'-'}, 
+{name:"UNC W",per:'-'}, 
+{name:"Villa",per:'-'}, 
+{name:"Indiana",per:'-'}, 
+{name:"Vandy",per:'-'}, 
+{name:"ETSU",per:'-'}, 
+{name:"SMU",per:'-'}, 
+{name:"Kentucky",per:'-'}, 
+{name:"Purdue",per:'-'}, 
+{name:"Winthrop",per:'-'}, 
+{name:"Arizona",per:'100.0%'}, 
+{name:"St Marys",per:'93.24%'}, 
+{name:"Clemson",per:'95.48%'}, 
+{name:"Alabama",per:'93.9%'}, 
+{name:"Tenn",per:'78.99%'}, 
+{name:"Houston",per:'99.68%'}, 
+{name:"Utah St",per:'98.52%'}, 
+{name:"Gonzaga",per:'100.0%'}, 
+{name:"Duke",per:'100.0%'}, 
+{name:"St Louis",per:'100.0%'}, 
+{name:"Kansas",per:'81.34%'}, 
+{name:"Florida",per:'91.24%'}, 
+{name:"Louis",per:'99.76%'}, 
+{name:"BYU",per:'99.93%'}, 
+{name:"Texas AM",per:'88.37%'}, 
+{name:"Neb",per:'99.99%'}, 
+{name:"Michigan",per:'100.0%'}, 
+{name:"Miami",per:'96.81%'}, 
+{name:"Ark",per:'82.14%'}, 
+{name:"Hawaii",per:'75.11%'}, 
+{name:"Miami OH",per:'99.25%'}, 
+{name:"Illinois",per:'99.97%'}, 
+{name:"St Johns",per:'99.99%'}, 
+{name:"Iowa St",per:'99.73%'}, 
+{name:"UConn",per:'99.97%'}, 
+{name:"Georgia",per:'82.52%'}, 
+{name:"Virginia",per:'91.99%'}, 
+{name:"Mich St",per:'97.43%'}, 
+{name:"Indiana",per:'96.26%'}, 
+{name:"Vandy",per:'100.0%'}, 
+{name:"SMU",per:'55.38%'}, 
+{name:"Purdue",per:'99.79%'}, 
+{name:"Arizona",per:'98.42%'}, 
+{name:"Clemson",per:'74.4%'}, 
+{name:"Houston",per:'77.02%'}, 
+{name:"Gonzaga",per:'100.0%'}, 
+{name:"St Louis",per:'73.21%'}, 
+{name:"Kansas",per:'46.61%'}, 
+{name:"BYU",per:'80.75%'}, 
+{name:"Neb",per:'92.41%'}, 
+{name:"Michigan",per:'100.0%'}, 
+{name:"Ark",per:'68.16%'}, 
+{name:"Miami OH",per:'64.52%'}, 
+{name:"Iowa St",per:'99.46%'}, 
+{name:"Georgia",per:'68.13%'}, 
+{name:"Mich St",per:'61.27%'}, 
+{name:"Vandy",per:'100.0%'}, 
+{name:"Purdue",per:'99.76%'}, 
+{name:"Arizona",per:'98.42%'}, 
+{name:"Gonzaga",per:'99.38%'}, 
+{name:"St Louis",per:'73.21%'}, 
+{name:"BYU",per:'51.57%'}, 
+{name:"Michigan",per:'99.9%'}, 
+{name:"Iowa St",per:'40.63%'}, 
+{name:"Georgia",per:'45.98%'}, 
+{name:"Vandy",per:'58.67%'}, 
+{name:"Arizona",per:'51.32%'}, 
+{name:"St Louis",per:'73.1%'}, 
+{name:"Michigan",per:'75.16%'}, 
+{name:"Vandy",per:'41.44%'}, 
+{name:"St Louis",per:'53.88%'}, 
+{name:"Michigan",per:'72.66%'}, 
+{name:"St Louis",per:'40.32%'}, 
+];
+var round_32_2026 = [];
+var round_16_2026 = [];
+var round_8_2026 = [];
+var round_4_2026 = [];
+var round_2_2026 = [];
+var round_1_2026 = [];
+
 var team_stats_2025 = [{name:"Auburn",per:'-'}, 
 {name:"Ala St",per:'-'}, 
 {name:"Louis",per:'-'}, 
@@ -681,7 +816,7 @@ var round_1_2021 = ['Baylor'];
 function change_year(year){
     document.getElementById("yearofstudy").innerHTML = year;
     if (year == "Year") {
-        document.getElementById('national_champ').innerHTML = "2025 Men's";
+        document.getElementById('national_champ').innerHTML = "2026 Men's";
     }
     else if (year == 2023){
         document.getElementById('national_champ').innerHTML = "2023 Men's";
@@ -698,12 +833,15 @@ function change_year(year){
     else if (year == 2025){
         document.getElementById('national_champ').innerHTML = "2025 Men's";
     }
+    else if (year == 2026){
+        document.getElementById('national_champ').innerHTML = "2026 Men's";
+    }
 }
 
 function print_year() {
     year = document.getElementById('yearofstudy').innerHTML;
     if (year == "Year") {
-        document.getElementById('national_champ').innerHTML = "2025 Men's";
+        document.getElementById('national_champ').innerHTML = "2026 Men's";
     }
     else {
         document.getElementById('national_champ').innerHTML = year + " Men's";
@@ -789,6 +927,21 @@ function find_winner(){
         var round_2 = round_2_2025;
         var round_1 = round_1_2025;
     }
+    else if (study_year == 2026){
+        document.getElementById("region_1").innerHTML = "South";
+        document.getElementById("region_2").innerHTML = "West";
+        document.getElementById("region_3").innerHTML = "East";
+        document.getElementById("region_4").innerHTML = "Midwest";
+        document.getElementById("bracket_score_text").innerHTML = "";
+        document.getElementById("bracket_score_text_two").innerHTML = "";
+        var team_stats = team_stats_2026;
+        var round_32 = round_32_2026;
+        var round_16 = round_16_2026;
+        var round_8 = round_8_2026;
+        var round_4 = round_4_2026;
+        var round_2 = round_2_2026;
+        var round_1 = round_1_2026;
+    }
     else if (study_year == "Year"){
         document.getElementById("region_1").innerHTML = "South";
         document.getElementById("region_2").innerHTML = "West";
@@ -796,7 +949,7 @@ function find_winner(){
         document.getElementById("region_4").innerHTML = "Midwest";
         document.getElementById("bracket_score_text").innerHTML = "";
         document.getElementById("bracket_score_text_two").innerHTML = "";
-        var team_stats = team_stats_2025;
+        var team_stats = team_stats_2026;
         var round_32 = [];
         var round_16 = [];
         var round_8 = [];

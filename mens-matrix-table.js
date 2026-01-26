@@ -1,3 +1,75 @@
+var team_stats_2026 = [{name:"Saint Louis Billikens (8)",Round_of_32:'100.0%',Sweet_Sixteen:'73.21%',Elite_Eight:'73.21%',Final_Four:'73.1%',Championship:'53.88%',Champion:'40.32%'}, 
+{name:"Michigan Wolverines (1)",Round_of_32:'100.0%',Sweet_Sixteen:'100.0%',Elite_Eight:'99.9%',Final_Four:'75.16%',Championship:'72.66%',Champion:'24.99%'}, 
+{name:"Gonzaga Bulldogs (2)",Round_of_32:'100.0%',Sweet_Sixteen:'100.0%',Elite_Eight:'99.38%',Final_Four:'47.12%',Championship:'16.25%',Champion:'10.56%'}, 
+{name:"Arizona Wildcats (1)",Round_of_32:'100.0%',Sweet_Sixteen:'98.42%',Elite_Eight:'98.42%',Final_Four:'51.32%',Championship:'21.42%',Champion:'10.55%'}, 
+{name:"Miami (OH) RedHawks (11)",Round_of_32:'99.25%',Sweet_Sixteen:'64.52%',Elite_Eight:'37.82%',Final_Four:'12.09%',Championship:'11.33%',Champion:'4.55%'}, 
+{name:"Duke Blue Devils (1)",Round_of_32:'100.0%',Sweet_Sixteen:'26.79%',Elite_Eight:'26.79%',Final_Four:'26.56%',Championship:'8.01%',Champion:'3.44%'}, 
+{name:"Iowa State Cyclones (2)",Round_of_32:'99.73%',Sweet_Sixteen:'99.46%',Elite_Eight:'40.63%',Final_Four:'8.45%',Championship:'7.89%',Champion:'2.45%'}, 
+{name:"Illinois Fighting Illini (3)",Round_of_32:'99.97%',Sweet_Sixteen:'35.48%',Elite_Eight:'21.45%',Final_Four:'4.3%',Championship:'3.83%',Champion:'1.93%'}, 
+{name:"Vanderbilt Commodores (3)",Round_of_32:'100.0%',Sweet_Sixteen:'100.0%',Elite_Eight:'58.67%',Final_Four:'41.44%',Championship:'2.76%',Champion:'0.42%'}, 
+{name:"Purdue Boilermakers (2)",Round_of_32:'99.79%',Sweet_Sixteen:'99.76%',Elite_Eight:'41.33%',Final_Four:'30.04%',Championship:'0.96%',Champion:'0.42%'}, 
+{name:"Houston Cougars (3)",Round_of_32:'99.68%',Sweet_Sixteen:'77.02%',Elite_Eight:'0.6%',Final_Four:'0.5%',Championship:'0.22%',Champion:'0.16%'}, 
+{name:"Georgia Bulldogs (9)",Round_of_32:'82.52%',Sweet_Sixteen:'68.13%',Elite_Eight:'45.98%',Final_Four:'15.9%',Championship:'0.37%',Champion:'0.15%'}, 
+{name:"Saint Mary's Gaels (8)",Round_of_32:'93.24%',Sweet_Sixteen:'1.57%',Elite_Eight:'1.57%',Final_Four:'1.06%',Championship:'0.17%',Champion:'0.05%'}, 
+{name:"Nebraska Cornhuskers (2)",Round_of_32:'99.99%',Sweet_Sixteen:'92.41%',Elite_Eight:'32.89%',Final_Four:'0.33%',Championship:'0.05%',Champion:'0.01%'}, 
+{name:"Michigan State Spartans (4)",Round_of_32:'97.43%',Sweet_Sixteen:'61.27%',Elite_Eight:'33.77%',Final_Four:'10.45%',Championship:'0.18%',Champion:'0.0%'}, 
+{name:"UConn Huskies (1)",Round_of_32:'99.97%',Sweet_Sixteen:'21.81%',Elite_Eight:'5.35%',Final_Four:'1.06%',Championship:'0.01%',Champion:'0.0%'}, 
+{name:"Virginia Cavaliers (5)",Round_of_32:'91.99%',Sweet_Sixteen:'36.46%',Elite_Eight:'10.77%',Final_Four:'0.87%',Championship:'0.01%',Champion:'0.0%'}, 
+{name:"Iowa Hawkeyes (8)",Round_of_32:'17.48%',Sweet_Sixteen:'10.06%',Elite_Eight:'3.71%',Final_Four:'0.2%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"UNC Wilmington Seahawks (12)",Round_of_32:'2.57%',Sweet_Sixteen:'0.29%',Elite_Eight:'0.1%',Final_Four:'0.03%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Texas A&M Aggies (10)",Round_of_32:'88.37%',Sweet_Sixteen:'7.59%',Elite_Eight:'0.77%',Final_Four:'0.01%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"George Mason Patriots (12)",Round_of_32:'8.01%',Sweet_Sixteen:'1.98%',Elite_Eight:'0.32%',Final_Four:'0.01%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"BYU Cougars (3)",Round_of_32:'99.93%',Sweet_Sixteen:'80.75%',Elite_Eight:'51.57%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Louisville Cardinals (5)",Round_of_32:'99.76%',Sweet_Sixteen:'19.17%',Elite_Eight:'14.74%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Arkansas Razorbacks (5)",Round_of_32:'82.14%',Sweet_Sixteen:'68.16%',Elite_Eight:'0.1%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"UT Martin Skyhawks (14)",Round_of_32:'0.27%',Sweet_Sixteen:'0.26%',Elite_Eight:'0.07%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"St. John's Red Storm (7)",Round_of_32:'99.99%',Sweet_Sixteen:'0.28%',Elite_Eight:'0.03%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"McNeese Cowboys (11)",Round_of_32:'21.01%',Sweet_Sixteen:'1.3%',Elite_Eight:'0.02%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Stephen F. Austin Lumberjacks (14)",Round_of_32:'0.07%',Sweet_Sixteen:'0.07%',Elite_Eight:'0.02%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"NC State Wolfpack (9)",Round_of_32:'6.76%',Sweet_Sixteen:'0.01%',Elite_Eight:'0.01%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Ohio State Buckeyes (11)",Round_of_32:'0.24%',Sweet_Sixteen:'0.01%',Elite_Eight:'0.01%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Clemson Tigers (5)",Round_of_32:'95.48%',Sweet_Sixteen:'74.4%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Kansas Jayhawks (5)",Round_of_32:'81.34%',Sweet_Sixteen:'46.61%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Florida Gators (4)",Round_of_32:'91.24%',Sweet_Sixteen:'45.31%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Hawai'i Rainbow Warriors (12)",Round_of_32:'75.11%',Sweet_Sixteen:'25.6%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Alabama Crimson Tide (4)",Round_of_32:'93.9%',Sweet_Sixteen:'22.73%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Tennessee Volunteers (5)",Round_of_32:'78.99%',Sweet_Sixteen:'21.68%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Murray State Racers (12)",Round_of_32:'18.66%',Sweet_Sixteen:'7.47%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Utah Valley Wolverines (12)",Round_of_32:'17.86%',Sweet_Sixteen:'6.24%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Liberty Flames (12)",Round_of_32:'4.52%',Sweet_Sixteen:'2.82%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Troy Trojans (12)",Round_of_32:'8.76%',Sweet_Sixteen:'0.61%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Winthrop Eagles (14)",Round_of_32:'0.21%',Sweet_Sixteen:'0.19%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"SMU Mustangs (7)",Round_of_32:'55.38%',Sweet_Sixteen:'0.05%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Florida Atlantic Owls (12)",Round_of_32:'6.1%',Sweet_Sixteen:'0.05%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Utah State Aggies (7)",Round_of_32:'98.52%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Miami Hurricanes (8)",Round_of_32:'96.81%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Indiana Hoosiers (11)",Round_of_32:'96.26%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Kentucky Wildcats (10)",Round_of_32:'44.62%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Texas Tech Red Raiders (4)",Round_of_32:'24.89%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"UCF Knights (7)",Round_of_32:'11.63%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Villanova Wildcats (5)",Round_of_32:'3.74%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Seton Hall Pirates (9)",Round_of_32:'3.19%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"USC Trojans (10)",Round_of_32:'1.48%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"North Carolina Tar Heels (5)",Round_of_32:'0.75%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Portland State Vikings (14)",Round_of_32:'0.32%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Wright State Raiders (14)",Round_of_32:'0.03%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Vermont Catamounts (16)",Round_of_32:'0.03%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"North Dakota State Bison (14)",Round_of_32:'0.01%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Auburn Tigers (10)",Round_of_32:'0.01%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Dartmouth Big Green (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Long Island University Sharks (14)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Colgate Raiders (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Wisconsin Badgers (9)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"Prairie View A&M Panthers (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+{name:"East Tennessee State Buccaneers (14)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
+];
+var round_32_2026 = [];
+var round_16_2026 = [];
+var round_8_2026 = [];
+var round_4_2026 = [];
+var round_2_2026 = [];
+var round_1_2026 = [];
+
 var team_stats_2025 = [{name:"Duke Blue Devils (1)",Round_of_32:'100.0%',Sweet_Sixteen:'100.0%',Elite_Eight:'99.97%',Final_Four:'99.96%',Championship:'99.59%',Champion:'99.15%'}, 
 {name:"Michigan State Spartans (2)",Round_of_32:'99.98%',Sweet_Sixteen:'96.31%',Elite_Eight:'54.66%',Final_Four:'28.78%',Championship:'11.41%',Champion:'0.19%'}, 
 {name:"Houston Cougars (1)",Round_of_32:'100.0%',Sweet_Sixteen:'40.85%',Elite_Eight:'40.84%',Final_Four:'39.16%',Championship:'0.19%',Champion:'0.19%'}, 
@@ -384,8 +456,11 @@ function find_winner(){
     else if (study_year == 2025){
       var team_stats = team_stats_2025;
     }
+    else if (study_year == 2026){
+      var team_stats = team_stats_2026;
+    }
     else if (study_year == "Year"){
-      var team_stats = team_stats_2025;
+      var team_stats = team_stats_2026;
     }
     let team_id = "team_";
     let rd_32_team_id = "team_";
@@ -572,6 +647,14 @@ function show_results() {
     var round_4 = round_4_2025;
     var round_2 = round_2_2025;
     var round_1 = round_1_2025;
+  }
+  else if (study_year == 2026){
+    var round_32 = round_32_2026;
+    var round_16 = round_16_2026;
+    var round_8 = round_8_2026;
+    var round_4 = round_4_2026;
+    var round_2 = round_2_2026;
+    var round_1 = round_1_2026;
   }
   else if (study_year == "Year"){
     var round_32 = [];
