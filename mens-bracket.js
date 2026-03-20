@@ -1604,12 +1604,12 @@ function find_winner(){
             document.getElementById("region_3").innerHTML = "West";
             document.getElementById("region_4").innerHTML = "Midwest";        
             var team_stats = team_stats_2026;
-            var round_32 = [];
-            var round_16 = [];
-            var round_8 = [];
-            var round_4 = [];
-            var round_2 = [];
-            var round_1 = [];
+            var round_32 = round_32_2026;
+            var round_16 = round_16_2026;
+            var round_8 = round_8_2026;
+            var round_4 = round_4_2026;
+            var round_2 = round_2_2026;
+            var round_1 = round_1_2026;
         }
         else if (study_year == "Year"){
             document.getElementById("region_1").innerHTML = "East";
