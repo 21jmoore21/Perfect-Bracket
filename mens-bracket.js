@@ -65,7 +65,7 @@ var team_stats_2026 = [{name:"Duke",Team_GP:0.7142857142857143,Team_PTS:0.568807
 ];
 var round_32_2026 = ['Duke','TCU','St Johns','Kansas','Louis','Mich St','UCLA','UConn','Florida','Iowa','Vandy','Neb','VCU','Illinois','Texas AM','Houston','Arizona','Utah St','H Point','Ark','Texas','Gonzaga','Miami','Purdue','Michigan','St Louis','TTU','Alabama','Tenn','Virginia','Kentucky','Iowa St'];
 var round_16_2026 = ['Duke','St Johns','Mich St','UConn','Iowa','Neb','Illinois','Houston','Arizona','Ark','Texas','Purdue','Michigan','Alabama','Tenn','Iowa St'];
-var round_8_2026 = [];
+var round_8_2026 = ['Duke','UConn','Iowa','Illinois','Arizona','Purdue','Michigan','Tenn'];
 var round_4_2026 = [];
 var round_2_2026 = [];
 var round_1_2026 = [];
