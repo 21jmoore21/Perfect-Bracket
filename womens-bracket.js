@@ -66,7 +66,7 @@ var team_stats_2026 = [{name:"UConn",Team_GP:0.8333333333333334,Team_PTS:0.83478
 var round_32_2026 = ['UConn','Syracuse','MD','UNC','N Dame','Ohio St','Illinois','Vandy','S Car','USC','Mich St','Okla','Wash','TCU','Iowa','Virginia','UCLA','Okla St','Ole Miss','Minn','Baylor','Duke','TTU','LSU','Texas','Oregon','Kentucky','WVU','Alabama','Louis','NC St','Michigan'];
 var round_16_2026 = ['UConn','UNC','N Dame','Vandy','S Car','Okla','TCU','Virginia','UCLA','Minn','Duke','LSU','Texas','Kentucky','Louis','Michigan'];
 var round_8_2026 = ['UConn','N Dame','S Car','TCU','UCLA','Duke','Texas','Michigan'];
-var round_4_2026 = [];
+var round_4_2026 = ['UConn','S Car','UCLA','Texas'];
 var round_2_2026 = [];
 var round_1_2026 = [];
 
