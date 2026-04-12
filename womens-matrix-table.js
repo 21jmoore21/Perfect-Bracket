@@ -63,12 +63,12 @@ var team_stats_2026 = [{name:"UConn Huskies (1)",Round_of_32:'100.0%',Sweet_Sixt
 {name:"Jacksonville Dolphins (14)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 {name:"Missouri State Lady Bears (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 ];
-var round_32_2026 = [];
-var round_16_2026 = [];
-var round_8_2026 = [];
-var round_4_2026 = [];
-var round_2_2026 = [];
-var round_1_2026 = [];
+var round_32_2026 = ["UConn Huskies","Syracuse Orange","Maryland Terrapins","North Carolina Tar Heels","Notre Dame Fighting Irish","Ohio State Buckeyes","Illinois Fighting Illini","Vanderbilt Commodores","South Carolina Gamecocks","USC Trojans","USC Trojans","Oklahoma Sooners","Washington Huskies","TCU Horned Frogs","Iowa Hawkeyes","Virginia Cavaliers","UCLA Bruins","Oklahoma State Cowgirls","Ole Miss Rebels","Minnesota Golden Gophers","Baylor Bears","Duke Blue Devils","Texas Tech Lady Raiders","LSU Tigers","Texas Longhorns","Oregon Ducks","Kentucky Wildcats","West Virginia Mountaineers","Alabama Crimson Tide","Louisville Cardinals","NC State Wolfpack","Michigan Wolverines"];
+var round_16_2026 = ["UConn Huskies","North Carolina Tar Heels","Notre Dame Fighting Irish","Vanderbilt Commodores","South Carolina Gamecocks","Oklahoma Sooners","TCU Horned Frogs","Virginia Cavaliers","UCLA Bruins","Minnesota Golden Gophers","Duke Blue Devils","LSU Tigers","Texas Longhorns","Kentucky Wildcats","Louisville Cardinals","Michigan Wolverines"];
+var round_8_2026 = ["UConn Huskies","Notre Dame Fighting Irish","South Carolina Gamecocks","TCU Horned Frogs","UCLA Bruins","Duke Blue Devils","Texas Longhorns","Michigan Wolverines"];
+var round_4_2026 = ["UConn Huskies","South Carolina Gamecocks","UCLA Bruins","Texas Longhorns"];
+var round_2_2026 = ["South Carolina Gamecocks","UCLA Bruins"];
+var round_1_2026 = ["UCLA Bruins"];
 
 
 var team_stats_2025 = [{name:"UConn Huskies (2)",Round_of_32:'100.0%',Sweet_Sixteen:'99.57%',Elite_Eight:'98.82%',Final_Four:'86.4%',Championship:'85.17%',Champion:'58.01%'}, 

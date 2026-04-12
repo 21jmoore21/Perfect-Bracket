@@ -63,12 +63,12 @@ var team_stats_2026 = [{name:"Arizona Wildcats (1)",Round_of_32:'100.0%',Sweet_S
 {name:"Long Island University Sharks (16)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 {name:"Missouri Tigers (10)",Round_of_32:'0.0%',Sweet_Sixteen:'0.0%',Elite_Eight:'0.0%',Final_Four:'0.0%',Championship:'0.0%',Champion:'0.0%'}, 
 ];
-var round_32_2026 = [];
-var round_16_2026 = [];
-var round_8_2026 = [];
-var round_4_2026 = [];
-var round_2_2026 = [];
-var round_1_2026 = [];
+var round_32_2026 = ["Duke Blue Devils","TCU Horned Frogs","St. John's Red Storm","Kansas Jayhawks","Louisville Cardinals","Michigan State Spartans","UCLA Bruins","UConn Huskies","Florida Gators","Iowa Hawkeyes","Vanderbilt Commodores","Nebraska Cornhuskers","VCU Rams","Illinois Fighting Illini","Texas A&M Aggies","Houston Cougars","Arizona Wildcats","Utah State Aggies","High Point Panthers","Arkansas Razorbacks","Texas Longhorns","Gonzaga Bulldogs","Miami Hurricanes","Purdue Boilermakers","Michigan Wolverines","Saint Louis Billikens","Texas Tech Red Raiders","Alabama Crimson Tide","Tennessee Volunteers","Virginia Cavaliers","Kentucky Wildcats","Iowa State Cyclones"];
+var round_16_2026 = ["Duke Blue Devils","St. John's Red Storm","Michigan State Spartans","UConn Huskies","Iowa Hawkeyes","Nebraska Cornhuskers","Illinois Fighting Illini","Houston Cougars","Arizona Wildcats","Arkansas Razorbacks","Texas Longhorns","Purdue Boilermakers","Michigan Wolverines","Alabama Crimson Tide","Tennessee Volunteers","Iowa State Cyclones"];
+var round_8_2026 = ["Duke Blue Devils","UConn Huskies","Iowa Hawkeyes","Illinois Fighting Illini","Arizona Wildcats","Purdue Boilermakers","Michigan Wolverines","Tennessee Volunteers"];
+var round_4_2026 = ["UConn Huskies","Illinois Fighting Illini","Arizona Wildcats","Michigan Wolverines"];
+var round_2_2026 = ["UConn Huskies","Michigan Wolverines"];
+var round_1_2026 = ["Michigan Wolverines"];
 
 var team_stats_2025 = [{name:"Duke Blue Devils (1)",Round_of_32:'100.0%',Sweet_Sixteen:'100.0%',Elite_Eight:'99.97%',Final_Four:'99.96%',Championship:'99.59%',Champion:'99.15%'}, 
 {name:"Michigan State Spartans (2)",Round_of_32:'99.98%',Sweet_Sixteen:'96.31%',Elite_Eight:'54.66%',Final_Four:'28.78%',Championship:'11.41%',Champion:'0.19%'}, 

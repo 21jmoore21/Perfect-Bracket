@@ -126,12 +126,12 @@ var team_stats_2026 = [{name:"UConn",per:'-'},
 {name:"LSU",per:'81.08%'}, 
 {name:"UConn",per:'78.4%'}, 
 ];
-var round_32_2026 = [];
-var round_16_2026 = [];
-var round_8_2026 = [];
-var round_4_2026 = [];
-var round_2_2026 = [];
-var round_1_2026 = [];
+var round_32_2026 = ['UConn','Syracuse','MD','UNC','N Dame','Ohio St','Illinois','Vandy','S Car','USC','Mich St','Okla','Wash','TCU','Iowa','Virginia','UCLA','Okla St','Ole Miss','Minn','Baylor','Duke','TTU','LSU','Texas','Oregon','Kentucky','WVU','Alabama','Louis','NC St','Michigan'];
+var round_16_2026 = ['UConn','UNC','N Dame','Vandy','S Car','Okla','TCU','Virginia','UCLA','Minn','Duke','LSU','Texas','Kentucky','Louis','Michigan'];
+var round_8_2026 = ['UConn','N Dame','S Car','TCU','UCLA','Duke','Texas','Michigan'];
+var round_4_2026 = ['UConn','S Car','UCLA','Texas'];
+var round_2_2026 = ['S Car','UCLA'];
+var round_1_2026 = ['UCLA'];
 
 var team_stats_2025 = [{name:"UCLA",per:'-'}, 
 {name:"Southern",per:'-'}, 
@@ -850,7 +850,7 @@ function print_year() {
 }
 
 function find_winner(){
-    let current_year = 2026;
+    let current_year = 2027;
     let study_year = document.getElementById("yearofstudy").innerHTML;
     if (study_year == 2023){
         document.getElementById("region_1").innerHTML = "Green.";
@@ -932,8 +932,8 @@ function find_winner(){
         document.getElementById("region_2").innerHTML = "Sac.";
         document.getElementById("region_3").innerHTML = "Sac.";
         document.getElementById("region_4").innerHTML = "Fort Worth";
-        document.getElementById("bracket_score_text").innerHTML = "";
-        document.getElementById("bracket_score_text_two").innerHTML = "";
+        document.getElementById("bracket_score_text").innerHTML = "This Bracket Would Have Scored: ";
+        document.getElementById("bracket_score_text_two").innerHTML = "Points";
         var team_stats = team_stats_2026;
         var round_32 = round_32_2026;
         var round_16 = round_16_2026;

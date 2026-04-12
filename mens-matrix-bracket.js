@@ -126,12 +126,12 @@ var team_stats_2026 = [{name:"Duke",per:'-'},
 {name:"Arizona",per:'62.29%'}, 
 {name:"Arizona",per:'37.9%'}, 
 ];
-var round_32_2026 = [];
-var round_16_2026 = [];
-var round_8_2026 = [];
-var round_4_2026 = [];
-var round_2_2026 = [];
-var round_1_2026 = [];
+var round_32_2026 = ['Duke','TCU','St Johns','Kansas','Louis','Mich St','UCLA','UConn','Florida','Iowa','Vandy','Neb','VCU','Illinois','Texas AM','Houston','Arizona','Utah St','H Point','Ark','Texas','Gonzaga','Miami','Purdue','Michigan','St Louis','TTU','Alabama','Tenn','Virginia','Kentucky','Iowa St'];
+var round_16_2026 = ['Duke','St Johns','Mich St','UConn','Iowa','Neb','Illinois','Houston','Arizona','Ark','Texas','Purdue','Michigan','Alabama','Tenn','Iowa St'];
+var round_8_2026 = ['Duke','UConn','Iowa','Illinois','Arizona','Purdue','Michigan','Tenn'];
+var round_4_2026 = ['UConn','Illinois','Arizona','Michigan'];
+var round_2_2026 = ['UConn','Michigan'];
+var round_1_2026 = ['Michigan'];
 
 var team_stats_2025 = [{name:"Auburn",per:'-'}, 
 {name:"Ala St",per:'-'}, 
@@ -850,7 +850,7 @@ function print_year() {
 }
 
 function find_winner(){
-    let current_year = 2026;
+    let current_year = 2027;
     let study_year = document.getElementById("yearofstudy").innerHTML;
     if (study_year == 2023){
         document.getElementById("region_1").innerHTML = "South";
@@ -932,8 +932,8 @@ function find_winner(){
         document.getElementById("region_2").innerHTML = "South";
         document.getElementById("region_3").innerHTML = "West";
         document.getElementById("region_4").innerHTML = "Midwest";
-        document.getElementById("bracket_score_text").innerHTML = "";
-        document.getElementById("bracket_score_text_two").innerHTML = "";
+        document.getElementById("bracket_score_text").innerHTML = "This Bracket Would Have Scored: ";
+        document.getElementById("bracket_score_text_two").innerHTML = "Points";
         var team_stats = team_stats_2026;
         var round_32 = round_32_2026;
         var round_16 = round_16_2026;
