@@ -1424,8 +1424,11 @@ function perfect_settings() {
     else if (study_year == 2025){
         var slider_weights = [86, 31, -74, 41, 8, -30, -63, -39, 13, 40, 20, -88, -57, 18, 98]
     }
+    else if (study_year == 2026){
+        var slider_weights = [41, -58, 51, -20, 62, -80, 63, 30, 14, 70, -83, 22, 1, -100, 93]
+    }
     else if (study_year == "Overall"){
-        var slider_weights = [-40, -72, 97, 76, 86, 5, -12, 28, 48, 73, -22, -7, -40, -27, 97]
+        var slider_weights = [61, -15, 14, 76, 98, -81, -30, -2, 24, 86, -45, -29, -10, -1, 97]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
@@ -1493,7 +1496,7 @@ function change_year(year){
     }
     else if (year == 2026){
         document.getElementById('national_champ').innerHTML = "2026 Men's";
-        update_perfect_year('ovr_perfect_year');
+        update_perfect_year('2026_perfect_year');
     }
 }
 

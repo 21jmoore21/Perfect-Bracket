@@ -49,7 +49,7 @@
     </div>
     <main class="row" style="padding-top:45px;">
         <div class="column_one" style="background-color: #ddd;">
-            <h2 style="color:#333">Weights:</h2>
+            <h2 style="color:#333">Weights</h2>
             <div>
                 <input type="checkbox" class="checkbox" id="checkbox1" onclick="trackButton('Checkbox') ; toggleLabel('checkbox1', 'label1','slider1','slider_1_value');find_winner();" checked><label for="checkbox1"></label>
                 <span id="label1"><div class="tooltip">Off Rtg: <span class="tooltiptext">Offensive Rating</span></div> <input min="-100" max="100" value="0" type="number" onchange="limit_input(this);slider1_val(this.value);find_winner()" id="slider_1_value" class="num_input"></input></span>
@@ -310,6 +310,7 @@
             <div class="perfect_dropdown" id="perfect_dropdown">
                 <a class="perfect_active_year" id="perfect_active_year">Overall</a>
                 <a class="perfect_year_pick" id="ovr_perfect_year" onclick="update_perfect_year('ovr_perfect_year')">Overall</a>
+                <a class="perfect_year_pick" id="2026_perfect_year" onclick="update_perfect_year('2026_perfect_year')">2026</a>
                 <a class="perfect_year_pick" id="2025_perfect_year" onclick="update_perfect_year('2025_perfect_year')">2025</a>
                 <a class="perfect_year_pick" id="2024_perfect_year" onclick="update_perfect_year('2024_perfect_year')">2024</a>
                 <a class="perfect_year_pick" id="2023_perfect_year" onclick="update_perfect_year('2023_perfect_year')">2023</a>

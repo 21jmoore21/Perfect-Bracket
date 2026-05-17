@@ -1426,8 +1426,11 @@ function perfect_settings() {
     else if (study_year == 2025){
         var slider_weights = [23, 22, 68, -69, 66, 81, -13, -49, 57, -78, 42, 64, 29, 95, 93]
     }
+    else if (study_year == 2026){
+        var slider_weights = [16, -8, 90, -2, 97, 65, 24, -39, -16, 69, -19, -19, -6, -16, 74]
+    }
     else if (study_year == "Overall"){
-        var slider_weights = [91, 85, -62, 40, -66, 17, 43, -26, 54, 12, -8, -31, -7, -17, 97]
+        var slider_weights = [4, 83, 82, -27, 56, 80, -33, -26, -49, 61, 16, -100, -43, 14, 100]
     }
     for (let j = 0, len = 15; j < len; j++) {
         let id = j+1;
@@ -1495,7 +1498,7 @@ function change_year(year){
     }
     else if (year == 2026){
         document.getElementById('national_champ').innerHTML = "2026 Women's";
-        update_perfect_year('ovr_perfect_year');
+        update_perfect_year('2026_perfect_year');
     }
 
     if (lastClicked == 'ML Button'){
